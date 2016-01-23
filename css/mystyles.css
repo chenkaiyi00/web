@@ -91,6 +91,7 @@ body{
 #mynav  {
   border: none;
       border-radius:0px;
+      height: 30px;
 }
 .list-footer >li >a {
   font-size: 75%;
@@ -111,8 +112,9 @@ body{
   width:100%;
   height:320px;
   background-color: #fff;
-  display: none;
+  top:50px;
  z-index: 10;
+ display: none;
 }
 #sign-up-center {
   background-image: url("../images/newyork.jpg");
@@ -149,10 +151,31 @@ color: #000000;
   }
   #login-pic{
     width: 100%;
-    height: 100%;
+    height: 350px;
   }
 
   .login-input{
-    margin-top: 7%;
-    height: 30px;
+    margin-top: 5%;
+   
+  }
+  .login-input input{
+    height: 40px;
+     width: 80%;
+  }
+  #login-btn {
+    width: 80%;
+     margin-top: 5%;
+  }
+  #forget-pwd{
+     margin-top: 3%;
+  }
+  .minheight{
+    min-height: 550px;
+  }
+  #login-container{
+    padding-top:  3%;
+    height: 700px;
+  }
+  #login-input1{
+    padding-top: 15%;
   }
