@@ -1,0 +1,166 @@
+<div ng-controller="navCtrl">
+   <nav  id="mynav"class= "navbar navbar-inverse " role="navigation" > 
+     <div class="container">
+      <div class="navbar-header">
+         
+      <a class="navbar-brand color-white" href="#">Logo</a>
+      </div>
+    
+
+       <ul class="nav navbar-nav color-white ">
+        <li  ng-class="{active:isSelected(1)}"> 
+          <a id="home" ng-mouseover="select(1)" ng-mouseleave="deselect(1)" href="#" >home</a></li>
+
+            <li ng-class="{active:isSelected(2)}">
+              <a id="1" href="#" ng-mouseover="select(2)" ng-mouseleave="deselect(2)">About</a></li>
+
+            <li ng-class="{active:isSelected(3)}">
+               <a id="2" href="#" ng-mouseover="select(3)" ng-mouseleave="deselect(3)">Contact</a></li>
+      </ul>
+
+    <ul class="nav navbar-nav  color-white navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+     </div>
+   </nav>
+   <div id="overlay1"  ng-mouseover="visibility(1)" ng-mouseleave="unshowoverlay(1)">
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class=".container-fluid">
+     <div class="row">
+      <h3> tittle1
+      </h3>
+     </div>
+     
+     <div class="row">
+ <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+         <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+
+     </div>
+     </div>
+
+
+         </div>
+         <div class="col-sm-6 margin-top ">
+           <img src="images/4.jpg" class="img-responsive " alt="Responsive image">
+   
+         </div>
+       
+       
+  </div>
+</div>
+</div>
+
+<div id="overlay2" ng-mouseover="visibility(2)" ng-mouseleave="unshowoverlay(2)">
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class=".container-fluid">
+     <div class="row">
+      <h3> tittle2
+      </h3>
+     </div>
+     
+     <div class="row">
+ <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+         <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+
+     </div>
+     </div>
+
+
+         </div>
+         <div class="col-sm-6 margin-top ">
+           <img src="images/1.jpg" class="img-responsive " alt="Responsive image">
+   
+         </div>
+       
+       
+  </div>
+</div>
+</div>
+
+<div id="overlay3" ng-mouseover="visibility(3)" ng-mouseleave="unshowoverlay(3)">
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class=".container-fluid">
+     <div class="row">
+      <h3> tittle3
+      </h3>
+     </div>
+     
+     <div class="row">
+ <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+         <div class="col-sm-6 ">
+      <ul class="list-unstyled">
+ <li>BROWSE ENGAGEMENT RING</li>
+  <li>JEWELRY AND GIFTS</li>
+   <li>VALENTINE'S DAY GIFT GUIDE</li>
+    <li>MEN'S WEDDING BANDS</li>
+     <li>WOMEN'S WEDDING BANDS</li>
+      <li>BROWSE ENGAGEMENT RINGS</li>
+        </ul>
+        </div>
+
+     </div>
+     </div>
+         </div>
+
+         <div class="col-sm-6 margin-top ">
+           <img src="images/3.jpg" class="img-responsive " alt="Responsive image" >
+   
+         </div>
+       
+       
+  </div>
+</div>
+</div>
+ </div>
