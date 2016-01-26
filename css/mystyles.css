@@ -179,3 +179,33 @@ color: #000000;
   #login-input1{
     padding-top: 15%;
   }
+  #product-detail{
+    width: 460px;
+    height: 560px;
+  }
+
+#product-info > .row{
+  margin-bottom: 20px;
+}
+
+.box{
+ border-top-style: solid;
+ border-style:solid;
+  border-color:#909090;
+    border-top-color: #FF8C00;
+    border-left-width: 0px;
+     border-right-width: 0px;
+      border-bottom-width: 0px;
+        margin-right: 0px;
+            margin-left: 0px;
+             margin-top: 20px;
+
+}
+
+.comment{
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+   border-bottom-color: #D8D8D8 ;
+   margin-bottom:4%;
+
+}
