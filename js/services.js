@@ -30,7 +30,7 @@ var carousels = [
   		.service('PopularFactory',function(){
       var popularProducts = [
 		{ 
-			image:'images/s1.jpg',
+			image:'images/s2.jpg',
 			name:'BOLE ZHUANGYUAN 南红心火龙果',
 			price:125,
 			price_sale:66,
