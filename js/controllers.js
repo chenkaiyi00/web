@@ -1,8 +1,8 @@
-app.controller('navCtrl', ['$scope',function($scope) {
+angular.module('myApp')
+.controller('NavController', ['$scope',function($scope) {
     
     $scope.tap=0;
     $scope.select=function (setTab) {
-       
       $scope.tap=setTab;
       $scope.showoverlay(setTab);
       $scope.visibility(setTab);
@@ -36,4 +36,14 @@ app.controller('navCtrl', ['$scope',function($scope) {
             $("#overlay"+index).css("visibility", "visible");     
           }
       };
+}])
+.controller('CarouselController', ['$scope','CarouselFactory',
+                                function($scope,CarouselFactory){
+  $scope.carousels=CarouselFactory.getCarousels();
+     
+}])
+.controller('PopularController', ['$scope','PopularFactory',
+                                function($scope,PopularFactory){
+  $scope.populars = PopularFactory.getPopulars();
+  $scope.number=[1,2,3];
 }]);

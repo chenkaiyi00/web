@@ -209,3 +209,8 @@ color: #000000;
    margin-bottom:4%;
 
 }
+.black-border{
+   border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000 ;
+}
