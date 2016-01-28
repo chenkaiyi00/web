@@ -60,4 +60,39 @@ var carousels = [
 		      this.getPopulars = function () {
 		      	return popularProducts;
 		      }
+  		})
+  		
+  		.service('RecommendFactory',function(){
+      var RecProducts = [
+		{ 
+			image:'images/sw1.jpg',
+			name:'BOLE ZHUANGYUAN 南红心火龙果',
+			price:125,
+			price_sale:66,
+			onsale:false
+				},
+		{
+			image:'images/sw2.jpg',
+			name:'霸王蟹 皇帝蟹大螃蟹',
+			price:221,
+			price_sale:30.5,
+			onsale:false
+				},
+		{
+			image:'images/sw3.jpg',
+			name:'President无盐黄油',
+			price:110,
+			price_sale:45.0,
+			onsale:false
+				},
+		{
+			image:'images/sw4.jpg',
+			name:'鲜之优果 墨西哥牛油果',
+			price:110,
+			price_sale:45,
+			onsale:false
+		      }];
+		      this.getRecs = function () {
+		      	return RecProducts;
+		      }
   		});

@@ -46,4 +46,9 @@ angular.module('myApp')
                                 function($scope,PopularFactory){
   $scope.populars = PopularFactory.getPopulars();
   $scope.number=[1,2,3];
+}])
+.controller('RecController', ['$scope','RecommendFactory',
+                                function($scope,RecommendFactory){
+  $scope.recProducts = RecommendFactory.getRecs();
+  $scope.number=[1,2,3];
 }]);

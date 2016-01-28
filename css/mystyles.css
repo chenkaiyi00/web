@@ -1,3 +1,10 @@
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+
 .row-header{
     margin:0px auto;
     padding:0px auto;
@@ -82,7 +89,7 @@ body{
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background:     #FF4500;
+    background:#FF4500;
 }
 .margin-top {
   margin-top: 30px;
@@ -212,4 +219,9 @@ color: #000000;
    border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #000 ;
+}
+.name-label,
+ .name-label:hover,
+ .name-label:focus{
+ color: #585858 ;
 }
