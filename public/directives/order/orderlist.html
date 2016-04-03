@@ -1,0 +1,41 @@
+<div class="order_change_con">
+
+
+<div class="package_detail" ng-repeat='order in user.data.orderhistory.slice().reverse()'>
+<p>
+<em>{{order.date.years}}-{{order.date.months+1}}-{{order.date.date}}</em>
+<span class="amount">￥{{order.total}}</span>
+</p>
+<a href="OrderDetail.html?id={{order._id}}" class="items a_link" target='_self'>
+<ul>
+
+<li ng-repeat='product in order.list'>
+<img src="http://d6.yihaodianimg.com/N03/M04/36/D9/CgQCtVLNFVyARPYFAALU15asl1k58301.jpg">
+</li>
+
+</ul>
+<span>
+1
+个包裹 (共{{ order.list.length}}件)
+</span>
+</a>
+<div class="order_info">
+<div class="info">
+<span>订单号</span>
+<span>{{order._id}}</span>
+</div>
+<div class="status">
+<div ng-if="order.status=='未支付'">
+<em class="timer"></em>
+<a  href="" class="btn_pay">立即支付</a>
+</div>
+</div>
+</div>
+</div>
+<!-- end product 1 -->
+
+
+
+
+</div>
+

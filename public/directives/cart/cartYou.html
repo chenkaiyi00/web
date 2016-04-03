@@ -1,0 +1,334 @@
+
+
+<div>
+<!-- h5 global top -->
+<style type="text/css">
+.order_warning {
+display:none;
+}
+.order_warning .warning_content {
+position: fixed;
+top: 50%;
+left: 50%;
+width: 75%;
+text-align: center;
+background-color: #fff;
+z-index: 920;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+.order_warning .warning_content .warning_title {
+line-height: 18px;
+padding: 30px 28px 0;
+font-size: 1.4rem;
+color: #333;
+}
+.order_warning .warning_content .warning_desc {
+line-height: 22px;
+padding: 0 28px;
+margin-top: 18px;
+font-size: 1.4rem;
+color: #333;
+white-space: nowrap;
+}
+.order_warning .warning_content .warning_desc span {
+display: block;
+}
+.order_warning .warning_content .warning_desc strong {
+color: #ff3c3c;
+font-weight: normal;
+}
+.order_warning .warning_content .warning_tip {
+line-height: 14px;
+margin-top: 10px;
+padding: 0 28px;
+font-size: 1.2rem;
+color: #999;
+}
+.order_warning .warning_content .order_detail {
+padding: 0 28px;
+margin-top: 38px;
+}
+.order_warning .warning_content .order_detail .detail_item {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+height: 34px;
+margin-top: 12px;
+border: 1px #e6e6e6 solid;
+text-align: center;
+border-radius: 5px;
+}
+.order_warning .warning_content .order_detail .detail_item .item_desc {
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+line-height: 14px;
+padding-left: 10px;
+text-align: left;
+}
+.order_warning .warning_content .order_detail .detail_item .item_desc .price {
+display: block;
+padding-top: 4px;
+color: #ff3c3c;
+font-size: 1.2rem;
+}
+.order_warning .warning_content .order_detail .detail_item .item_desc .sort {
+display: block;
+color: #666;
+font-size: 0.9rem;
+}
+.order_warning .warning_content .order_detail .detail_item .button {
+display: block;
+width: 80px;
+line-height: 34px;
+margin-top: -1px;
+font-size: 1.2rem;
+color: #fff;
+background-color: #ff3c3c;
+border-radius: 5px;
+}
+.order_warning .warning_content .bottom_btn {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+height: 40px;
+line-height: 40px;
+margin-top: 20px;
+}
+.order_warning .warning_content .bottom_btn a {
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+-ms-flex: 1;
+flex: 1;
+display: block;
+font-size: 1.4rem;
+color: #999;
+text-align: center;
+background-color: #f5f5f5;
+}
+.order_warning .mask {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+z-index: 904;
+}
+</style>
+
+<div id="container">
+
+<div class="layout_head">
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="javascript:history.go(-1);" ></a>
+<h1>购物车</h1>
+
+<div class="rightBox"ng-click=showMenuFunc()>
+<a class="right icon-more btn_more"  id="globalMore" >
+</a>
+<div ng-class="{'hide': !showMenu}" class="more_list " id="globalMoreList">
+
+
+<a href="/" target='_self'id="moreIconHome" class="moreA"><span class="icon icon-home"></span>首页</a>
+<a ng-click='gotoAccount()' target='_self'id="moreIconMyYhd" class="moreA"><span class="icon icon-my"></span>我的账号</a>
+
+</div>
+</div></div>
+
+</div>
+
+
+<div class="layout_body">
+<form  class="buycarForm" name="productForm" id="productForm">
+
+<div class="touchweb_page-shopCart">
+<div class="goods_box">
+<div class="goods_box-title">
+
+<label class="left">
+
+
+<a class="link" >source</a>
+</label>
+<div class="right">
+<span class="cart_info">
+<span class="double">
+运费
+<em class="price">
+¥20
+</em>
+</span>
+<br>
+<span>
+
+<span>
+
+</span>
+</span>
+</span>
+<!--
+<a href="/cart/noFee?merchantId=3" class="btn_all">
+凑单
+<i class="icon-right_arrow">
+</i>
+</a> -->
+</div>
+</div> 
+
+<div class="goods_box-tips">
+满199元包邮
+</div>
+
+
+
+<div class="goods_box-body" ng-repeat='item in cart track by $index'>
+<div class="product_list">
+<div class="product_list_wrap">
+
+<input type="checkbox" class="check_box"  ng-model='item.check'>
+
+
+<!-- content -->
+<div class="product_content">
+<div class="product_box">
+<div class="product_pic" >
+<img   src="http://d6.yihaodianimg.com/N03/M04/36/D9/CgQCtVLNFVyARPYFAALU15asl1k58301_130x130.jpg">
+</div>
+<a class="product_con" href = '/detail.html?p={{item.product._id}}'>
+<span class="product_title"  >
+{{item.product.name}}</span>
+<p class="product_from">
+</p>
+<p class="cell_price">
+<span class="sale_price">
+¥{{item.product.price}}
+</span>
+</p>
+</a>
+
+<div class="product_option">
+<div class="tool_num">
+
+<div class="computing_act">
+<input type="button" value="-" class="reduce" onclick="">
+</div>
+<div class="computing_num">
+
+<select class="needsclick" ng-model='cart[ $index].quantity' ng-options='v for v in options.values'>
+
+
+</select>
+
+<i class="icon-rabish" ng-click='removeItemById(item.product._id)'></i>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--
+<div class="activty_box">
+<div class="mixed">
+<a class="list" data-tpa="GOTO_PROMOTION_DETAIL" href="http://m.yhd.com/mw/promotionprolist/1324656/1443826/1/1?promotiontitle=单品满1件送赠品">
+单品满1件送赠品
+<span onclick="javascript:window.event.stopPropagation;window.event.preventDefault();window.location='/cart/rdadyPromotion?promotionId=1324656&amp;levelId=1443826'">立即参与 <i class="icon-right_arrow"></i></span>
+</a>
+</div>
+</div>
+-->
+</div>
+
+<!-- end product 1 -->
+
+
+</div>
+<!-- end products -->
+
+
+</div>
+</form>
+</div>
+
+<div class="layout_footer">
+<div class="normal">
+<label class="all_check" checked="true" >
+
+
+<br>
+
+</label>
+
+<div class="checkout_info">
+<span>
+<span class="price">
+¥{{getTotal()}}
+</span>
+<br>
+<em>
+商品
+</em>
+</span>
+<span class="plus">
++
+</span>
+<span>
+<span class="price">
+¥ 20
+</span>
+<br>
+<em>
+运费
+</em>
+</span>
+</div>
+
+<a ng-click='gotoCheck1()' class="btn_checkout">
+结算({{numOfcheck()}})
+</a>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<nav></nav>
+
+
+<div id="yhd_alert_tip" style="display: none;">
+<div class="m_popup_wrap"><div class="title">
+<span id="yhd_alert_titletext">确认</span>
+<b id="yhd_alert_titleclose" class="close" ng-click='close_alert_tip()'></b></div><div class="text">
+<p id="yhd_alert_contenttext" style="overflow: auto; height: 60px;">确定从购物车中删除吗？</p>
+</div><div class="btn_box">
+<a id="yhd_alert_cancel" class="btn_public btn_general"
+ ng-click='close_alert_tip()'>取消</a>
+<a id="yhd_alert_close" class="btn_public btn_highlight" ng-click='confirm_alert_tip()' >确定</a></div>
+</div>
+<div class="m_popup_wrap_mask"></div>
+</div>
+
+<div id="yhd_alert_tip_nopro" style="display: none;">
+<div class="m_popup_wrap"><div class="title">
+<span id="yhd_alert_titletext">确认</span>
+<b id="yhd_alert_titleclose" class="close" ng-click='close_alert_tip_nopro()'></b></div><div class="text">
+<p id="yhd_alert_contenttext" style="overflow: auto; height: 60px;">请选择至少一件商品</p>
+</div><div class="btn_box">
+
+<a id="yhd_alert_close" class="btn_public btn_highlight" 
+
+ ng-click='close_alert_tip_nopro()'>确定</a></div>
+</div>
+<div class="m_popup_wrap_mask"></div>
+</div>
+
+</div>
+   

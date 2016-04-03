@@ -1,0 +1,99 @@
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>标题，标题</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<link href="css/user/global.css" rel="stylesheet" type="text/css">
+<link href="css/user/h5Index.css" rel="stylesheet" type="text/css">
+
+ </head>
+<body ng-controller='AccountController'>
+
+<div ng-controller='UserController'>
+
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="javascript:history.go(-1);" ></a>
+<h1>我的账号</h1>
+
+<div class="rightBox" ng-click=showMenuFunc()>
+
+<a class="right icon-more" href=""></a>
+<div ng-class="{'hide': !showMenu}" class="more_list " id="globalMoreList">
+
+
+<a href="/" id="moreIconHome" class="moreA"target='_self'>
+<span class="icon icon-home"></span>首页</a>
+<a  id="moreIconMyYhd" class="moreA" >
+<span class="icon icon-my"></span>我的账号</a>
+
+</div>
+</div></div>
+
+<div class="mine_main_content">
+<!-- 头像 昵称 积分 暂不支持
+<div class="desc">
+<div class="img" style="background-image:url()">
+</div>
+<div class="user_info">
+<span>用户昵称：</span>
+<span>-BarbY.. </span>
+<ul>
+<li  id="pointItem" ><em>积分</em><i>0</i></li>
+<li  id="accountItem" ><em>账户余额</em><i>¥0</i></li>
+</ul>
+</div>
+</div> -->
+
+
+<ul>
+<li><a id="yhdlogistics"href='cart.html'target='_self' >
+我的购物车<i>{{user.data.cart.length}}</i></a></li>
+<li><a id="yhdlogistics" >物流快捷查询<i>0</i></a></li>
+<li><a id="yhdorder" href='orderList.html'target='_self'>
+	我的订单<i>{{user.data.orderhistory.length}}</i></a></li>
+<li><a id="myComment"  >我的评论 </a></li>
+<li><a id="myaddress" >地址管理</a></li>
+<!--
+<li><a id="mycou" >我的抵用劵<i>0</i></a></li>
+<li><a id="myOfnMenu" >以旧换新</a></li>
+<li><a id="myfav"  >我的收藏<i>0</i></a></li>
+<li><a id="pointShop">积分商城</a></li>
+<li><a id="myCustomerService" >我的客服</a></li>
+<li><a id="myBought"  >购物足迹</a></li>
+<li><a id="myReservation"  >我的预约</a></li>-->
+</ul>
+<ul>
+
+<li>
+<a  >手机绑定
+<em>
+已绑定
+</em>
+</a>
+</li>
+<li>
+<a  >修改密码
+<em>
+已绑定
+</em>
+</a>
+</li>
+</ul>
+
+
+<a  class="logout" ng-click='logout()'>退出当前账户</a>
+</div>
+</div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/user.js"></script>	
+	<script src="js/controllers/account.js"></script>
+	<script src="js/controllers/user.js"></script>
+
+</body></html>

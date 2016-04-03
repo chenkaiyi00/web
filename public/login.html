@@ -1,0 +1,114 @@
+<html lang="zh"ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="tp_page" content="5123.0">
+   
+    <link type="text/css" rel="stylesheet" href="https://passport.yhd.com/front-passport/passport/css/style-m-2.0.css?1561453">
+   
+   <link type="text/css" rel="stylesheet" href="css/passport/login-m-2.0.css">
+    <link type="text/css" rel="stylesheet" href="css/passport/popup.css">
+
+	
+
+</head>
+<body ng-controller="LoginController">
+    <div id="container">
+        <div class="touchweb-com_header ">
+    
+    <!-- left start -->
+    <a id="back"  class="left icon-back" href="javascript:history.go(-1);"></a>
+    <!-- left end -->
+    
+    
+    
+    <!-- title start -->
+    <h1>登录</h1>
+    <!-- title end -->
+    
+	<!-- right start -->
+    <!-- activeClass:js的相关class(screening筛选的jsclass); class:普通class(按钮:rbtn_box；省略号:icon-more) -->
+        <div class="rightBox">
+        
+        <a id="register_btn" href="register.html"target='_self' class="right rbtn">
+            
+            注册
+        </a>
+        
+        </div>
+        <!-- 下拉 start -->
+            
+        <!-- 下拉 end -->
+    <!-- right end -->
+    
+</div>
+
+<div class="touchweb_page-login">
+
+        
+    <div class="login_box">
+        <div class="form_item">
+            <label class="icon-my" for="touchweb_form-username"></label>
+            <div class="input_box">
+                <input type="text" id="touchweb_form-username" placeholder="邮箱/手机/用户名"
+				ng-model='value.phonenum'>
+                
+            </div>
+        </div>
+        <div class="form_item">
+            <label class="icon-password" for="touchweb_form-password"></label>
+            <div class="input_box">
+                <input type="password" id="touchweb_form-password" placeholder="请输入密码"
+				ng-model='value.password'>
+              
+            </div>
+        </div>
+    </div>
+    
+ 
+    <div class="remember_login">
+        <input id="touchweb_form-checkbox" type="checkbox" checked=""
+		ng-model='value.remember'>
+        <label for="touchweb_form-checkbox">两周内记住登录</label>
+        <a href="" class="forgot_password">忘记密码？</a>
+    </div>
+    
+
+    
+    <div class="login_btn">
+        <a id="login-btn" ng-click='login()' class="btn">{{logNotif}}</a>
+    </div>
+    <div class="joint_login">
+        <h2><span>合作账号登录</span></h2>
+        <ul>
+            <li style="width: 33.33%;">
+                <a href="javascript: void(0);" class="icon-alipay"></a>
+            </li>
+            <li style="width: 33.33%;">
+                <a href="javascript: void(0);" class="icon-weibo"></a>
+            </li>
+            <li style="width: 33.33%;">
+                <a href="javascript: void(0);" class="icon-qq"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div id='errorMessage' class="pop_login-error "></div>
+   
+   </div>
+     <script src="js/jquery-1.11.0.min.js"></script>
+     <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+
+	<script src="js/services/user.js"></script>	
+
+   <script src="js/controllers/login.js"></script>
+    
+
+</body></html>

@@ -1,0 +1,163 @@
+<!-- h5 global top -->
+<div class="touchweb_page-order" ng-controller='UserController' >
+
+<div class="public_com-header">
+<!-- left start -->
+<a href="javascript:history.go(-1);" class="left icon-back" ></a>
+<!-- left end -->
+<!-- title start -->
+<h1>无需注册，轻松下单
+</h1>
+<!-- title end -->
+</div>
+<div class="tips">
+无需注册轻松下单，或选择<a href="login.html" target='_self' >登录/注册</a>后结算
+</div>
+
+<div class="idInfo">
+
+<form action="">
+<div class="item">
+<div class="text">
+<input type="text" id="receiverName" placeholder="收货人姓名" 
+maxlength="10" ng-model="address.recipient">
+</div>
+<div class="text">
+<input type="tel" placeholder="手机" id="mobilePhoneNo" ng-model="address.phone">
+</div>
+</div>
+<!-- 
+<div class="item">
+<div class="verification text">
+<input type="text" maxlength="6" placeholder="短信验证码" id="verifyCode">
+</div>
+<span class="get-verification" id="getValidCode" >获取验证码</span>
+</div>    -->
+<div class="item">
+<div >
+<select class="text select"id="provinceId" ng-model="address.selectedProvice"
+ng-options="province.name for province in provincelist"
+ ng-init='address.selectedProvice = provincelist[0]'>
+
+</select>
+<select class="text select"name="cityName"  id="cityId" ng-model="address.selectedCity" 
+ng-options="city.name for city in address.selectedProvice.cityList"
+ng-init='address.selectedCity = address.selectedProvice.cityList[0]'  >
+
+</select>
+<select class="text select"name="countyName" id="countyId" ng-model="address.selectedArea"
+ng-options="area for area in address.selectedCity.areaList"
+ng-init='address.selectedArea = address.selectedCity.areaList[0]' >
+
+</select>
+</div>
+</div>
+<div class="item">
+<div class="verification text">
+<input type="text" id="addressId" placeholder="填写详细收货地址（如门牌号等）" 
+maxlength="40" ng-model="address.address">
+</div>
+<span  ng-click='saveOrderInfo()' class="get-verification" id="regisitorId" 
+>保存信息</span>
+</div>
+</form>
+</div>
+
+
+<div class="touchweb_com-package">
+<h2>商品信息</h2>
+<div class="b_wrapper">
+<div class="title">
+<div class="source">自营</div>
+</div>
+
+<div class="p_wrapper">
+<ul class="product_list" >
+<!-- product list-->
+<li ng-repeat='item in unsuborder.list'>
+<a class="product_wrapper">
+<img src="http://d6.yihaodianimg.com/N01/M09/56/DF/CgQCrVL7E_qABOn4AAQXghYIjrs28901_130x130.jpg" alt="">
+<div class="info">
+<p class="content">{{item.product.name}}</p>
+</div>
+<div class="price">
+<span class="totol_price">￥{{item.product.price}}</span>
+<span class="count">X{{item.quantity}}</span>
+</div>
+</a>
+</li>
+
+
+
+<!-- end product 1-->
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="payway">
+<div class="title">
+<h2>支付方式</h2>
+<a href="javascript:;" class="pay_option" >网上支付</a>
+</div>
+
+<div class="option_list">
+<div class="option_item selected">
+<input name="option" type="radio" class="option_radio" checked="">
+<div class="option_desc">网上支付</div>
+</div>
+</div>
+</div>
+
+<div class="submit_box">
+<div class="order_totol_cost">
+<span class="totol_cost">商品价格合计：
+<span class="cost"><span class="small">￥</span>{{total}}</span>
+</span>
+</div>
+<a  ng-click='saveOrderInfo()' class="submit">保存信息</a>
+</div>
+</div>
+
+
+<nav></nav>
+
+
+
+<div id="yhd_alert_tip" style="display: none;">
+
+
+<div class="m_popup_wrap">
+
+
+
+<div class="title">
+<span id="yhd_alert_titletext">提示内容</span>
+<b id="yhd_alert_titleclose" class="close" ng-click='closeTip()' ></b>
+</div>
+
+<div  id='textTip' >
+<div class="text"><p id="yhd_alert_contenttext" style="overflow: auto; height: 60px;">请填写收货人姓名</p></div>
+
+<div class="btn_box">
+<a id="yhd_alert_cancel" class="btn_public btn_general" style="display: none;">取消</a>
+
+<a id="yhd_alert_close" class="btn_public btn_highlight" ng-click='closeTip()'>关闭</a></div>
+</div>
+
+<!--
+<div id='loginTip'style="display: none;">
+<div class="text" >
+<p id="yhd_alert_contenttext" style="overflow: auto; height: 60px;">您的手机号已经是注册用户,去登录吗？</p>
+</div>
+
+<div class="btn_box"><a id="yhd_alert_cancel" class="btn_public btn_general" style="display: none;">取消</a>
+<a id="yhd_alert_close" class="btn_public btn_highlight" >登录</a></div>
+</div>  -->
+
+</div>
+
+<div class="m_popup_wrap_mask"></div>
+
+</div>

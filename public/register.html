@@ -1,0 +1,142 @@
+<html lang="zh" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="tp_page" content="5124.0">
+    
+    <link type="text/css" rel="stylesheet" href="css/passport/register-m-2.0.css">
+    <link rel="stylesheet" type="text/css" href="https://passport.yhd.com/front-passport/passport/css/public-m-2.0.css?1561453">
+
+
+</head>
+
+<body  ng-controller="RegisterController">
+    <div id="container">
+        <div class="touchweb-com_header ">
+    
+    <!-- left start -->
+    <a id="nav_back" href="javascript:history.go(-1);"class="left icon-back"></a>
+    <!-- left end -->
+    
+    
+    
+    <!-- title start -->
+    <h1>注册</h1>
+    <!-- title end -->
+    
+    
+    <!-- right start -->
+    <!-- activeClass:js的相关class(screening筛选的jsclass); class:普通class(按钮:rbtn_box；省略号:icon-more) -->
+        <div class="rightBox">
+        
+        <a id="login_btn" href="login.html" class="right rbtn" target='_self'>
+            
+            登录
+        </a>
+        
+        </div>
+        <!-- 下拉 start -->
+            
+        <!-- 下拉 end -->
+    <!-- right end -->
+    
+</div>
+<div class="touchweb_page-register">
+
+    <div class="con_box show">
+	
+        <div class="step_1">
+            <div class="form_box">
+			<!-- phone -->
+                <div class="form_item">
+                    <label for="register_form-phone" class="icon-cell_phone"></label>
+                    <div class="input_box">
+               <input id="register_form-phone" class="text_box"  ng-model="value.phonenum"
+			   type="tel" placeholder="请输入手机号码" maxlength="11">
+			  
+
+						
+						
+                    </div>
+                </div>
+				
+				<!-- 验证码 
+                <div class="form_item">
+                    <label for="register_form-phone-verification" class="icon-mail"></label>
+                    <div class="input_box">
+                    	<input id="validateSig" type="hidden" value="NiDSHwjKpfGkLPIWHiGPZEdOQGMntEBd2Sbx572q85lydMVv">
+                        <input id="register_form-phone-verification" class="text_verification" type="text" placeholder="请输入验证码" maxlength="4">
+                       
+                        <img id="captcha" class="pic_verification" alt="" width="105" height="43" 
+						src="https://captcha.yhd.com/public/getjpg.do?sig=NiDSHwjKpfGkLPIWHiGPZEdOQGMntEBd2Sbx572q85lydMVv">
+                        <span id="captcha_refresh" class="icon_refresh icon-refresh"></span>
+                    </div>
+                </div>-->
+				
+				<!-- pwd -->
+				  <div class="form_item">
+                    <label for="register_form-phone-pwd" class="icon-password"></label>
+                    <div class="input_box">
+                        <input id="register_form-phone-pwd" class="text_pwd" 
+						type="{{inputType}}" placeholder="6-20位字母，数字或符号组合" 
+						ng-model="value.password" maxlength="20">
+						
+                        <input type="checkbox" class="show_pwd"
+						ng-model="value.show_pwd"  ng-click="hideShowPassword()"
+						>
+                    </div>
+                </div>
+				
+					<!-- 手机验证码 
+				<div class="form_box">
+            	<input type="hidden" id="csrf_state" name="regState" value="b0dac88cae8ad6ac02d2bd1c43c00a4f">
+                <div class="form_item">
+                    <label for="register_form-phone-message" class="icon-cell_phone"></label>
+                    <div class="input_box">
+                        <input id="register_form-phone-message" class="text_message" type="text" placeholder="请输入验证码" maxlength="6">
+                        <a href="javascript:;" class="again_message disable">
+                            <span class="text">获取验证码</span>
+                            <span class="countdown">（<em class="num">60</em>S）</span>
+                        </a>
+                    </div>
+                </div>
+
+                </div>-->
+			
+			
+            </div>
+											<!--  error message-->
+            <div class="error_tips" style="" ng-if='showErr'>
+			<span class="icon-warning icon_warning"></span>&nbsp;{{errorMessage}}
+			</div>
+
+            <div class="agreement">
+                <label>点击注册，表示您同意<a href='' class="license-terms">《服务协议》</a></label>
+            </div>
+			
+            <div class="btn_box">
+                <a  ng-click='register()' 
+				ng-class="{'disable': !enable()}"class="btn phone_reg_btn " >注册</a>
+            </div>
+        </div><!-- step_1 -->
+             
+			 
+    </div><!-- con_box -->
+
+	<div class="banner" id="ad_position_area"></div>
+</div>
+
+
+
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+
+	<script src="js/services/user.js"></script>	
+
+   <script src="js/controllers/RegisterController.js"></script>
+</body>
+</html>

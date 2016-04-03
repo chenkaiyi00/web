@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>结算页</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="wap-font-scale" content="no">
+<meta name="Keywords" content="结算页">
+<meta name="Description" content="结算页">
+
+
+<link href="css/order/global.css" rel="stylesheet" type="text/css">
+<link href="css/order/checkoutIndex.css" rel="stylesheet" type="text/css">
+
+<style type="text/css"></style>
+
+</head>
+
+<body ng-controller='OrderController'>
+<!-- h5 global top -->
+<div id="container" ng-controller='UserController'>
+
+<confirmorder></confirmorder>
+</div>
+<nav></nav>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/bin/order.js"></script>
+	<script src="js/services/user.js"></script>	
+   <script src="js/services/sharedata.js"></script>	
+	<script src="js/controllers/user.js"></script>
+    <script src="js/controllers/order.js"></script>
+
+</body>
+
+</html>

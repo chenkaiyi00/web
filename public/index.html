@@ -1,0 +1,249 @@
+
+<html ng-app="myApp">
+
+<head>
+<meta charset="UTF-8">
+<title> 标题，标题</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="wap-font-scale" content="no">
+<meta name="Keywords" content="">
+
+<meta name="Description" content="">
+
+
+
+<link href="css/homepage/globle.css" rel="stylesheet" type="text/css">
+
+<link href="css/homepage/homepage.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body ng-controller="PopularController">
+
+
+<div id="container" style="height: auto;" ng-controller="UserController">
+<div id="container_inner">
+<div class="touchweb_page-index">
+
+<div class="blocks" id="blocks">
+
+<!-- h5 global top -->
+<div class="touchweb-com_header index" id="globalHeader" >
+<a href="/" class="header_logo">
+<img src="img/logo-small.png">
+</a>
+
+
+<div id="searchBox" class="search_wrap">
+
+
+</div>
+
+
+<div class="rightBox" >
+<!--
+<a  class="right" >
+<span class="right_text icon-sort_big_pic">
+</span>
+<span class="icon_text">更多</span>
+</a>
+ -->
+<a href="cart.html" class="right" target='_self'>
+<span class="right_text icon-cart">
+</span>
+
+<span class="icon_text">购物车</span>
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="search_fixed_mask" id="searchMask"></div>
+<div style="height: 0.45rem; overflow: hidden;"></div>
+
+<!-- carousle -->
+<div class="public_com-swipeSlide" id="indexBanner" >
+<ul style="transition: all 0.3s ease; transform: translate3d(800px, 0px, 0px);">
+
+<li style="transition: all 0s ease; transform: translate3d(-800px, 0px, 0px);">
+<a >
+<img src="http://d7.yihaodianimg.com/N10/M03/06/DE/ChEi2lbr0saACm6MAAJXEbOAUO851100_828x265.jpg"  alt="海飞丝奇葩说" >
+</a>
+</li>
+</ul>
+    
+
+
+
+<!--
+
+<div class="dot">
+<span class=""></span>
+<span class=""></span>
+<span class="cur"></span>
+</div>-->
+
+</div>
+
+<!-- menu 10 ge-->
+<div class="touchweb_components-headerMenu"  id="iconNav">
+
+
+
+
+
+
+
+
+
+
+<a href="user.html" class="item" >
+<span class="icon_box" >
+<img src="http://d8.yihaodianimg.com/N09/M06/9B/45/ChEi11aFPLiAFZeAAAARUFEPnRM85300_119x119.webp" alt="我的1号店" class="icon">
+</span>
+<span class="title">我的***</span>
+</a>
+
+
+<a href="" class="item" >
+<span class="icon_box">
+<img src="http://d8.yihaodianimg.com/N08/M02/BA/8F/ChEi1VaeLr-AetWPAAAP5eOrhNY47200_119x119.webp" alt="1号商城" class="icon">
+</span>
+<span class="title">最受欢迎</span>
+</a>
+
+
+<a href="" class="item" >
+<span class="icon_box" >
+<img src="http://d7.yihaodianimg.com/N08/M01/1E/C2/ChEi1VW7SSaATR_HAAAPwHc6pTw25300_119x119.webp" alt="新品试用" class="icon">
+</span>
+<span class="title">新品试用</span>
+</a>
+
+
+
+
+
+
+</div>
+
+
+<!-- 3图
+<div class="floor_column_3" >
+<a href="http://cms.m.yhd.com/sale/XFJwTNepnNJ" >
+<img src="http://d8.yihaodianimg.com/N10/M03/26/49/ChEi21b1_8OAI32eAABoQcZdiKE51400_344x344.webp" 
+alt="街拍直击" 
+ class="">
+</a>
+<a href="http://cms.m.yhd.com/sale/YppoAaGjjiM" >
+<img src="http://d8.yihaodianimg.com/N06/M0A/88/55/ChEbu1br72KAAdOMAACZz9-yHbo26900_344x344.webp" alt="鞋靴运动 开春上新季" 
+class="">
+</a>
+<a href="http://cms.m.yhd.com/sale/YGYqCLqkfiM" >
+<img src="http://d8.yihaodianimg.com/N06/M0A/EA/16/CgQIzVbz12iAOvDQAABiThRlscU63000_344x344.webp" alt="好货逛不停"  class="">
+</a>
+</div>
+-->
+
+
+
+
+
+	
+	<!-- 
+<div class="precision_title hot_recommendation" data-order="HOTRECOMMENDATION">
+<h2><span class="icon-good"></span>热卖推荐</h2>
+<span class="desc">你可能感兴趣的热销商品</span>
+</div>
+
+<div class="precision_scroll hot_recommendation" id="hotRecommendation" 
+>
+
+
+<a class="item " >
+<div class="pic">
+<img src="http://d6.yihaodianimg.com/N06/M07/CA/A0/CgQIzVWuGUKAKlAdAANIL46QC1039101.webp" 
+alt="" class=""></div>
+<h3>奥利奥巧心结浓情巧克力味47g</h3>
+<div class="price_box"><span >￥4.9</span></div></a>
+
+</div>
+ 热卖推荐-->
+
+<!-- 猜你喜欢-->
+<div >
+	<div class="precision_title precision_like">
+			<h2><span class="icon-like"></span>最新产品</h2>
+			<span class="desc">最新推出的产品</span>
+	</div>
+		<div class="precision_column" id="youLike">
+
+			<div class="product_item" ng-repeat="popular in populars">
+				<a href="/detail.html?p={{popular._id}}"target="_self" >
+					<div class="pic_box">
+				<img  src="img/麦提莎脆心朱古力.jpg"> <!-- 210px*210px-->
+					</div>
+					<h3>{{popular.name}}dddddddddddddddddddd</h3>				
+					<div class="price_box">
+						   <strong>￥{{popular.price}}</strong>
+					</div>
+				</a>
+				   <a ng-click="addItem(popular)"  class="icon_add_cart icon-shop_cart">
+
+				   </a>
+						
+				
+			</div>
+
+		</div> <!--end cai -->
+	</div>
+</div><!-- end bolock-->
+<!--
+<div class="mod_computer">
+<a href="http://www.yhd.com/?from=h5">电脑版</a>
+</div>-->
+
+<div class="touchweb_com-backTop show">
+<a href="#"></a>
+</div>
+
+<div class="copyright">
+<p>店铺名称</p>
+<p>0731-51796600</p>
+</div>
+
+</div>
+</div>
+<div id="fixed_layer"></div>
+</div>
+                                           <!-- show -->
+<div ng-class="{'show': show}"class="touchweb_com-indexPop pop_add-cart " id="mCart_confirm_popup">
+	<div class="inner">
+		<div class="content"><p>添加成功！<br>商品已成功加入购物车</p></div>
+		<div id="mcart_confirm_popup_btns" class="btn_box"><a class="btn btn_cancel" ng-click='shutPop()'>再逛逛</a>
+			<a href="cart.html" class="btn btn_confirm">去购物车
+			</a>
+		</div>
+	</div>
+</div>
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+    <script src="js/services/sharedata.js"></script>
+    <script src="js/services/user.js"></script>
+    <script src="js/services/popular.js"></script>
+    <script src="js/controllers/popular.js"></script>
+    <script src="js/controllers/user.js"></script>
+
+</body></html>

@@ -1,0 +1,53 @@
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>订单列表</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<link href="css/user/global.css" rel="stylesheet" type="text/css">
+<link href="css/user/h5OrderList.css" rel="stylesheet" type="text/css">
+
+</head>
+<body ng-controller='UserController'>
+
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="javascript:history.go(-1);"></a>
+<h1>订单列表</h1>
+<div class="rightBox">
+</div>
+</div>
+
+
+<div class="myOrderContent" ng-controller='AccountController'>
+
+<ul class="tab">
+<li ng-click='setShowOrderList(1)' ng-class="{'ac': showOrderList(1)}"><a >处理中
+<!--<i>1</i>-->
+</a></li>
+<li  ng-click='setShowOrderList(2)'ng-class="{'ac': showOrderList(2)}"><a  >已取消</a></li>
+<li  ng-click='setShowOrderList(3)'ng-class="{'ac': showOrderList(3)}"><a >已完成</a></li>
+</ul>
+
+
+<div class="myOrder_none" ng-if='user.data.orderhistory.length===0'>
+<div class="img"></div>
+<p>暂无已完成的订单</p>
+</div>
+
+<orderlist ng-if='user.data.orderhistory.length!==0'></orderlist>
+
+</div>
+
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/user.js"></script>	
+	<script src="js/controllers/account.js"></script>
+	<script src="js/controllers/user.js"></script>
+</body></html>

@@ -1,0 +1,92 @@
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>订单完成页</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<link href="css/order/finishglobal.css" rel="stylesheet" type="text/css">
+<link href="css/order/h5OrderFinish.css" rel="stylesheet" type="text/css">
+
+</head>
+<body ng-controller='OrderDetailController'>
+
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="cart.html" target='_self'></a>
+<h1>订单已生成</h1>
+<div class="rightBox">
+<a class="right rbtn" id="orderDetail" ng-click='gotoDetail()' >查看订单</a>
+</div></div>
+
+
+<div class="modPoint cartHeadYelw">
+<!--银行转账 -->
+我们将保留订单24小时，请在24小时内完成付款 <!--<span class="deepRed">23:59:59内完成付款</span>-->
+，祝您购物愉快！
+</div>
+
+
+<!--start 订单已生成-->
+<div class="layoutMain">
+<span class="layoutTop"></span>
+<div class="layoutContent">
+<div class="modOrder">
+<a >
+<p>订单编号：{{order._id}}</p>
+<p class="mt5">包裹数：1
+个
+</p>
+<p class="mt5">商品数：{{order.list.length}}个</p>
+<p class="mt5">
+待支付金额：<span class="deepRed">¥{{order.total}}.<em>40</em></span>
+</p>
+<i class="greyRightArrow"></i>
+</a>
+</div>
+
+<div class="modDefray">
+<p class="payment relative">
+<a href="/myH5/h5Pay/onlinePayList.do?orderCode=7955388614454">
+<!--支付那边没有对微信屏蔽支付宝国际，我们先做一个兼容，到时候这个可以删除-->
+
+
+<span class="modShortSlct greenLnk fr">
+
+</span>
+支持支付方式：支付宝 OR 微信支付
+</a>
+
+<i class="greyRightArrow"></i>
+</p>
+<br>
+<br>
+<br>
+<div class="pages_nextprev" ng-if="order.status=='未支付'"
+<a id="h5OrderFinishGoPay" >
+<p class="floatListMore mt">立即支付</p>
+</a>
+</div>
+
+</div>
+</div>
+
+
+<span class="layoutFooter"></span>
+</div>
+
+
+
+<div class="touchweb_page-payCompleted">
+<p class="tips">请您在收货时确认商品后再签收，祝您购物愉快，谢谢！</p>
+<!--2: 货到付款 5:pos机 12:货到刷支付宝 4: 银行转账-->
+</div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/orderdetail.js"></script>	
+    <script src="js/controllers/orderdetail.js"></script>	
+
+</body></html>

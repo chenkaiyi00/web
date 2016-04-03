@@ -1,0 +1,20 @@
+<div class="wrap chooseAddr mb" ng-controller='UserController'>
+
+
+<div class="whiteBodrBox radio mt" ng-repeat='add in userAddresses track by $index'
+>
+<input class="addrIpt radioH5" type="radio" id="delivery1" name="chooseAddr" ng-click='chooseAddr($index)' >
+<label class="addrCon" ng-click='chooseAddr($index)' >
+<p>{{add.recipient}}&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>{{add.selectedProvice}}&nbsp;&nbsp;{{add.selectedCity}}&nbsp;&nbsp;</p>
+<p>{{add.selectedArea}}</p>
+<p>{{add.address}}</p>
+<p> {{add.phone}}&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</label>
+
+<a ng-click='gotoEdit($index)' class="addrEdit" >
+<i class="editIco"></i>
+</a>
+</div>
+
+</div>

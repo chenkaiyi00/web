@@ -1,0 +1,34 @@
+<div>
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="/" target='_self' ></a>
+<h1>购物车</h1>
+
+<div class="rightBox" ng-click=showMenuFunc()>
+<a class="right icon-more btn_more"  id="globalMore" >
+</a>
+<div ng-class="{'hide': !showMenu}" class="more_list " id="globalMoreList">
+
+
+<a href="/" id="moreIconHome" class="moreA"target='_self'><span class="icon icon-home"></span>首页</a>
+<a  id="moreIconMyYhd" class="moreA" ng-click='gotoAccount()'>
+<span class="icon icon-my"></span>我的账号</a>
+
+</div>
+</div></div>
+
+<div class="modGiftCard">
+<span class="noCar"></span>
+<p class="alignC"><a href='/' target='_self'> 您的购物车内还没有任何商品,  去逛逛</a></p>
+<div ng-if='!isloggedin()'>
+<p class="alignC">是否立即登录?</p>
+<div class="mt mb alignC">
+<a href="login.html" class="redBtn w48 h38" target='_self'>登录</a>
+<a href="register.html" class="deepGreyBtn w48 h38"target='_self'>注册</a>
+</div>
+</div>
+</div>
+
+
+
+<nav></nav>
+</div>

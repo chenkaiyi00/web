@@ -1,0 +1,64 @@
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>商品详情</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+
+<link href="css/order/global.css" rel="stylesheet" type="text/css">
+<link href="css/order/h5OrderProductList.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body ng-controller='OrderDetailController'>
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="javascript:history.go(-1);" ></a>
+<h1>商品明细</h1>
+<div class="rightBox">
+
+</div>
+
+</div>
+
+
+<div class="wrapper">
+<p class="package">包裹</p>
+
+<div class="item_list">
+<table>
+<tbody>
+
+<tr  id="goProductDetail" ng-repeat='item in order.list' >
+<td>
+<div>
+<img src="http://d6.yihaodianimg.com/N03/M0A/F9/D3/CgQCs1KFrIiAcJXsAANM_VfkBAo42001.jpg">
+</div>
+</td>
+<td>
+<p class="item_name">{{item.product.name}}</p>
+</td>
+<td>
+<p>¥{{item.product.price}}</p>
+<p>x{{item.quantity}}</p>
+</td>
+</tr>
+
+
+
+</tbody></table>
+
+
+</div>
+</div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/orderdetail.js"></script>	
+    <script src="js/controllers/orderdetail.js"></script>	
+
+</body></html>

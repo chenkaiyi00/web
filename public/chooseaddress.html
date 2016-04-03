@@ -1,0 +1,48 @@
+<html ng-app="myApp">
+
+<head>
+<meta charset="UTF-8">
+<title>收货地址</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="wap-font-scale" content="no">
+<meta name="Keywords" content="收货地址">
+<meta name="Description" content="收货地址">
+<meta name="tp_page" content="CHECKOUT_H5_ADDRESS_EDIT.0">
+
+
+
+
+<link href="css/order/global.css" rel="stylesheet" type="text/css">
+<link href="css/order/chooseAddress.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+</style>
+
+</head>
+
+<body ng-controller='AddressController'>
+<!-- h5 global top -->
+
+<header class="titleHead clearfix">
+<h2>选择收货地址</h2>
+<a href="javascript:history.go(-1);" ><button  class="backArrow" ></button></a>
+<a ng-click='gotoEdit(-1)' class="rightBtn cur" >新建地址</a>
+
+</header>
+
+<chooseaddr></chooseaddr>
+
+
+<nav></nav>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/bin/order.js"></script>
+	<script src="js/services/user.js"></script>	
+	<script src="js/controllers/user.js"></script>
+    <script src="js/controllers/address.js"></script>
+ <script src="js/services/sharedata.js"></script>	
+</body></html>

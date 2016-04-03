@@ -1,0 +1,158 @@
+<html ng-app="myApp">
+
+<head>
+<meta charset="UTF-8">
+<title>标题标题</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="wap-font-scale" content="no">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+
+<link href="css/detail/global.css" rel="stylesheet" type="text/css">
+<link href="css/detail/detail.css" rel="stylesheet" type="text/css">
+<style type="text/css"></style>
+
+
+</head>
+
+<body ng-controller="ProductDetailController ">
+
+
+<div class="touchweb-com_header detail" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="javascript:history.go(-1);" ></a>
+<div class="rightBox"  ng-click=showMenuFunc()>
+<a class="right icon-more btn_more" id="globalMore">
+</a>
+
+<div  ng-class="{'hide': !showMenu}"class="more_list " id="globalMoreList" >
+<a href="cart.html" target='_self'id="moreIconCart"  class="moreA">
+<span class="icon icon-cart"></span>购物车</a>
+<!--
+<a href="http://search.m.yhd.com/search/index" id="moreIconSearch"class="moreA">
+
+<span class="icon icon-search"></span>搜索</a> -->
+
+<a href='/' id="moreIconHome"  target='_self' class="moreA">
+<span class="icon icon-home"></span>首页</a>
+<a href="user.html" target='_self'id="moreIconMyYhd" class="moreA">
+<span class="icon icon-my"></span>我的账号</a>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="pd_product-wrap">
+<!-- slide -->
+<div class="screen_slide">
+<div class="swipeSlide_wrap">
+<div class="swipeSlide_detail">
+<ul style="transition: all 0.3s ease; transform: translate3d(-2892px, 0px, 0px);">
+
+<li style="transition: all 0s ease; transform: translate3d(2892px, 0px, 0px);">
+<a href="javascript:void(0);">
+<img src="http://d10.yihaodianimg.com/N06/M01/F9/C6/ChEbu1ZxSWCAG7DvAAT_vrM1MEo08201_640x640.jpg" alt="">
+</a>
+</li>
+
+</ul>
+
+</div><!-- swipeSlide_detail -->
+</div>
+<div class="swipe_num">
+<!--<span class="cur">7</span>/<span class="sum">8</span> -->
+</div>
+</div><!-- end screen_slide -->
+
+<productinfo>
+</productinfo>
+ <!-- inner_wrapper -->
+
+
+<!-- 悬浮加入购物车 -->
+<div class="pd_product-buy-num show" id="product-buy-num" ng-controller="UserController ">
+<div class="pd_product-num-wrap">
+<span ng-class ="{'pd_product-num_disable':value.quantity==1}"class="pd_product-num-minus "
+ ng-click='minusQ()'>
+</span>
+<input class="pd_product-num-form" type="number" min="1" max="999" id="buycount"
+ng-model='value.quantity' >
+<span class="pd_product-num-plus"ng-click='addQ()'></span>
+</div>
+<a  class="pd_buy-now" id="buynow" style="display: none;" >立即购买</a>
+<a  ng-click=addToCart(value.quantity) class="pd_add-cart" id="addcart" >加入购物车</a>
+<a class="pd_shop-cart icon-shop_cart" href="cart.html" target='_self'>
+<span class="num">{{cart.length}}</span>
+</a>
+
+</div><!-- pd_product-buy-num -->
+
+</div><!-- pd_product-wrap -->
+
+<div id='collect'class="pd_pop-text pd_pop-fast-add-cart "></div>
+<div id='added'class="pd_pop-text pd_pop-text-add-cart">
+<span class="icon-ok"></span>商品已成功加入购物车</div>
+
+
+<!-- show -->
+<div class="pd_product-property " id="sku_unit">
+
+<div class="pd_product-property-info">
+<div class="pd_product-property-pic">
+<img src="http://d10.yihaodianimg.com/N09/M03/82/A0/ChEi11ZxSCeAGokbAAQQcE1pbP415101_320x320.jpg" width="70" height="70" alt="">
+</div>
+<div class="pd_product-property-title-wrap">
+<div class="pd_product-property-title">蜀道香 天椒麻辣牛肉 88g/袋 X 2</div>
+<div class="pd_product-property-price">
+<span class="price" id="pd_product-property-price-num">￥21.6</span>
+</div>
+<div class="pd_product-property-price" id="pd_product-property-integral-price" style="display: none;"></div>
+</div>
+
+</div>
+<!-- 系列属性 -->
+<div class="property-wrapper" style="max-height: 379.014px;"><div class="pd_product-property-box" id="suit">
+    <div class="pd_product-property-box-title">选套装：
+        <span class="js_product-property-val">
+			        2件(￥10.8/件)
+        </span>
+    </div>
+    <ul class="pd_product-property-select">
+    <li class="pd_product-property-select-item item_suit " >
+    	<span class="price">￥10.9/件</span>
+        <span class="num">1件</span>
+     </li>
+     <li class="pd_product-property-select-item item_suit pd_product-property-select-item_current" >
+     	<span class="price">￥10.8/件</span>
+        <span class="num">2件</span>
+     </li>
+    </ul>
+</div>
+</div>
+<a href="javascript:;" class="property-close">
+<span class="icon-clear"></span>
+</a>
+</div>
+
+<div class="pd_product-property_mask"></div>
+
+<div class="pd_back-top show">
+<a class="icon_back-top icon-back show" href="#" target='_self'></a>
+</div>
+
+<nav></nav>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/user.js"></script>
+	<script src="js/services/productdetail.js"></script>
+    <script src="js/services/comment.js"></script>
+	<script src="js/controllers/productdetail.js"></script>
+	<script src="js/controllers/user.js"></script>
+</body></html>

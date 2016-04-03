@@ -1,0 +1,118 @@
+<div class="wrapper">
+<font color="red" id="rebuyNews" style="display:none">重新购买失败</font>
+<font color="red" id="cancelOk" style="display:none">取消订单成功</font>
+<font color="red" id="cancelFail" style="display:none">取消订单失败</font>
+
+<div class="order_module basic_info">
+<p class="module_title">基本信息</p>
+<table class="order_detail_wrapper">
+<tbody><tr>
+<td>订单编号</td>
+<td>{{order._id}}</td>
+</tr>
+<tr>
+<td>下单时间</td>
+<td>{{order.date.years}}-{{order.date.months+1}}-{{order.date.date}} 
+{{order.date.hours}}:{{order.date.minutes}}:{{order.date.seconds}}</td>
+</tr>
+<tr>
+<td>收货地址</td>
+<td>
+<p>{{order.address.recipient}}</p>
+<p>{{order.address.selectedProvice}}&nbsp;{{order.address.selectedCity}}&nbsp; 
+{{order.address.selectedArea}}</p>
+<p> {{order.address.address}}</p>
+<p>{{order.address.phone}}</p>
+</td>
+</tr>
+<tr>
+<td>包裹数</td>
+<td>
+1
+个<span class="attachment">（含{{order.list.length}}件商品）</span></td>
+</tr>
+<tr>
+<td>支付方式</td>
+<td class="pay_content">
+网上支付
+</td>
+</tr>
+<tr>
+<td>共需支付</td>
+<td class="amount"><span class="payment">¥{{order.total}}</span><span class="attachment">（含20元运费）</span></td>
+</tr>
+
+<tr ng-if="order.status=='未支付'">
+<td colspan="2">
+<a   class="pay_now" href='/' target='blank'>立即支付</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<!-- 包裹及配送信息 -->
+<div class="order_module package_infos">
+<p class="module_title">包裹及配送信息</p>
+
+<div class="package">
+<p class="store_type">自营</p>
+<div class="package_detail">
+<p class="title">
+<a>
+<span>包裹1</span>
+<span class="delivery_time">
+</span>
+</a>
+</p>
+<a   class="items a_link" ng-click='gotoOrderproList()'>
+<ul>
+<li ng-repeat='item in order.list'>
+<img src="http://d6.yihaodianimg.com/N03/M04/36/D9/CgQCtVLNFVyARPYFAALU15asl1k58301.jpg">
+</li>
+
+</ul>
+<span>共{{order.list.length}}件</span>
+</a>
+<p class="bottom ">
+<a>
+<em>{{order.status}}</em>
+</a>
+</p>
+</div>
+</div>
+</div>
+
+
+<!-- 价格清单 -->
+<div class="order_module charge_info">
+<p class="module_title">价格清单</p>
+<ul>
+<li>
+订单金额
+<span>¥{{order.total}}</span>
+</li>
+<li>
+运费
+<span>+¥20</span>
+</li>
+<li>
+抵用券
+<span>-¥0</span>
+</li>
+<li>
+礼品卡
+<span>-¥0</span>
+</li>
+<li>
+现金账户
+<span>-¥0</span>
+</li>
+<li>
+还需支付
+<span class="payment">¥{{order.total}}</span>
+</li>
+</ul>
+</div>
+
+</div>
