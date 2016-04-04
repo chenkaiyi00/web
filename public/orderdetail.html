@@ -30,8 +30,9 @@
 <a  id="cancelOrder"  class="moreA">取消订单</a>
 <a  id="cancelOrder" href="cart.html" target='_self' class="moreA"><span class="icon icon-cart"></span>购物车</a>
 <a href="/" target='_self' id="moreIconHome" class="moreA"><span class="icon icon-home"></span>首页</a>
-<a href="user.html" target='_self'id="moreIconMyYhd" class="moreA"><span class="icon icon-my"></span>我的1号店</a>
-
+<div ng-controller='UserController'>
+<a  ng-if='isloggedin()' href="user.html" target='_self'id="moreIconMyYhd" class="moreA"><span class="icon icon-my"></span>我的1号店</a>
+</div>
 </div>
 
 </div></div>
@@ -44,8 +45,10 @@
 
     <script src="js/angular.min.js"></script>
     <script src="js/bin/index.js"></script>
+  <script src="js/services/user.js"></script>
 	<script src="js/services/orderdetail.js"></script>	
-    <script src="js/controllers/orderdetail.js"></script>	
+    <script src="js/controllers/orderdetail.js"></script>
+<script src="js/controllers/user.js"></script>	
 
 
 
