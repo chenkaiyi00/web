@@ -140,7 +140,7 @@ angular.module('myApp')
                     
                       $scope.saveCart();
                   $window.location.href=baseURL+
-                          'confirmOrder.html?id='+data.unsuborderId;
+                          'confirmorder.html?id='+data.unsuborderId;
                     }).catch(function(err){
                        // if is validate err go to login page
 

@@ -54,7 +54,7 @@ controller('AddressController', ['$scope','UserFactory','OrderFactory',
             OrderFactory.updateUnsubAddNolog($scope.userAddresses[index])
              .then(function(data){
                $scope.unsuborder=data.unsuborder;
-                  $window.location.href=baseURL+'confirmOrder.html?id='
+                  $window.location.href=baseURL+'confirmorder.html?id='
                                   +    $scope.unsuborder._id;           
              })
              .catch(function(err){
@@ -113,7 +113,7 @@ controller('AddressController', ['$scope','UserFactory','OrderFactory',
                      //go to confirm order page
 
                   $scope.unsuborder=data.unsuborder;
-                  $window.location.href=baseURL+'confirmOrder.html?id='
+                  $window.location.href=baseURL+'confirmorder.html?id='
                                   +    $scope.unsuborder._id;         
                    })
                      .catch(function(err){
