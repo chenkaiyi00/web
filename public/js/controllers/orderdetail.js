@@ -18,11 +18,11 @@
                     
                    $scope.gotoDetail = function(){
                      $window.location.href=baseURL+
-                          'OrderDetail.html?id='+$scope.order._id;
+                          'orderdetail.html?id='+$scope.order._id;
                    } 
                   $scope.gotoOrderproList = function(){
                      $window.location.href=baseURL+
-                          'OrderProductList.html?id='+$scope.order._id;
+                          'orderproductlist.html?id='+$scope.order._id;
                    } 
 
                   $scope.showMenuFunc = function(){
