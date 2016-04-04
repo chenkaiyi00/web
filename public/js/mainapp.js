@@ -7,7 +7,7 @@ angular.module('myApp', [require('angular-messages'),
     requireBase: false
      });
   })
- .constant("baseURL","http://localhost:3000/")
+ .constant("baseURL","http://112.124.122.209:3000/")
 .directive('slider',[ function() {
   return {
     restrict: 'E',
