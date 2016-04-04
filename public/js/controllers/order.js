@@ -152,7 +152,7 @@ angular.module('myApp')
               
                         UserFactory.$save();
                 // go to confirmOrder.html with unsuborder Id
-               $window.location.href=baseURL+'confirmOrder.html?id='
+               $window.location.href=baseURL+'confirmorder.html?id='
                                   +    $scope.unsuborder._id;                         
                     });
 
@@ -174,7 +174,7 @@ angular.module('myApp')
         
                   
                   UserFactory.upateCartAfterCheckoutLocal();
-                    $window.location.href=baseURL+'orderFinish.html?id='
+                    $window.location.href=baseURL+'orderfinish.html?id='
                                +    data.order._id;  
                  });
               
@@ -214,7 +214,7 @@ angular.module('myApp')
                   // all finished in server
 
 
-                  $window.location.href=baseURL+'orderFinish.html?id='
+                  $window.location.href=baseURL+'orderfinish.html?id='
                                +    order._id;  
                  });
 };
