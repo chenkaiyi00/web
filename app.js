@@ -164,6 +164,7 @@ Category.create(categories,function(err){
       res.json({products:products,
                 categories:categories}    
              );
+console.log('end here');
        });
       });
 });

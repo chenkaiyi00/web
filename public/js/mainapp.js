@@ -47,13 +47,13 @@ angular.module('myApp', [require('angular-messages'),
 .directive('cartyou',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/cart/cartYou.html'
+    templateUrl:'directives/cart/cartyou.html'
   };
 }])
 .directive('cartno',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/cart/cartNo.html'
+    templateUrl:'directives/cart/cartno.html'
   };
 }])
 .directive('comment',[ function() {
