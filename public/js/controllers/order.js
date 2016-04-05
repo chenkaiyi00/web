@@ -6,6 +6,14 @@ angular.module('myApp')
         
          
              $scope.unsuborder;
+             $scope.$watch(function(){
+                       return OrderFactory.unsuborder;
+                     },
+                      function(newValue,oldValue){
+                               if (newValue!==oldValue) {
+                               $scope.unsuborder = newValue;
+                               }
+                    });
             function getTotal(){
                var list = $scope.unsuborder.list;
                var temp = 0;
@@ -43,9 +51,7 @@ angular.module('myApp')
                            .then(function(data){
             
               $scope.unsuborder = data.unsuborder;
-             console.log(  'get unsuborder succussfully ' +$scope.unsuborder);
-              console.log( $scope.unsuborder);
-              $scope.total =  getTotal();
+                       $scope.total =  getTotal();
               if (  !$scope.noAdd) {
                   if (!$scope.unsuborder.address) {
                      $scope.unsuborder.address=  $scope.userAddresses[0];
@@ -62,8 +68,8 @@ angular.module('myApp')
         // calculation based on service value
            $scope.cart = UserFactory.getCart();
            $scope.user = UserFactory.getUser();
-          console.log($scope.cart)  ;
-         console.log('fkhgkjdfhgdfkj');
+         
+         
             //get UnsuborderNotlogin via ID after user loaded
         OrderFactory.getUnsuborderNotlogin($location.search().id)
            .catch(function(err){
@@ -72,9 +78,8 @@ angular.module('myApp')
           })
            .then(function(data){
              $scope.noAdd=false;
-              $scope.unsuborder = data.unsuborder;
-              console.log( $scope.unsuborder);
-              $scope.total =  getTotal();
+              $scope.unsuborder = OrderFactory.unsuborder;
+                       $scope.total =  getTotal();
            });
 
           });
@@ -202,7 +207,11 @@ angular.module('myApp')
               };
 
                   $scope.makeOrderlogin = function(){
-                 
+                
+ 			//check if addr is empty 
+                    if($scope.noAdd){
+                            return;
+			}
                     OrderFactory.makeOrder($scope.unsuborder) 
                     .catch(function(err){
             

@@ -66,7 +66,7 @@ module.exports = function(wagner) {
             status(status.NOT_FOUND).
             json({ error: 'Not found' +'in getordernotlogin'});
         }
-
+                 console.log(unsub);
         return res.json({ unsuborder: unsub });
       });
     };
@@ -104,6 +104,7 @@ module.exports = function(wagner) {
                             });
                         } else {
                             //update user add
+				console.log(unsuborder);
                                 return res.
                                   json({
                                      success: true,
