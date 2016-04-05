@@ -7,7 +7,7 @@ angular.module('myApp')
          
              $scope.unsuborder;
 
-             var unsuborder;
+             var unsuborder = {};
             function getTotal(){
                var list = $scope.unsuborder.list;
                var temp = 0;
@@ -16,6 +16,9 @@ angular.module('myApp')
                };
                return temp;
         };
+        function getunsuborder () {
+          return unsuborder;
+        }
                 /*************************************************
                        init part
                  ************************************************/
@@ -74,7 +77,7 @@ angular.module('myApp')
              $scope.noAdd=false;
               unsuborder = data.unsuborder;;
                        $scope.total =  getTotal();
-                       $scope.unsuborder =unsuborder;
+                       $scope.unsuborder =getunsuborder();
            });
 
           });
