@@ -2,10 +2,7 @@
   angular.module('myApp')
       .service('SharedDataFactory',function(){
         
-         var loadedProducts = null;
-         this.getProducts = function () {
-            return loadedProducts;
-          };
+
           this.getProvinceList = function () {
             return [  
  {name:'请选择省份', cityList:[           
@@ -447,11 +444,5 @@
 ]}   
 ];
           };
-          this.setProducts = function ( products) {
 
-            if (loadedProducts===null) {
-       
-              loadedProducts = products;
-            }
-          };
       });

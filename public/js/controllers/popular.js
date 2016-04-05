@@ -10,11 +10,12 @@ controller('PopularController', ['$scope','PopularFactory','SharedDataFactory','
             UserFactory.addItem(product,1);
           $scope.show=true; 
      };
+
     PopularFactory.getPopulars( function(err){
         if (err) {  // fail load data
        $scope.message = err;
         }
-     $scope.populars = SharedDataFactory.getProducts();
+     $scope.populars = PopularFactory.populars;
       });
 
 }]);
