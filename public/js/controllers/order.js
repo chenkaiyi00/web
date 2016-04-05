@@ -6,8 +6,14 @@ angular.module('myApp')
         
          
              $scope.unsuborder;
-
-             var unsuborder = {};
+             $scope.$watch(function(){
+                       return OrderFactory.unsuborder;
+                     },
+                      function(newValue,oldValue){
+                               if (newValue!==oldValue) {
+                               $scope.unsuborder = newValue;
+                               }
+                    });
             function getTotal(){
                var list = $scope.unsuborder.list;
                var temp = 0;
@@ -16,9 +22,6 @@ angular.module('myApp')
                };
                return temp;
         };
-        function getunsuborder () {
-          return unsuborder;
-        }
                 /*************************************************
                        init part
                  ************************************************/
@@ -75,9 +78,8 @@ angular.module('myApp')
           })
            .then(function(data){
              $scope.noAdd=false;
-              unsuborder = data.unsuborder;;
+              $scope.unsuborder = OrderFactory.unsuborder;
                        $scope.total =  getTotal();
-                       $scope.unsuborder =getunsuborder();
            });
 
           });
