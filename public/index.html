@@ -109,15 +109,15 @@
 
 <a href="user.html" class="item" >
 <span class="icon_box" >
-<img src="http://d8.yihaodianimg.com/N09/M06/9B/45/ChEi11aFPLiAFZeAAAARUFEPnRM85300_119x119.webp" alt="我的1号店" class="icon">
+<img src="images/website/index/my.jpg" alt="我的账号" class="icon">
 </span>
-<span class="title">我的***</span>
+<span class="title">我的账号</span>
 </a>
 
 
 <a href="" class="item" >
 <span class="icon_box">
-<img src="http://d8.yihaodianimg.com/N08/M02/BA/8F/ChEi1VaeLr-AetWPAAAP5eOrhNY47200_119x119.webp" alt="1号商城" class="icon">
+<img src="images/website/index/popular.jpg" alt="最受欢迎" class="icon">
 </span>
 <span class="title">最受欢迎</span>
 </a>
@@ -125,14 +125,10 @@
 
 <a href="" class="item" >
 <span class="icon_box" >
-<img src="http://d7.yihaodianimg.com/N08/M01/1E/C2/ChEi1VW7SSaATR_HAAAPwHc6pTw25300_119x119.webp" alt="新品试用" class="icon">
+<img src="images/website/index/gift.jpg" alt="新品试用" class="icon">
 </span>
 <span class="title">新品试用</span>
 </a>
-
-
-
-
 
 
 </div>
@@ -181,32 +177,8 @@ alt="" class=""></div>
  热卖推荐-->
 
 <!-- 猜你喜欢-->
-<div >
-	<div class="precision_title precision_like">
-			<h2><span class="icon-like"></span>最新产品</h2>
-			<span class="desc">最新推出的产品</span>
-	</div>
-		<div class="precision_column" id="youLike">
-
-			<div class="product_item" ng-repeat="popular in populars">
-				<a href="/detail.html?p={{popular._id}}"target="_self" >
-					<div class="pic_box">
-				<img  src="img/麦提莎脆心朱古力.jpg"> <!-- 210px*210px-->
-					</div>
-					<h3>{{popular.name}}dddddddddddddddddddd</h3>				
-					<div class="price_box">
-						   <strong>￥{{popular.price}}</strong>
-					</div>
-				</a>
-				   <a ng-click="addItem(popular)"  class="icon_add_cart icon-shop_cart">
-
-				   </a>
-						
-				
-			</div>
-
-		</div> <!--end cai -->
-	</div>
+<youlike></youlike>
+	
 </div><!-- end bolock-->
 <!--
 <div class="mod_computer">

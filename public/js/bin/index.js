@@ -1145,28 +1145,10 @@ angular.module('myApp', [require('angular-messages'),
      });
   })
  .constant("baseURL","http://112.124.122.209:3000/")
-.directive('slider',[ function() {
+ .directive('youlike',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/slider.html'
-  };
-}])
-.directive('sidemenu',[ function() {
-  return {
-    restrict: 'E',
-    templateUrl:'directives/sidemenu.html'
-  };
-}])
-.directive('footer',[ function() {
-  return {
-    restrict: 'E',
-    templateUrl:'directives/footer.html'
-  };
-}])
-.directive('navbarend',[ function() {
-  return {
-    restrict: 'E',
-    templateUrl:'directives/navbarend.html'
+    templateUrl:'directives/index/youlike.html'
   };
 }])
 .directive('productinfo',[ function() {
@@ -1175,10 +1157,10 @@ angular.module('myApp', [require('angular-messages'),
     templateUrl:'/directives/detail/productinfo.html'
   };
 }])
-.directive('copyright',[ function() {
+.directive('comment',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/copyright.html'
+    templateUrl:'directives/detail/comment.html'
   };
 }])
 .directive('cartyou',[ function() {
@@ -1191,12 +1173,6 @@ angular.module('myApp', [require('angular-messages'),
   return {
     restrict: 'E',
     templateUrl:'directives/cart/cartno.html'
-  };
-}])
-.directive('comment',[ function() {
-  return {
-    restrict: 'E',
-    templateUrl:'directives/detail/comment.html'
   };
 }])
 .directive('confirmorder',[ function() {
@@ -1229,4 +1205,5 @@ angular.module('myApp', [require('angular-messages'),
     templateUrl:'directives/addr/chooseaddr.html'
   };
 }]);
+
 },{"angular-local-storage":1,"angular-messages":4}]},{},[5]);
