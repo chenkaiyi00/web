@@ -3,11 +3,12 @@
 <tbody>
 
 <tr  id="goProductDetail" ng-repeat='item in order.list' >
+<a href = '/detail.html?p={{item.product._id}}' target='_self'>
 <td>
 <div>
-<a href = '/detail.html?p={{item.product._id}}' target='_self'>
+
 <img src="http://d6.yihaodianimg.com/N03/M0A/F9/D3/CgQCs1KFrIiAcJXsAANM_VfkBAo42001.jpg"  alt="{{item.product.name}}">
-</a>
+
 </div>
 </td>
 <td>
@@ -17,6 +18,7 @@
 <p>¥{{item.product.price}}</p>
 <p>x{{item.quantity}}</p>
 </td>
+</a>
 </tr>
 
 
