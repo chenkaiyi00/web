@@ -44,6 +44,12 @@ angular.module('myApp', [require('angular-messages'),
     templateUrl:'directives/order/confirmorder.html'
   };
 }])
+.directive('orderprolist',[ function() {
+  return {
+    restrict: 'E',
+    templateUrl:'directives/order/orderprolist.html'
+  };
+}])
 .directive('orderlist',[ function() {
   return {
     restrict: 'E',
