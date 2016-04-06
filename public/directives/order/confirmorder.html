@@ -12,9 +12,9 @@
 
 <a class="userInfo" ng-click='editAdd()' >
 
-<div ng-if='!noAdd'>
+<div ng-if='!noAdd' >
 <div class="name">
-<span>收货人：</span><em><span id="receiverNameCn">{{unsuborder.address.recipient}}</span>
+<span>收货人</span><em><span id="receiverNameCn">{{unsuborder.address.recipient}}</span>
  &nbsp;&nbsp; {{unsuborder.address.phone}}</em>
 </div>
 <div class="address">{{unsuborder.address.selectedProvice}} &nbsp;&nbsp; 
@@ -44,7 +44,8 @@
 <a class="product_wrapper" href = '/detail.html?p={{item.product._id}}' target='_self'>
 <img src="http://d9.yihaodianimg.com/N01/M06/EF/7E/CgQCr1J3DkaAHmEhAALp35CtbH832101_40x40.jpg" alt="{{item.product.name}}">
 <div class="info">
-<p class="content">{{item.product.name}}</p>
+<p class="content">{{item.product.name}}
+</p>
 <!--
 <div class="icons">
 <span class="icon_exchange_not icon-exchange_not" style="width: auto;font-size: 1rem;">不支持无理由退货</span>

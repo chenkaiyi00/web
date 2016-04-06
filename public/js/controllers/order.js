@@ -1,4 +1,4 @@
-angular.module('myApp')
+﻿angular.module('myApp')
 .controller('OrderController', ['$scope','UserFactory','SharedDataFactory',
   'OrderFactory','baseURL','$window','$location',
       function($scope,UserFactory,SharedDataFactory,OrderFactory,baseURL,
@@ -80,7 +80,13 @@ angular.module('myApp')
              $scope.noAdd=false;
               $scope.unsuborder = OrderFactory.unsuborder;
                        $scope.total =  getTotal();
+	      //       
+ 			if((!$scope.unsuborder.address)&&($location.path()=='/confirmorder.html')){
+					$window.location.href= $location.absUrl();      
+
+			}
            });
+
 
           });
        /*************************************************
