@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 var bodyparser = require('body-parser');
 var status = require('http-status');
 var jwt = require('jsonwebtoken');
@@ -55,6 +55,7 @@ module.exports = function(wagner) {
 */
   api.get('/getordernotlogin/:id', wagner.invoke(function(Unsubmittedorder) {
     return function(req, res) {
+     console.log('abcdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee');
       Unsubmittedorder.findOne({ _id: req.params.id }, function(error, unsub) {
         if (error) {
           return res.
