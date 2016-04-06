@@ -125,8 +125,7 @@
 
                   if (self.isEmpty(self.user)) { // save locally
                     localStorageService.set("cart", self.cart);
-                   console.log('save cart locally');
-                    console.log(self.cart);
+                    
                   }else{ //save to database
                     var url = baseURL+'user/cart/update';
                     var token = localStorageService.get("token");

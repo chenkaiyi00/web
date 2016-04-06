@@ -51,9 +51,7 @@
                            .then(function(data){
             
               $scope.unsuborder = data.unsuborder;
-               console.log($scope.unsuborder);
-		console.log('aaaaaaaaaaaaaaa');
-		console.log(data.unsuborder);
+
                        $scope.total =  getTotal();
               if (  !$scope.noAdd) {
                   if (!$scope.unsuborder.address) {
@@ -84,8 +82,7 @@
               $scope.unsuborder = OrderFactory.unsuborder;
                        $scope.total =  getTotal();
 	      //       
- 			if((!$scope.unsuborder.address)&&($location.path()=='/confirmorder.html')){
-					$window.location.href= $location.absUrl();      
+  
 
 			}
            });
