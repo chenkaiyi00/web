@@ -182,11 +182,17 @@
         // this funtion get call after user login
         this.combineCart = function(onlinecart){
 
-  //console.log( localStorageService.get("cart"));
-           if (  localStorageService.get("cart").length===0) { // if local cart is empty
+         //console.log( localStorageService.get("cart"));
+
+           if (  !localStorageService.get("cart")) { 
+            // no local cart
+             self.setCart(onlinecart);
+              return;
+           }
+           else if (localStorageService.get("cart").length===0) {
+              // if local cart is empty
                self.setCart(onlinecart);
-            
-           }else{
+             }else{
              self.setCart(localStorageService.get("cart").concat(onlinecart));
             for(var i=0; i<self.cart.length; ++i) {
                    for(var j=i+1; j<self.cart.length; ++j) {
