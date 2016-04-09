@@ -14,7 +14,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var morgan = require('morgan');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
-
+var cors = require('cors');
 // =======================
 // configuration =========
 // =======================
@@ -31,6 +31,7 @@ app.use(morgan('dev'));
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // use body parser so we can get info from POST and/or URL parameters
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

@@ -1158,7 +1158,7 @@ angular.module('myApp', [require('angular-messages'),
     $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 }])
- .constant("baseURL","http://www.xx-jia.com/")
+ .constant("baseURL","http://xx-jia.com/")
  .directive('youlike',[ function() {
   return {
     restrict: 'E',

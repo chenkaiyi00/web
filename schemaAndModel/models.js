@@ -1,7 +1,29 @@
-var mongoose = require('mongoose');
 
+
+
+var mongoose = require('mongoose');
+var sprintf = require("sprintf-js").sprintf;
 module.exports = function(wagner) {
-  mongoose.connect('mongodb://localhost/test');
+
+  var host1 = "dds-bp1b3f2f84c2e1642.mongodb.rds.aliyuncs.com:3717";
+var port1 = 27017;
+
+var host2 = "dds-bp1b3f2f84c2e1641.mongodb.rds.aliyuncs.com:3717";
+var port2 = 27017;
+
+var username = "admin";
+var password = "admin";
+var replSetName = "mgset-1095113";
+var demoDb = "test";
+
+
+var url = sprintf("mongodb://%s:%d,%s:%d/%s?replicaSet=%s", 
+  host1, port1, host2, port2, demoDb, replSetName);
+  
+  mongoose.connect(url,{
+     user: username,
+      pass: password
+  });
 
   var Category =
     mongoose.model('Category', require('./category'), 'categories');
@@ -40,3 +62,4 @@ module.exports = function(wagner) {
   };
   return models;
 };
+
