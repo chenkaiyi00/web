@@ -1159,7 +1159,35 @@ angular.module('myApp', [require('angular-messages'),
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 }])
  .constant("baseURL","http://xx-jia.com/")
- .directive('youlike',[ function() {
+ .filter('comment', function() {
+  return function(input, rate) {
+    var out = [];
+
+     if (rate=='low'){ //low
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].rate==1) {
+                out.push(input[i]);
+          }        
+       }
+     }else if(rate=='medium'){//medium
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].rate==2||input[i].rate==3) {
+                out.push(input[i]);
+          }        
+       }
+     }else if(rate=='high'){
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].rate==4||input[i].rate==5) {
+                out.push(input[i]);
+          }        
+       }
+     }else{
+      return input;
+     }
+    return out;
+  };
+})
+.directive('youlike',[ function() {
   return {
     restrict: 'E',
     templateUrl:'directives/index/youlike.html'
@@ -1231,5 +1259,4 @@ angular.module('myApp', [require('angular-messages'),
     templateUrl:'directives/addr/chooseaddr.html'
   };
 }]);
-
 },{"angular-local-storage":1,"angular-messages":4}]},{},[5]);
