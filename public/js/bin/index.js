@@ -1195,6 +1195,12 @@ angular.module('myApp', [require('angular-messages'),
     templateUrl:'directives/order/confirmorder.html'
   };
 }])
+.directive('orderfinish',[ function() {
+  return {
+    restrict: 'E',
+    templateUrl:'directives/order/orderfinish.html'
+  };
+}])
 .directive('orderprolist',[ function() {
   return {
     restrict: 'E',

@@ -13,16 +13,8 @@ var productSchema = {
   },
   category: Category.categorySchema,
   comments: [{ 
-            time:{
-               type:Schema.Types.Mixed,
-                 required:true
-            },content:{
-                type:String,
-                 required:true
-            },author:{
-                  type:String,
-                 required:true
-               }
+            type:Schema.Types.ObejectID ,
+            ref:'Comment'
                     }]
 };
 module.exports = new mongoose.Schema(productSchema);

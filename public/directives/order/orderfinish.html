@@ -1,0 +1,47 @@
+<div class="layoutMain">
+<span class="layoutTop"></span>
+<div class="layoutContent">
+<div class="modOrder">
+<a >
+<p>订单编号：{{order._id}}</p>
+<p class="mt5">包裹数：1
+个
+</p>
+<p class="mt5">商品数：{{order.list.length}}个</p>
+<p class="mt5">
+待支付金额：<span class="deepRed">¥{{order.total}}.<em>40</em></span>
+</p>
+<i class="greyRightArrow"></i>
+</a>
+</div>
+
+<div class="modDefray">
+<p class="payment relative">
+<a href="/myH5/h5Pay/onlinePayList.do?orderCode=7955388614454">
+<!--支付那边没有对微信屏蔽支付宝国际，我们先做一个兼容，到时候这个可以删除-->
+
+
+<span class="modShortSlct greenLnk fr">
+
+</span>
+支持支付方式：支付宝 OR 微信支付
+</a>
+
+<i class="greyRightArrow"></i>
+</p>
+<br>
+<br>
+<br>
+<div class="pages_nextprev" ng-if="order.status=='未支付'">
+<a id="h5OrderFinishGoPay" >
+<p class="floatListMore mt">立即支付</p>
+</a>
+</div>
+
+</div>
+</div>
+
+
+<span class="layoutFooter"></span>
+</div>
+

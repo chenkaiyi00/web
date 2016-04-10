@@ -1,174 +1,214 @@
 <div id="container">
 
-
 <div class="pd_comment-wrap">
-<div class="pd_head-fixed">
-
+<div class="pd_head-fixed fixed">
 <div class="pd_comment-tab">
-<div class="pd_comment-tab-item pd_comment-tab-item_current" >
+<div class="pd_comment-tab-item" ng-click='chooseCom(1)'
+ng-class="{'pd_comment-tab-item_current': isAtCom(1)}">
 <span class="pd_comment-tab-text">全部</span>
-<span class="pd_comment-tab-num">(16448)</span>
+<span class="pd_comment-tab-num">(6)</span>
 </div>
-<div class="pd_comment-tab-item" commentflag="good" data-tpc="2">
+<div class="pd_comment-tab-item" ng-click='chooseCom(2)'
+ng-class="{'pd_comment-tab-item_current': isAtCom(2)}" >
 <span class="pd_comment-tab-text">好评</span>
-<span class="pd_comment-tab-num">(16050)</span>
+<span class="pd_comment-tab-num">(6)</span>
 </div>
-<div class="pd_comment-tab-item" commentflag="medium" data-tpc="3">
+<div class="pd_comment-tab-item" ng-click='chooseCom(3)'
+ng-class="{'pd_comment-tab-item_current': isAtCom(3)}" >
 <span class="pd_comment-tab-text">中评</span>
-<span class="pd_comment-tab-num">(330)</span>
+<span class="pd_comment-tab-num">(0)</span>
 </div>
-<div class="pd_comment-tab-item" commentflag="poor" data-tpc="4">
+<div class="pd_comment-tab-item" ng-click='chooseCom(4)'
+ng-class="{'pd_comment-tab-item_current': isAtCom(4)}">
 <span class="pd_comment-tab-text">差评</span>
-<span class="pd_comment-tab-num">(68)</span>
+<span class="pd_comment-tab-num">(0)</span>
 </div>
 </div><!-- pd_comment-tab -->
-
-
 </div><!-- pd_head-fixed -->
 
 
 
-<div class="pd_comment-box pd_comment-box_current" >
-<div class="pd_comment-item">
-<div class="pd_comment-text-box">
-<div class="pd_comment-user">
-用户：叶呈玲
-</div>
-<div class="pd_comment-date">2016-03-23</div>
-</div>
-<div class="pd_comment-score">
-<span class="pd_comment-score-text">评分：</span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-</div>
-<div class="pd_comment-con"><a>还没尝，应该还可以吧</a></div>
-<div class="pd_comment-thumbnails">
-<div  class="pd_comment-thumbnails-item" 
-style="background-image:url(http://d8.yihaodianimg.com/N05/M00/A9/D0/ChEbulbylBCAbPu9AADDy0oDBSA42600_40x40.jpg)">
- </div>
-</div>
-</div>
-
-<div class="pd_comment-item">
-<div class="pd_comment-text-box">
-<div class="pd_comment-user">
-用户：186***
-</div>
-<div class="pd_comment-date">2016-03-26</div>
-</div>
-<div class="pd_comment-score">
-<span class="pd_comment-score-text">评分：</span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-</div>
-<div class="pd_comment-con"><a>大家请注意了，刚刚从别的群里得到的消息：有人在网上传日本10级地震的视频，不要打开，立即删除，是病毒，特别是手上有支付宝，手机银行等帐号的，这个必须转，刚新闻也播了，大家都动手转到自己的每个群里，别</a></div>
-</div>
-
-
-
-<div class="pd_comment-item">
-<div class="pd_comment-text-box">
-<div class="pd_comment-user">
-用户：雨**铛
-</div>
-<div class="pd_comment-date">2016-03-21</div>
-</div>
-<div class="pd_comment-score">
-<span class="pd_comment-score-text">评分：</span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-</div>
-<div class="pd_comment-con"><a>很好，下次还会购买</a></div>
-<div class="pd_comment-thumbnails">
-<div data-tpc="1" class="pd_comment-thumbnails-item" style="background-image:url(http://d7.yihaodianimg.com/N08/M06/17/63/ChEi1FbvxtuAYjiaAADRUPhSu5c38500_40x40.jpg)" data-bgpic="http://d7.yihaodianimg.com/N08/M06/17/63/ChEi1FbvxtuAYjiaAADRUPhSu5c38500_500x500.jpg" data-index="0"></div>
-</div>
-</div>
-
-
-<div class="pd_comment-item">
-<div class="pd_comment-text-box">
-<div class="pd_comment-user">
-用户：jhc***
-</div>
-<div class="pd_comment-date">2016-03-23</div>
-</div>
-<div class="pd_comment-score">
-<span class="pd_comment-score-text">评分：</span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-<span class="icon-star_fat stars light"></span>
-</div>
-<div class="pd_comment-con"><a>味道很麻辣！</a></div>
-<div class="pd_comment-thumbnails">
-<div data-tpc="1" class="pd_comment-thumbnails-item" style="background-image:url(http://d6.yihaodianimg.com/N05/M05/4C/19/CgQI0lbyHd-ADAKtAAA89qBECPA72600_40x40.jpg)" data-bgpic="http://d6.yihaodianimg.com/N05/M05/4C/19/CgQI0lbyHd-ADAKtAAA89qBECPA72600_500x500.jpg" data-index="0"></div>
-<div data-tpc="1" class="pd_comment-thumbnails-item" style="background-image:url(http://d9.yihaodianimg.com/N08/M0B/1C/71/ChEi1lbyHd-AJyaRAAAv-0Oddf869400_40x40.jpg)" data-bgpic="http://d9.yihaodianimg.com/N08/M0B/1C/71/ChEi1lbyHd-AJyaRAAAv-0Oddf869400_500x500.jpg" data-index="1"></div>
-</div>
-</div>
-
-
-<div class="pd_comment-item">
+<div class="pd_comment-box pd_comment-box_current">
+<div class="pd_comment-no-poor">暂无中评！</div>
+            <div class="pd_comment-item">
                 <div class="pd_comment-text-box">
                     <div class="pd_comment-user">
-						用户：rob***
+						用户：暗**日
 					</div>
-                    <div class="pd_comment-date">2016-03-27</div>
+                    <div class="pd_comment-date">2016-03-26</div>
                 </div>
                 <div class="pd_comment-score">
                     <span class="pd_comment-score-text">评分：</span>
                     <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
                 </div>
-                <div class="pd_comment-con"><a>味道一般般</a></div>
-				<!-- reply -->
+                <div class="pd_comment-con"><a>衬衫质量比较好，拿到手这样的设计也非常时尚，正好春天穿，尤其搭配我粉色的外套。</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:M        颜色:白色        </div>
+                    
+                </div>
                 <div class="pd_comment-reply pd_comment-reply-business">
                     <div class="pd_comment-text-box">
                         <div class="pd_comment-reply-user">1号店官方回复：</div>
-                        <div class="pd_comment-date">2016-03-27</div>
+                        <div class="pd_comment-date">2016-03-28</div>
                     </div>
-                    <div class="pd_comment-con">您好，1哥考虑到个人口味的不同，食品类商品总不可能让所有客户满意，1哥建议您可以选其他品牌试试，或许会有更好的收获，感谢您支持1号店，祝您生活愉快！\n</div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对ONEBUYE的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。\n每周新品不断！期待您的下次光临。</div>
                 </div>
             </div>
-</div>
-</div>
+            <div class="pd_comment-item">
+                <div class="pd_comment-text-box">
+                    <div class="pd_comment-user">
+						用户：低**行
+					</div>
+                    <div class="pd_comment-date">2016-03-24</div>
+                </div>
+                <div class="pd_comment-score">
+                    <span class="pd_comment-score-text">评分：</span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                </div>
+                <div class="pd_comment-con"><a>衣服收到意外惊喜很漂亮,衣形质量好，穿上版型棒棒的，很喜欢没有买错,朋友也买了一件收到也很高兴.爱漂亮的女孩!快下手买哦。</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:S        颜色:白色        </div>
+                    
+                </div>
+                <div class="pd_comment-reply pd_comment-reply-business">
+                    <div class="pd_comment-text-box">
+                        <div class="pd_comment-reply-user">1号店官方回复：</div>
+                        <div class="pd_comment-date">2016-03-28</div>
+                    </div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对ONEBUYE的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。\n每周新品不断！期待您的下次光临。</div>
+                </div>
+            </div>
+            <div class="pd_comment-item">
+                <div class="pd_comment-text-box">
+                    <div class="pd_comment-user">
+						用户：丁**3
+					</div>
+                    <div class="pd_comment-date">2016-03-22</div>
+                </div>
+                <div class="pd_comment-score">
+                    <span class="pd_comment-score-text">评分：</span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                </div>
+                <div class="pd_comment-con"><a>宝贝很不错，质量很好 还有穿上很舒服 物流也快</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:XL        颜色:白色        </div>
+                    
+                </div>
+                <div class="pd_comment-reply pd_comment-reply-business">
+                    <div class="pd_comment-text-box">
+                        <div class="pd_comment-reply-user">1号店官方回复：</div>
+                        <div class="pd_comment-date">2016-03-23</div>
+                    </div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对ONEBUYE的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。每周新品不断！期待您的下次光临。</div>
+                </div>
+            </div>
+            <div class="pd_comment-item">
+                <div class="pd_comment-text-box">
+                    <div class="pd_comment-user">
+						用户：qiu***
+					</div>
+                    <div class="pd_comment-date">2016-03-20</div>
+                </div>
+                <div class="pd_comment-score">
+                    <span class="pd_comment-score-text">评分：</span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                </div>
+                <div class="pd_comment-con"><a>衣服很有小清新的感觉，是我喜欢的风格，所以毫不犹豫就下手了，不错。</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:S        颜色:白色        </div>
+                    
+                </div>
+                <div class="pd_comment-reply pd_comment-reply-business">
+                    <div class="pd_comment-text-box">
+                        <div class="pd_comment-reply-user">1号店官方回复：</div>
+                        <div class="pd_comment-date">2016-03-21</div>
+                    </div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对Onebuye的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。\n每周新品不断！期待您的下次光临。</div>
+                </div>
+            </div>
+            <div class="pd_comment-item">
+                <div class="pd_comment-text-box">
+                    <div class="pd_comment-user">
+						用户：秋**0
+					</div>
+                    <div class="pd_comment-date">2016-03-17</div>
+                </div>
+                <div class="pd_comment-score">
+                    <span class="pd_comment-score-text">评分：</span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                </div>
+                <div class="pd_comment-con"><a>穿上很有文艺范，我好喜欢，面料很凉爽，满意。</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:S        颜色:白色        </div>
+                    
+                </div>
+                <div class="pd_comment-reply pd_comment-reply-business">
+                    <div class="pd_comment-text-box">
+                        <div class="pd_comment-reply-user">1号店官方回复：</div>
+                        <div class="pd_comment-date">2016-03-21</div>
+                    </div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对Onebuye的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。\n每周新品不断！期待您的下次光临。</div>
+                </div>
+            </div>
+            <div class="pd_comment-item">
+                <div class="pd_comment-text-box">
+                    <div class="pd_comment-user">
+						用户：心**方
+					</div>
+                    <div class="pd_comment-date">2016-03-20</div>
+                </div>
+                <div class="pd_comment-score">
+                    <span class="pd_comment-score-text">评分：</span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                    <span class="icon-star_fat stars light"></span>
+                </div>
+                <div class="pd_comment-con"><a>衣服面料不错，很舒服，不褶皱，喜欢。</a></div>
+                <div class="pd_comment-arguments">
+                    <div class="pd_comment-arguments-text">颜色：尺码:S        颜色:白色        </div>
+                    
+                </div>
+                <div class="pd_comment-reply pd_comment-reply-business">
+                    <div class="pd_comment-text-box">
+                        <div class="pd_comment-reply-user">1号店官方回复：</div>
+                        <div class="pd_comment-date">2016-03-21</div>
+                    </div>
+                    <div class="pd_comment-con">亲爱的顾客，非常感谢您对Onebuye的肯定和赞赏呢，幸福需要传递，美丽需要分享，也请向您周围的朋友分享一下哦。\n每周新品不断！期待您的下次光临。</div>
+                </div>
+            </div>
 
 
-<!-- pd_comment-box -->
-<div class="pd_comment-box">
-</div><!-- pd_comment-box -->
-<div class="pd_comment-box">
-</div><!-- pd_comment-box -->
-<div class="pd_comment-box">
 </div><!-- pd_comment-box -->
 
-<div class="pd_comment-loading-wrap"  >
+
+<div class="pd_comment-loading-wrap"  style="display: none;">
 <div class="pd_comment-loading"></div>
 </div>
 </div>
 
-<!-- pd_comment-wrap 图图-->
-<div class="pd_comment-showbox-wrap" style="display:none;">
-<div class="touchweb-com_header">
-<a href="javascript:;" class="left icon-back" id="js_comment-showbox-back"></a>
-<h1>
-<span id="js_show-num_current">1</span>
-/
-<span id="js_show-num_sum">1</span>
-</h1>
-</div>
-<div class="pd_comment-showbox">
-<div class="pd_comment-showbox-lists">
-</div>
-<div class="pd_comment-showbox-left"></div>
-<div class="pd_comment-showbox-right"></div>
-</div>
+
+
+
 </div>

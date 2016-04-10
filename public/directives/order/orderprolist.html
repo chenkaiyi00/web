@@ -1,13 +1,11 @@
+
 <div class="item_list">
 <table>
-<tbody>
-<a href = '/detail.html?p={{item.product._id}}' target='_self'>
-<tr  id="goProductDetail" ng-repeat='item in order.list' >
+<tbody><tr ng-click="goProductDetail({{item.product._id}});" 
+id="goProductDetail" >
 <td>
 <div>
-<a href = '/detail.html?p={{item.product._id}}' target='_self'>
-<img src="http://d6.yihaodianimg.com/N03/M0A/F9/D3/CgQCs1KFrIiAcJXsAANM_VfkBAo42001.jpg"  alt="{{item.product.name}}">
-</a>
+<img src="http://d7.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900.jpg">
 </div>
 </td>
 <td>
@@ -18,10 +16,5 @@
 <p>x{{item.quantity}}</p>
 </td>
 </tr>
-
-
-
 </tbody></table>
-
-
 </div>
