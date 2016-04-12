@@ -105,7 +105,7 @@ module.exports = function(wagner) {
                             });
                         } else {
                             //update user add
-				console.log(unsuborder);
+			
                                 return res.
                                   json({
                                      success: true,
@@ -592,7 +592,7 @@ module.exports = function(wagner) {
                     }
 
                     user.data.orderhistory.push(order);
-                    user.data.cart.length
+
                     // delete checked product in cart
                     for ( i = 0; i < user.data.cart.length; i++) {
                
@@ -810,6 +810,107 @@ module.exports = function(wagner) {
             });
 
         };
+    }));
+    /*
+     ****************************************************************
+     * delete addr user profile                                     *
+     *                                                              *
+     ****************************************************************
+     */
+ api.post('/deleteaddr', wagner.invoke(function(User) {
+        return function(req, res) {           
+
+           
+                            //update user add
+                            var phone = req.decoded.phone;
+                            User.findOne({
+                                'profile.phone': phone
+                            }, function(err, user) {
+                                if (err) {
+                        return res.status(status.INTERNAL_SERVER_ERROR).
+                            json({
+                                error: err + 'when find user in deleteaddr',
+                                errorType: 'server'
+                            });
+                                } else{
+                                    
+                                    //delete addr at specific index
+
+                      user.profile.addresses.splice(parseInt(req.body.index),
+                                1);                                 
+                        user.save(function(err) {
+                                        if (err) {
+                         return res.status(status.INTERNAL_SERVER_ERROR).
+                            json({
+                                error: err + 'when save user in deleteaddr',
+                                errorType: 'server'
+                            });
+                                    } else {  
+                                            return res.
+                                            json({
+                                                success: true                                      
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        
+                    };
+
+    }));
+    /*
+     ****************************************************************
+     * save new address user profile                                *
+     *                                                              *
+     ****************************************************************
+     */
+ api.post('/saveaddr', wagner.invoke(function(User) {
+        return function(req, res) {           
+                            //update user add
+                            var phone = req.decoded.phone;
+                            User.findOne({
+                                'profile.phone': phone
+                            }, function(err, user) {
+                                if (err) {
+                        return res.status(status.INTERNAL_SERVER_ERROR).
+                            json({
+                                error: err + 'when find user in saveaddr',
+                                errorType: 'server'
+                            });
+                                } else {    
+                            if (req.body.index==(-1)) {
+                                        // new addr
+                                user.profile.addresses.push(req.body.address);
+                                    }
+                                 else{
+                                    //update addr at specific index
+
+                      user.profile.addresses.splice(parseInt(req.body.index),
+                                1);
+                              user.profile.addresses.push(req.body.address);
+                                     
+                               
+                                 }
+                                    user.save(function(err) {
+                                        if (err) {
+                         return res.status(status.INTERNAL_SERVER_ERROR).
+                            json({
+                                error: err + 'when save user in saveaddr',
+                                errorType: 'server'
+                            });
+                                        } else {
+                                           
+                                            return res.
+                                            json({
+                                                success: true
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        
+                    };
+
     }));
     return api;
 };

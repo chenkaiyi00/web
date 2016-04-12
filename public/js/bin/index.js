@@ -1258,5 +1258,11 @@ angular.module('myApp', [require('angular-messages'),
     restrict: 'E',
     templateUrl:'directives/addr/chooseaddr.html'
   };
+}])
+.directive('usermenulist',[ function() {
+  return {
+    restrict: 'E',
+    templateUrl:'directives/user/menulist.html'
+  };
 }]);
 },{"angular-local-storage":1,"angular-messages":4}]},{},[5]);

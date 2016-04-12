@@ -1,10 +1,12 @@
 angular.module('myApp').
-controller('AddressController', ['$scope','UserFactory','OrderFactory',
-'baseURL', '$window','$location','SharedDataFactory',
- function($scope,UserFactory,OrderFactory,baseURL,$window,$location,
-  SharedDataFactory){
+controller('AddressuController', ['$scope','UserFactory',
+'baseURL', '$window','$location','SharedDataFactory','$http','localStorageService',
+ function($scope,UserFactory,baseURL,$window,$location,
+  SharedDataFactory,$http,localStorageService){
                   
-                       //get watch on user  
+         $scope.showAlert =false;
+         $scope.index =0;
+                    //get watch on user  
         $scope.$on('UserController:getUserConfigSuccess', function() { 
         // calculation based on service value
   
@@ -29,53 +31,52 @@ controller('AddressController', ['$scope','UserFactory','OrderFactory',
            }else{
            $scope.address =   $scope.userAddresses[parseInt($location.search().index)];
                }
-                       //get Unsuborder via ID after user loaded
-          OrderFactory.getUnsuborder($location.search().id)
-                           .then(function(data){
-            
-              $scope.unsuborder = data.unsuborder;
-           
-           })
-            .catch(function(err){
-               console.log(err);
-           });
+
      
           });
+
       $scope.$on('UserController:getUserConfigFail', function() {
         // calculation based on service value
 
                 $window.location.href=baseURL+'login.html';
                                  
-          });         
+          });
 
-      $scope.chooseAddr = function(index){
 
-            ////set unsuborder addr and save unsuborder in DB
-            OrderFactory.updateUnsubAddNolog($scope.userAddresses[index])
-             .then(function(data){
-               $scope.unsuborder=data.unsuborder;
-                  $window.location.href=baseURL+'confirmorder.html?id='
-                                  +    $scope.unsuborder._id;           
-             })
-             .catch(function(err){
-                  console.log(err);
-             });
-            // go back to orderConfirm.html with unsuborder id 
-      } ;
-      $scope.gotoEdit = function(index,inUser){
-            if (inUser) {
-          $window.location.href=baseURL+'user/addr/editaddress.html?'
-                                 'index='
-                                  + index;  
-            }else{
-          $window.location.href=baseURL+'editaddress.html?id='
-                                  +    $scope.unsuborder._id+'&index='
+
+      $scope.gotoEdit = function(index){
+          $window.location.href=baseURL+'user/addr/editaddress.html?index='
                                   + index;           
-                    }
       };
-
-      //update profile addr and set unsuborder
-     $scope.saveAddrprofileNunsuborder = function(){
+     $scope.delete = function(index){
+         //show alert          
+           $scope.showAlert =true;
+           $scope.index =index;
+          
+      };
+        $scope.confirmDelete = function(){
+         //show alert          
+           if ($scope.showAlert){
+               $http.post(baseURL+'user/deleteaddr',
+                      {index:$scope.index,
+                        token:localStorageService.get("token")})
+               .then(function(response){
+                       $window.location.href=$location.absUrl();
+               })
+               .catch(function(err){
+                  console.log(err);
+               });
+           }else{
+            return;
+           }
+          
+      };
+      $scope.cancel = function(index){
+         //show alert   
+           $scope.showAlert =false;       
+      };
+      //update profile addr 
+     $scope.saveAddr = function(){
           //validate part
           if ( !$scope.address.selectedProvice) {
           
@@ -112,18 +113,19 @@ controller('AddressController', ['$scope','UserFactory','OrderFactory',
                    =$scope.address.selectedProvice.name;
                   $scope.address.selectedCity
                    =$scope.address.selectedCity.name;
-                   console.log($scope.address);
-       OrderFactory.saveAddress( $scope.address,true,parseInt($location.search().index))
-                   .then(function(data){
-                     //go to confirm order page
 
-                  $scope.unsuborder=data.unsuborder;
-                  $window.location.href=baseURL+'confirmorder.html?id='
-                                  +    $scope.unsuborder._id;         
-                   })
-                     .catch(function(err){
-                        console.log(err);
-                     });
+                  $http.post(baseURL+'user/saveaddr',
+                      {index:$location.search().index,address:$scope.address,
+                       token:localStorageService.get("token")})
+               .then(function(response){
+
+                       $window.location.href=baseURL+'user/addrmanage.html';
+               })
+               .catch(function(err){
+                  console.log(err);
+               });
+                                
+
      };
      $scope.closeTip = function(){
           $('#yhd_alert_tip').hide();

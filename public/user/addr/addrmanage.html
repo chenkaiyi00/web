@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>地址管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="tp_page" content="5080.0">
+
+<link href="http://xx-jia.com/css/homepage/globle.css" rel="stylesheet" type="text/css">
+<link href="http://xx-jia.com/css/user/h5AddressBookList.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body ng-controller="UserController">
+<div ng-controller="AddressuController">
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="http://xx-jia.com/user.html"></a>
+<h1>地址管理</h1>
+<div class="rightBox">
+</div></div>
+<section class="main address_manage">
+<a  id="addAddress" class="greyBtn w48" ng-click='gotoEdit(-1)'>
+添加收货地址</a>
+
+
+
+
+<article class="yrd_col clearfix" ng-repeat='add in userAddresses track by $index'>
+<p>{{add.recipient}}&&nbsp;&nbsp;{{add.selectedProvice}}&nbsp;&nbsp;{{add.selectedCity}}&nbsp;&nbsp;
+{{add.selectedArea}}&nbsp;&nbsp;
+{{add.address}}&nbsp;&nbsp;&nbsp;&nbsp;{{add.phone}}
+</p>
+<br>
+<a ng-click='gotoEdit($index)' class="edite_address" id="editeAddress">编辑</a>
+<a ng-click='delete($index)' class="del_address" >删除</a>
+</article>
+</section>
+
+<div ng-if='showAlert'>
+<div class="tipMask" style="display: block;"></div>
+
+<div class="alertTip">
+<div class="tip" id="canclOdr" style="display: block;">
+<div class="canclOdrIn clearfix">
+<p class="borderBotm" style="text-align:center">确定删除该收货地址？</p>
+<a id="delUrl" class="greyBtn greyShortBtn" ng-click='confirmDelete()'>确定</a>
+<a  class="tinyRedBtn yellowBtn" ng-click='cancel()'>取消</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+   <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/user.js"></script>	
+	 <script src="js/services/sharedata.js"></script>	
+	<script src="js/controllers/user.js"></script>
+    <script src="js/controllers/useraddress.js"></script>
+</body>
+</html>

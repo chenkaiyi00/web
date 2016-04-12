@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'complaints-icons';
+	src:url('fonts/complaints-icons.eot?-9k137x');
+	src:url('fonts/complaints-icons.eot?#iefix-9k137x') format('embedded-opentype'),
+		url('fonts/complaints-icons.woff?-9k137x') format('woff'),
+		url('fonts/complaints-icons.ttf?-9k137x') format('truetype'),
+		url('fonts/complaints-icons.svg?-9k137x#complaints-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'complaints-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+	content: "\e601";
+}
+.icon-down:before {
+	content: "\e602";
+}
+.icon-add:before {
+	content: "\e600";
+}
+.icon-error:before {
+	content: "\e603";
+}
+.icon-order:before {
+	content: "\e604";
+}
+.icon-success:before {
+	content: "\e605";
+}
+.icon-right_arrow:before {
+	content: "\e60d";
+}
+.icon-location:before {
+	content: "\e612";
+}

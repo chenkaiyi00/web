@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>收货地址</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="wap-font-scale" content="no">
+<meta name="Keywords" content="收货地址">
+<meta name="Description" content="收货地址">
+
+<link href="css/order/global.css" rel="stylesheet" type="text/css">
+<link href="css/order/editAddress.css" rel="stylesheet" type="text/css">
+<style type="text/css"></style>
+
+ </head>
+<body ng-controller='AddressuController'>
+<!-- h5 global top -->
+<header>
+<div class="leftBtns">
+<a href="javascript:history.go(-1);" class="goback"></a>
+
+</div>
+
+<h2>收货地址编辑 </h2>
+<div class="rightBtns" >
+<div class="confirm" ng-click='saveAddr()'>保存</div></div>
+</header>
+<!--header end-->
+
+<div class="address_add_content" ng-controller='UserController'>
+
+<ul>
+<li>
+<input type="text" name="receiverName" id="receiverName" 
+ placeholder="收货人姓名" maxlength="20" ng-model="address.recipient"
+style='height:37px'>
+</li>
+<li>
+<select id="provinceId"  class="province_select" ng-model="address.selectedProvice"
+ng-options="province.name for province in provincelist" 
+>
+
+</select>
+<select name="cityName"  id="cityId"ng-model="address.selectedCity" 
+ng-options="city.name for city in address.selectedProvice.cityList">
+
+</select>
+</li>
+<li>
+<select name="countyName" id="countyId" ng-model="address.selectedArea"
+ng-options="area for area in address.selectedCity.areaList">
+
+</select>
+</li>
+<li>
+<input type="text" name="address1" id="address1Id" value="" placeholder="详细地址" 
+maxlength="100"style='height:37px' ng-model="address.address">
+</li>
+<li>
+<input type="tel" name="receiverMobile" 
+id="receiverMobile" ng-model="address.phone" placeholder="手机"style='height:37px'>
+</li>
+
+<li>
+<p>
+<span class="checkSeckKillAddr">是否设为常用地址</span>
+<input type="checkbox" id="defaultAddr" name="defaultAddr" class="setdefaultaddress">
+</p>
+</li>
+
+<li ng-click='saveAddrprofileNunsuborder()'>
+<input type="submit" class="save"  value="保存" id="submitAddress"></li>
+</ul>
+</div>
+
+<nav></nav>
+
+<div id="yhd_alert_tip" style="display: none;">
+<div class="m_popup_wrap"><div class="title"><span id="yhd_alert_titletext">提示</span>
+<b id="yhd_alert_titleclose" class="close"></b></div>
+<div class="text">
+<p id="yhd_alert_contenttext" style="overflow: auto; height: 60px;">请填写收货人姓名</p></div>
+<div class="btn_box">
+<a id="yhd_alert_cancel" class="btn_public btn_general" style="display: none;">取消</a>
+<a id="yhd_alert_close" 
+class="btn_public btn_highlight" ng-click='closeTip()'>关闭</a></div></div>
+<div class="m_popup_wrap_mask"></div>
+</div>
+
+</body>
+ <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+	<script src="js/services/user.js"></script>	
+	 <script src="js/services/sharedata.js"></script>	
+	<script src="js/controllers/user.js"></script>
+    <script src="js/controllers/useraddress.js"></script>
+</html>
