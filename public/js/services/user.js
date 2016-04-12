@@ -81,7 +81,14 @@
                 };   
                 this.changePwd = function(oldpassword,password){
                     return $http.post(baseURL+'user/changepwd',
-                      {oldpassword:oldpassword,password:password,token:localStorageService.get("token")}).then(
+                      {password:password,token:localStorageService.get("token")}).then(
+                      function(response){
+                    return response;
+                     });
+                };
+                this.validatePwd = function(oldpassword){
+                    return $http.post(baseURL+'user/validatepwd',
+                      {oldpassword:oldpassword,token:localStorageService.get("token")}).then(
                       function(response){
                     return response;
                      });

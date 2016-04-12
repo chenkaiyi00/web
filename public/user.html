@@ -54,13 +54,7 @@
 
 
 <ul>
-<li><a id="yhdlogistics"href='cart.html'target='_self' >
-我的购物车<i>{{user.data.cart.length}}</i></a></li>
-<li><a id="yhdlogistics" >物流快捷查询<i>0</i></a></li>
-<li><a id="yhdorder" href='orderlist.html'target='_self'>
-	我的订单<i>{{user.data.orderhistory.length}}</i></a></li>
-<li><a id="myComment"  >我的评论 </a></li>
-<li><a id="myaddress" >地址管理</a></li>
+<usermenulist></usermenulist>
 <!--
 <li><a id="mycou" >我的抵用劵<i>0</i></a></li>
 <li><a id="myOfnMenu" >以旧换新</a></li>
@@ -80,7 +74,7 @@
 </a>
 </li>
 <li>
-<a  >修改密码
+<a  href='changepwd.html' target='_self'>修改密码
 <em>
 已绑定
 </em>

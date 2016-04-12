@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>修改密码</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="tp_page" content="5086.0">
+
+
+
+<link href="css/user/global.css" rel="stylesheet" type="text/css">
+<link href="css/user/h5changepassword.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body ng-controller="PasswordController">
+<div class="touchweb-com_header" id="globalHeader">
+<a id="topIconBack" class="left icon-back" href="user.html" target='_self' ></a>
+<h1>设置密码</h1>
+<div class="rightBox">
+</div></div>
+
+<div class="wrap">
+<p class="mt">为了您账户安全，修改密码前，须进行验证。请输入原密码： <span class="deepRed"></span></p>
+
+<div class="verfyCod mt clearfix">
+
+<span class="w48 relative">
+<ins class="iptTip">原密码:</ins>
+<span class="clearIpt none">清空</span>
+<ins class="mobiIpt">
+<input placeholder="请输入原密码" type="text" id="verifyCode" 
+name="verifyCode" ng-model='value.oldpwd'></ins>
+
+</span>
+<!--error message -->
+<p class="mobiEror mt none" id="msgs">
+<i class="alertIco"></i>
+<ins id="errinfo">原密码错误</ins>
+</p>
+
+</div>
+
+<p class="alignC mt mb">
+<a id="checkVerfyCod" class="redBtn w48 h38" ng-click="validatePwd(value.oldpwd)" >提交</a>
+</p>
+</div>
+
+
+<div class="wrap" ng-if='setMode'>
+
+<form method="post"  name="logForm" id="saveForm">
+<p class="mt5 longIpt clearfix">
+<span class="iptTip">设置密码：</span>
+<span class="mobiIpt">
+<input id="mobiPswd" name="password" 
+type="password" placeholder="6-20位字母、数字或符号" ng-model='value.pwd' >
+</span>
+</p>
+<p class="mobiEror mt" id="msgs" style="display:none;">
+<i class="alertIco"></i>
+<ins id="checkedinfo"></ins>
+</p>
+<p class="mt">
+<label id="togglePswd" class="relative"><i class="relative checkedBtn"></i>显示密码</label>
+</p>
+<p class="alignC mt mb">
+<a id="save" class="redBtn w48 h38" ng-click='changePwd(value.pwd)'  >完成</a>
+</p>
+</form>
+</div>
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/bin/index.js"></script>
+    <script src="js/services/user.js"></script>
+    <script src="js/controllers/user.js"></script>
+	<script src="js/controllers/password.js"></script>
+
+
+
+</body>
+
+</html>

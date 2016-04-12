@@ -55,7 +55,6 @@ module.exports = function(wagner) {
 */
   api.get('/getordernotlogin/:id', wagner.invoke(function(Unsubmittedorder) {
     return function(req, res) {
-     console.log('abcdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee');
       Unsubmittedorder.findOne({ _id: req.params.id }, function(error, unsub) {
         if (error) {
           return res.
@@ -485,13 +484,13 @@ module.exports = function(wagner) {
             });
         };
     }));
-    /*
+       /*
      ****************************************************************
      * change user's password                                       *
      *                                                              *
      ****************************************************************
      */
-    api.post('/changepwd', wagner.invoke(function(User) {
+    api.post('/validatepwd', wagner.invoke(function(User) {
         return function(req, res) {
             var phone = req.decoded.phone;
             User.findOne({
@@ -512,17 +511,43 @@ module.exports = function(wagner) {
                         error: 'old password is wrong'
                     });
                 }
+               return res.status(status.OK).json({
+                      success:true
+                    });
+
+            });
+        };
+    })); 
+    /*
+     ****************************************************************
+     * change user's password                                       *
+     *                                                              *
+     ****************************************************************
+     */
+    api.post('/changepwd', wagner.invoke(function(User) {
+        return function(req, res) {
+            var phone = req.decoded.phone;
+            User.findOne({
+                'profile.phone': phone
+            }, function(err, user) {
+                if (err) {
+                    return res.status(status.INTERNAL_SERVER_ERROR).
+                    json({
+                        error: err,
+                        errorType: 'server'
+                    });
+                }
                 user.setPassword(req.body.password);
-                user.save(function(err) {
+                user.save(function(err){
 
                     if (err) {
                         return res.status(status.INTERNAL_SERVER_ERROR).json({
-                            error: err,
+                            error: err + ' when save user in changepwd' ,
                             errorType: 'server'
                         });
                     }
                     return res.json({
-                        success: "success"
+                        success: true
                     });
 
                 });
