@@ -25,7 +25,7 @@
 <div class="rightBox">
 </div></div>
 
-<div class="wrap">
+<div class="wrap" ng-if='!setMode'>
 <p class="mt">为了您账户安全，修改密码前，须进行验证。请输入原密码： <span class="deepRed"></span></p>
 
 <div class="verfyCod mt clearfix">
@@ -67,15 +67,13 @@ type="password" placeholder="6-20位字母、数字或符号" ng-model='value.pw
 <ins id="checkedinfo"></ins>
 </p>
 <p class="mt">
-<label id="togglePswd" class="relative"><i class="relative checkedBtn"></i>显示密码</label>
 </p>
 <p class="alignC mt mb">
 <a id="save" class="redBtn w48 h38" ng-click='changePwd(value.pwd)'  >完成</a>
 </p>
 </form>
 </div>
-
-
+<script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/bin/index.js"></script>
     <script src="js/services/user.js"></script>

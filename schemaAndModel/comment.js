@@ -16,15 +16,18 @@ author:{
       required:true
     },
   _id:{ 
-       type:Schema.Types.ObejectID ,
+       type:mongoose.Schema.Types.ObjectId ,
        required:true 
     }
                },
-reply: commentSchema,
+reply:{
+   type:mongoose.Schema.Types.ObjectId ,
+   ref:'Comment'
+},
 rate: {
   type:Number,
    required:true 
 }                  
 };
-module.exports = new mongoose.Schema(commentSchema);
+module.exports  = new mongoose.Schema(commentSchema);
 module.exports.commentSchema = commentSchema;

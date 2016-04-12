@@ -79,7 +79,7 @@
                     return self.user;
                      });
                 };   
-                this.changePwd = function(oldpassword,password){
+                this.changePwd = function(password){
                     return $http.post(baseURL+'user/changepwd',
                       {password:password,token:localStorageService.get("token")}).then(
                       function(response){

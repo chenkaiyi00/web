@@ -2,7 +2,7 @@ angular.module('myApp').
 controller('PasswordController', ['$scope','baseURL','UserFactory','$window',
  function($scope,baseURL,UserFactory,$window){
             $scope.value={
-              oldpwd:null
+              oldpwd:null,
               pwd:null
             };
             $scope.validatePwd = function(oldpassword){

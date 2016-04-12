@@ -13,7 +13,7 @@ var productSchema = {
   },
   category: Category.categorySchema,
   comments: [{ 
-            type:Schema.Types.ObejectID ,
+            type:Schema.ObjectId ,
             ref:'Comment'
                     }]
 };

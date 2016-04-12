@@ -27,9 +27,14 @@ var url = sprintf("mongodb://%s:%d,%s:%d/%s?replicaSet=%s",
 
   var Category =
     mongoose.model('Category', require('./category'), 'categories');
- var Product =
+
+  var Comment =
+    mongoose.model('Comment', require('./comment'), 'comments');
+ 
+var Product =
     mongoose.model('Product', require('./product'), 'products');
-  var Order =
+ 
+ var Order =
     mongoose.model('Order', require('./order'), 'orders');
 
   var Unsubmittedorder =
@@ -53,13 +58,18 @@ var url = sprintf("mongodb://%s:%d,%s:%d/%s?replicaSet=%s",
     wagner.factory('Unsubmittedorder', function() {
     return Unsubmittedorder;
   });
-  var models = {
+   wagner.factory('Comment', function() {
+    return Comment;
+  });
+ 
+ var models = {
     Category: Category,
     Product: Product,
     User: User,
     Order:Order,
-    Unsubmittedorder:Unsubmittedorder
-  };
+    Unsubmittedorder:Unsubmittedorder,
+     Comment:Comment 
+ };
   return models;
 };
 
