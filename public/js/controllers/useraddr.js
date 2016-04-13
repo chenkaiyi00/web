@@ -45,7 +45,7 @@ controller('AddressuController', ['$scope','UserFactory',
 
 
       $scope.gotoEdit = function(index){
-          $window.location.href=baseURL+'user/addr/editaddress.html?index='
+          $window.location.href=baseURL+'userpublic/addr/editaddress.html?index='
                                   + index;           
       };
      $scope.delete = function(index){
@@ -119,11 +119,12 @@ controller('AddressuController', ['$scope','UserFactory',
                        token:localStorageService.get("token")})
                .then(function(response){
 
-                       $window.location.href=baseURL+'user/addrmanage.html';
+                       $window.location.href=baseURL+'userpublic/addr/addrmanage.html';
                })
                .catch(function(err){
                   console.log(err);
-               });
+	    			             
+  });
                                 
 
      };

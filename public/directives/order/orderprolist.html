@@ -1,8 +1,9 @@
 
 <div class="item_list">
 <table>
-<tbody><tr ng-click="goProductDetail({{item.product._id}});" 
-id="goProductDetail" >
+<tbody>
+<tr ng-repeat='item in order.list'
+ ng-click="goProductDetail(item.product._id)"  id="goProductDetail" >
 <td>
 <div>
 <img src="http://d7.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900.jpg">

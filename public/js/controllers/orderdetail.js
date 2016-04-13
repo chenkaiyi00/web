@@ -19,12 +19,15 @@
                    $scope.gotoDetail = function(){
                      $window.location.href=baseURL+
                           'orderdetail.html?id='+$scope.order._id;
-                   } 
+                   }; 
                   $scope.gotoOrderproList = function(){
                      $window.location.href=baseURL+
                           'orderproductlist.html?id='+$scope.order._id;
-                   } 
-
+                   }; 
+			$scope.goProductDetail = function(id){
+			
+			$window.location.href=baseURL +'detail.html?p='+id;
+			};
                   $scope.showMenuFunc = function(){
                       if (  $scope.showMenu) {
                          $scope.showMenu = false;

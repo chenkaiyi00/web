@@ -22,7 +22,7 @@ controller('PasswordController', ['$scope','baseURL','UserFactory','$window',
                    UserFactory.changePwd(password)
                    .then(function(){
                               // go to changepwdsuc.html  
-                        $window.location.href=baseURL+'user/password/changepwdsuc.html'; 
+                        $window.location.href=baseURL+'userpublic/password/changepwdsuc.html'; 
                          })
                    .catch(function(err){
                        
