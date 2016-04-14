@@ -1,5 +1,5 @@
 "use strict";
-angular.module('myApp', [require('angular-messages'),
+angular.module('myApp', [require('angular-carousel'),require('angular-touch'),
   require('angular-local-storage')])
 .config(function ($locationProvider) { //config your locationProvider
        $locationProvider.html5Mode({

@@ -17,9 +17,9 @@
 
 <link href="css/detail/global.css" rel="stylesheet" type="text/css">
 <link href="css/detail/detail.css" rel="stylesheet" type="text/css">
+<link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
 <style type="text/css"></style>
-<script type="text/javascript" charset="utf-8" 
-src="http://image.yihaodianimg.com/inshop/wireless/js/lib/swipeSlide.min.js"></script>
+
 
 </head>
 
@@ -57,45 +57,63 @@ src="http://image.yihaodianimg.com/inshop/wireless/js/lib/swipeSlide.min.js"></s
 <div class="screen_slide">
 <div class="swipeSlide_wrap">
 <div class="swipeSlide_detail">
-<ul style="transition: all 0.3s ease; transform: translate3d(-990px, 0px, 0px);"><li style="transition: all 0s ease; transform: translate3d(-495px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+
+<ul rn-carousel>
+
+<li>
+
 <img src="http://d11.yihaodianimg.com/N06/M00/01/E7/CgQIzlcDT4OASTZzAAIXAwqLgTc78900_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(0px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li>
+
 <img src="http://d10.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(495px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li >
+
 <img src="http://d11.yihaodianimg.com/N07/M08/EA/09/ChEbvFbNYlaAEwsqAAJoiDNB8I065300_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(990px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li>
+
 <img src="http://d11.yihaodianimg.com/N09/M03/DC/0F/ChEi2VbNYmCAXKHpAALs38NaoyM67100_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(1485px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li>
+
 <img src="http://d11.yihaodianimg.com/N09/M01/36/9F/ChEi2FcDT4OAfdkeAAN4rORBXLU09000_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(1980px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li>
+
 <img src="http://d11.yihaodianimg.com/N06/M00/01/E7/CgQIzlcDT4OASTZzAAIXAwqLgTc78900_640x640.jpg" alt="">
-</a>
+
 </li>
-<li style="transition: all 0s ease; transform: translate3d(2475px, 0px, 0px);">
-<a href="javascript:void(0);">
+
+<li>
+
 <img src="http://d10.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900_640x640.jpg" alt="">
-</a>
-</li></ul>
+
+</li>
+
+</ul>
+
+
 </div><!-- swipeSlide_detail -->
 </div>
+
+
 <div class="swipe_num">
-<span class="cur">3</span>/<span class="sum">5</span>
+<span class="cur">{{carouselIndex}}</span>/<span class="sum">{{slides.length}}</span>
+<div rn-carousel-indicators ng-if="slides.length > 1" 
+slides="slides" rn-carousel-index="carouselIndex"></div>
 </div>
 </div>
 
