@@ -71,86 +71,72 @@ Order.remove({},function(error){
   }
         var categories = [
       { _id: '肉类' },
-      { _id: '牛肉', parent: '肉类' },
-      { _id: '鸡鸭类', parent: '肉类' },
-      { _id: '鸡爪',parent: '鸡鸭类'  },
-      { _id: '鱼肉',parent: '肉类'  }
+      { _id: '牛肉', parent: '肉类' }
     ];
 
 var products = [{
     _id:1,
-   name: '东鸠桃烤杏仁焦糖粟米条',
+   name: '乌冬面',
    price: 20,
     smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/1/750/1.jpg',
+    'http://xx-jia.com/images/productimage/1/750/2.jpg',
+    'http://xx-jia.com/images/productimage/1/750/3.jpg',
+    'http://xx-jia.com/images/productimage/1/750/4.jpg',
+    'http://xx-jia.com/images/productimage/1/750/5.jpg',
+    'http://xx-jia.com/images/productimage/1/750/6.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/1/640/1.jpg',
+       'http://xx-jia.com/images/productimage/1/640/2.jpg',
+       'http://xx-jia.com/images/productimage/1/640/3.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
 }
  },{
     _id:2,
-   name: '奶油夏威夷果零食进口坚果',
-   price: 30,
-   smallpic:'http://localhost:3000/img/奶油夏威夷果零食进口坚果.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+   name: '牛肉酱',
+   price: 20,
+    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/2/750/1.jpg',
+    'http://xx-jia.com/images/productimage/2/750/2.jpg',
+    'http://xx-jia.com/images/productimage/2/750/3.jpg',
+    'http://xx-jia.com/images/productimage/2/750/4.jpg',
+    'http://xx-jia.com/images/productimage/2/750/5.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/2/640/1.jpg',
+       'http://xx-jia.com/images/productimage/2/640/2.jpg',
+       'http://xx-jia.com/images/productimage/2/640/3.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
 }
  },
- {
+{
     _id:3,
-   name: '小饼松永黄油味小米脆饼干',
-   price: 10,
-   smallpic:'http://localhost:3000/img/小饼松永黄油味小米脆饼干.jpg',
-   category: { _id: '鸡鸭类', ancestors: ['鸡鸭类', '肉类']  
-}
- },
- {
-    _id:4,
-   name: '斯提拉米苏蛋糕',
-   price: 15,
-    smallpic:'http://localhost:3000/img/斯提拉米苏蛋糕.jpg',
-   category: { _id: '鱼肉', ancestors: ['鱼肉', '肉类']  
-}
- },{
-    _id:5,
-   name: '森永巧克力粒子曲奇饼干',
+   name: '鱿鱼',
    price: 20,
-    smallpic:'http://localhost:3000/img/森永巧克力粒子曲奇饼干.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
- },{
-    _id:6,
-   name: '烘米苏奶酪咖啡巧克力',
-   price: 20,
-    smallpic:'http://localhost:3000/img/烘米苏奶酪咖啡巧克力.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
- },{
-    _id:7,
-   name: '烤制浓厚巧克力',
-   price: 20,
-    smallpic:'http://localhost:3000/img/烤制浓厚巧克力.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
- },
- {
-    _id:8,
-   name: '麦提莎脆心朱古力',
-   price: 20,
-    smallpic:'http://localhost:3000/img/麦提莎脆心朱古力.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
- },
- {
-    _id:9,
-   name: 'COLLON迁利抹茶忌廉蛋卷',
-   price: 20,
-    smallpic:'http://localhost:3000/img/COLLON迁利抹茶忌廉蛋卷.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
- },
- {
-    _id:10,
-   name: 'malteserl麦提莎脆心朱古力',
-   price: 20,
-    smallpic:'http://localhost:3000/img/malteserl麦提莎脆心朱古力.jpg',
-   category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/3/750/1.jpg',
+    'http://xx-jia.com/images/productimage/3/750/2.jpg',
+    'http://xx-jia.com/images/productimage/3/750/3.jpg',
+    'http://xx-jia.com/images/productimage/3/750/4.jpg',
+    'http://xx-jia.com/images/productimage/3/750/5.jpg',
+    'http://xx-jia.com/images/productimage/3/750/6.jpg',
+    'http://xx-jia.com/images/productimage/3/750/7.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/1/640/1.jpg',
+       'http://xx-jia.com/images/productimage/1/640/2.jpg',
+       'http://xx-jia.com/images/productimage/1/640/3.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
 }
  }
 
