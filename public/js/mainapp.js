@@ -1,6 +1,6 @@
 "use strict";
-angular.module('myApp', [
-  require('angular-local-storage')])
+angular.module('myApp', [ require('angular-touch'),
+  require('angular-local-storage'),'angular-carousel'])
 .config(function ($locationProvider) { //config your locationProvider
        $locationProvider.html5Mode({
     enabled: true,

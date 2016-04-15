@@ -23,20 +23,6 @@
 
 
  <script src="js/jquery-1.11.0.min.js"></script>
- <script src="js/unslider-min.js"></script>
-
-	<script>
-		jQuery(document).ready(function($) {
-			$('.banner').unslider(
-{	speed: 1000,               //  The speed to animate each slide (in milliseconds)
-	delay: 3000,              //  The delay between slide animations (in milliseconds)
-	autoplay: true,
-dots: false,
-keys: false           
-}
-);
-		});
-	</script>
 <style type="text/css"></style>
 
 
@@ -78,7 +64,30 @@ keys: false
 <div  class='banner'>
 
 
-<detailslider ></detailslider>
+<ul  rn-carousel rn-carousel-index="carouselIndex2" 
+rn-carousel-auto-slide rn-carousel-pause-on-hover  >
+
+<li>
+
+<img src='http://xx-jia.com/images/productimage/1/640/1.jpg'>
+
+</li>
+
+<li>
+
+<img src='http://xx-jia.com/images/productimage/1/640/2.jpg'>
+
+</li>
+
+<li>
+
+<img src='http://xx-jia.com/images/productimage/1/640/3.jpg'>
+
+</li>
+
+</ul>
+
+
 
 
 
@@ -174,7 +183,8 @@ ng-model='value.quantity' >
 <nav></nav>
 
     <script src="js/angular.min.js"></script>  
-<script src="js/bin/index.js"></script>
+	<script src="js/angular-carousel.min.js"></script>  
+	<script src="js/bin/index.js"></script>
 	<script src="js/services/user.js"></script>
 	<script src="js/services/productdetail.js"></script>
     <script src="js/services/comment.js"></script>
