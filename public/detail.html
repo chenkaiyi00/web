@@ -64,27 +64,13 @@
 <div  class='banner'>
 
 
-<ul  rn-carousel rn-carousel-index="carouselIndex2" 
-rn-carousel-auto-slide rn-carousel-pause-on-hover  >
+<ul  rn-carousel rn-carousel-auto-slide rn-carousel-pause-on-hover  >
 
-<li>
+<li ng-repeat='img in sliderimgs'>
 
-<img src='http://xx-jia.com/images/productimage/1/640/1.jpg'>
-
-</li>
-
-<li>
-
-<img src='http://xx-jia.com/images/productimage/1/640/2.jpg'>
+<img  ng-src='{{img}}'>
 
 </li>
-
-<li>
-
-<img src='http://xx-jia.com/images/productimage/1/640/3.jpg'>
-
-</li>
-
 </ul>
 
 
@@ -98,7 +84,7 @@ rn-carousel-auto-slide rn-carousel-pause-on-hover  >
 </div>
 
 <div class="swipe_num">
-<span class="cur"></span><span class="sum"></span>
+<span class="cur"></span>/<span class="sum"></span>
 </div>
 
 </div>
