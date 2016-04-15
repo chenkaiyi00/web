@@ -80,47 +80,12 @@ keys: false
 
 <ul  >
 
-<li>
+<li ng-repeat='img in product.sliderpictures'>
 
-<img src="http://d11.yihaodianimg.com/N06/M00/01/E7/CgQIzlcDT4OASTZzAAIXAwqLgTc78900_640x640.jpg" alt="">
-
-</li>
-
-<li>
-
-<img src="http://d10.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900_640x640.jpg" alt="">
+<img src="{{img}}" alt="product.name">
 
 </li>
 
-<li >
-
-<img src="http://d11.yihaodianimg.com/N07/M08/EA/09/ChEbvFbNYlaAEwsqAAJoiDNB8I065300_640x640.jpg" alt="">
-
-</li>
-
-<li>
-
-<img src="http://d11.yihaodianimg.com/N09/M03/DC/0F/ChEi2VbNYmCAXKHpAALs38NaoyM67100_640x640.jpg" alt="">
-
-</li>
-
-<li>
-
-<img src="http://d11.yihaodianimg.com/N09/M01/36/9F/ChEi2FcDT4OAfdkeAAN4rORBXLU09000_640x640.jpg" alt="">
-
-</li>
-
-<li>
-
-<img src="http://d11.yihaodianimg.com/N06/M00/01/E7/CgQIzlcDT4OASTZzAAIXAwqLgTc78900_640x640.jpg" alt="">
-
-</li>
-
-<li>
-
-<img src="http://d10.yihaodianimg.com/N10/M07/DF/93/ChEi3FbNYlGAeHCcAAJXvmb7hqM90900_640x640.jpg" alt="">
-
-</li>
 
 </ul>
 
@@ -130,7 +95,7 @@ keys: false
 </div>
 
 <div class="swipe_num">
-<span class="cur">{{carouselIndex}}</span><span class="sum">{{slides.length}}</span>
+<span class="cur"></span><span class="sum"></span>
 </div>
 
 </div>
