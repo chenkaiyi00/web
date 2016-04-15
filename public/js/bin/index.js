@@ -3278,8 +3278,7 @@ module.exports = 'ngTouch';
 
 },{"./angular-touch":4}],6:[function(require,module,exports){
 "use strict";
-angular.module('myApp', [require('angular-carousel'),require('angular-touch'),
-  require('angular-local-storage')])
+angular.module('myApp', [ require('angular-local-storage')])
 .config(function ($locationProvider) { //config your locationProvider
        $locationProvider.html5Mode({
     enabled: true,
@@ -3310,7 +3309,7 @@ angular.module('myApp', [require('angular-carousel'),require('angular-touch'),
           if (input[i].rate==1) {
                 out.push(input[i]);
           }        
-       }
+i       }
      }else if(rate=='medium'){//medium
         for (var i = 0; i < input.length; i++) {
           if (input[i].rate==2||input[i].rate==3) {

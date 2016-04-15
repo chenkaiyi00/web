@@ -17,7 +17,26 @@
 
 <link href="css/detail/global.css" rel="stylesheet" type="text/css">
 <link href="css/detail/detail.css" rel="stylesheet" type="text/css">
-<link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
+
+<link href="css/unslider.css" rel="stylesheet" type="text/css">
+
+
+
+ <script src="js/jquery-1.11.0.min.js"></script>
+ <script src="js/unslider-min.js"></script>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$('.banner').unslider(
+{	speed: 1000,               //  The speed to animate each slide (in milliseconds)
+	delay: 3000,              //  The delay between slide animations (in milliseconds)
+	autoplay: true,
+dots: false,
+keys: false           
+}
+);
+		});
+	</script>
 <style type="text/css"></style>
 
 
@@ -56,10 +75,10 @@
 
 <div class="screen_slide">
 <div class="swipeSlide_wrap">
-<div class="swipeSlide_detail">
+<div class="banner">
 
 
-<ul rn-carousel>
+<ul  >
 
 <li>
 
@@ -107,14 +126,13 @@
 
 
 </div><!-- swipeSlide_detail -->
-</div>
 
+</div>
 
 <div class="swipe_num">
-<span class="cur">{{carouselIndex}}</span>/<span class="sum">{{slides.length}}</span>
-<div rn-carousel-indicators ng-if="slides.length > 1" 
-slides="slides" rn-carousel-index="carouselIndex"></div>
+<span class="cur">{{carouselIndex}}</span><span class="sum">{{slides.length}}</span>
 </div>
+
 </div>
 
 <productinfo>
@@ -194,9 +212,9 @@ ng-model='value.quantity' >
 </div>
 
 <nav></nav>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/bin/index.js"></script>
+
+    <script src="js/angular.min.js"></script>  
+<script src="js/bin/index.js"></script>
 	<script src="js/services/user.js"></script>
 	<script src="js/services/productdetail.js"></script>
     <script src="js/services/comment.js"></script>
