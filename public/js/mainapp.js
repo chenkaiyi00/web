@@ -1,5 +1,5 @@
 "use strict";
-angular.module('myApp', [require('angular-carousel'),require('angular-touch'),
+angular.module('myApp', [
   require('angular-local-storage')])
 .config(function ($locationProvider) { //config your locationProvider
        $locationProvider.html5Mode({
@@ -60,6 +60,12 @@ angular.module('myApp', [require('angular-carousel'),require('angular-touch'),
   return {
     restrict: 'E',
     templateUrl:'/directives/detail/productinfo.html'
+  };
+}])
+.directive('detailslider',[ function() {
+  return {
+    restrict: 'E',
+    templateUrl:'/directives/detail/detailslider.html'
   };
 }])
 .directive('comment',[ function() {
