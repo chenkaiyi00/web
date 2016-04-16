@@ -7,7 +7,7 @@
 
 <li class="slide" ng-repeat="image in images" ng-show="image.visible">
 
-<img src='http://xx-jia.com/images/productimage/1/640/1.jpg' alt='{{image.alt}}'>
+<img ng-src='{{image.src}}' alt='{{image.alt}}'>
 
 </li>
 
@@ -25,7 +25,7 @@
 </div>
 
 <div class="swipe_num">
-<span class="cur"></span>/<span class="sum"></span>
+<span class="cur">{{currentIndex+1}}</span>/<span class="sum">{{images.length}}</span>
 </div>
 
 </div>

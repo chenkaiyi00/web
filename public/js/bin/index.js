@@ -5350,7 +5350,7 @@ angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
     return out;
   };
 })
-directive('detailslider', function ($timeout) {
+.directive('detailslider', function ($timeout) {
   return {
     restrict: 'AE',
   replace: true,
