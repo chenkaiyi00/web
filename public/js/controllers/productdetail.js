@@ -15,7 +15,11 @@
                              //get product, set to scope,
                              $scope.inCart = false;
                              $scope.product = product;
-		                         $scope.sliderimgs = $scope.product.sliderpictures;                             $scope.comments = $scope.product.comments;
+		                         $scope.sliderimgs = [];
+                             product.sliderpictures.forEach(function(src){
+                              $scope.sliderimgs.append({src:src,alt:product.name});
+                             });                             
+                             $scope.comments = $scope.product.comments;
                              $scope.isCollected =false;
                              $scope.tabAt = 1;
                      });
