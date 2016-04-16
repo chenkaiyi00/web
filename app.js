@@ -85,12 +85,14 @@ var products = [{
     'http://xx-jia.com/images/productimage/1/750/3.jpg',
     'http://xx-jia.com/images/productimage/1/750/4.jpg',
     'http://xx-jia.com/images/productimage/1/750/5.jpg',
-    'http://xx-jia.com/images/productimage/1/750/6.jpg'
+    'http://xx-jia.com/images/productimage/1/750/6.jpg',
+     'http://xx-jia.com/images/productimage/1/750/7.jpg'
     ],
      sliderpictures: [
        'http://xx-jia.com/images/productimage/1/640/1.jpg',
        'http://xx-jia.com/images/productimage/1/640/2.jpg',
-       'http://xx-jia.com/images/productimage/1/640/3.jpg'
+       'http://xx-jia.com/images/productimage/1/640/3.jpg',
+       'http://xx-jia.com/images/productimage/1/640/4.jpg'
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
@@ -105,7 +107,9 @@ var products = [{
     'http://xx-jia.com/images/productimage/2/750/2.jpg',
     'http://xx-jia.com/images/productimage/2/750/3.jpg',
     'http://xx-jia.com/images/productimage/2/750/4.jpg',
-    'http://xx-jia.com/images/productimage/2/750/5.jpg'
+    'http://xx-jia.com/images/productimage/2/750/5.jpg',
+    'http://xx-jia.com/images/productimage/2/750/6.jpg',
+    'http://xx-jia.com/images/productimage/2/750/7.jpg'
     ],
      sliderpictures: [
        'http://xx-jia.com/images/productimage/2/640/1.jpg',
@@ -133,7 +137,32 @@ var products = [{
      sliderpictures: [
        'http://xx-jia.com/images/productimage/1/640/1.jpg',
        'http://xx-jia.com/images/productimage/1/640/2.jpg',
-       'http://xx-jia.com/images/productimage/1/640/3.jpg'
+       'http://xx-jia.com/images/productimage/1/640/3.jpg',
+       'http://xx-jia.com/images/productimage/1/640/4.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+}
+ },
+ {
+    _id:4,
+   name: '牛肉干',
+   price: 20,
+    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/3/750/1.jpg',
+    'http://xx-jia.com/images/productimage/3/750/2.jpg',
+    'http://xx-jia.com/images/productimage/3/750/3.jpg',
+    'http://xx-jia.com/images/productimage/3/750/4.jpg',
+    'http://xx-jia.com/images/productimage/3/750/5.jpg',
+    'http://xx-jia.com/images/productimage/3/750/6.jpg',
+    'http://xx-jia.com/images/productimage/3/750/7.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/1/640/1.jpg',
+       'http://xx-jia.com/images/productimage/1/640/2.jpg',
+       'http://xx-jia.com/images/productimage/1/640/3.jpg',
+       'http://xx-jia.com/images/productimage/1/640/4.jpg'
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  

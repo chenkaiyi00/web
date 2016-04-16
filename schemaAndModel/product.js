@@ -8,6 +8,7 @@ var productSchema = {
   smallpic:{type: String, match: /^http:\/\//i },
   detailpictures: [{ type: String, match: /^http:\/\//i }],
   sliderpictures: [{ type: String, match: /^http:\/\//i }],
+  shortDes:{ type: String},
   price: {
    type: Number, 
    required: true 
