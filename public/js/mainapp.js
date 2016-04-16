@@ -50,14 +50,15 @@ angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
     return out;
   };
 })
- .directive('detailslider',[ function($timeout) {
+directive('detailslider', function ($timeout) {
   return {
     restrict: 'AE',
-    replace: true,
-    scope: {
-      images: '='
-    },
-    link: function(scope, elem, attrs) {
+  replace: true,
+  scope:{
+    images: '='
+  },
+    link: function (scope, elem, attrs) {
+  
     scope.currentIndex=0;
 
     scope.next=function(){
@@ -93,10 +94,11 @@ angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
     });
     
     /* End : For Automatic slideshow*/
+    
     },
-    templateUrl: 'directives/detail/detailslider.html'
-  };
-}])
+  templateUrl:'directives/detail/detailslider.html'
+  }
+})
 .directive('youlike',[ function() {
   return {
     restrict: 'E',
