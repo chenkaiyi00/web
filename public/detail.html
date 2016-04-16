@@ -57,30 +57,7 @@
 <div class="pd_product-wrap">
 <!-- slide -->
 
-<div class="screen_slide">
-<div class="swipeSlide_wrap">
-<div  class='banner'>
-  <uib-carousel active="0" interval="1000" no-pause='true' >
-      <uib-slide ng-repeat="img in sliderimgs" >
-        <img ng-src="{{img}}" >
-      </uib-slide>
-   </uib-carousel>
-
-
-
-
-
-
-
-</div><!-- swipeSlide_detail -->
-
-</div>
-
-<div class="swipe_num">
-<span class="cur"></span>/<span class="sum"></span>
-</div>
-
-</div>
+<detailslider images="sliderimgs"></detailslider>
 
 
 <productinfo>

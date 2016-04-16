@@ -1,6 +1,6 @@
 "use strict";
 angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
-  require('angular-local-storage'), require('angular-ui-bootstrap')])
+  require('angular-local-storage')])
 .config(function ($locationProvider) { //config your locationProvider
        $locationProvider.html5Mode({
     enabled: true,
@@ -50,6 +50,53 @@ angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
     return out;
   };
 })
+ .directive('detailslider',[ function($timeout) {
+  return {
+    restrict: 'AE',
+    replace: true,
+    scope: {
+      images: '='
+    },
+    link: function(scope, elem, attrs) {
+    scope.currentIndex=0;
+
+    scope.next=function(){
+      scope.currentIndex<scope.images.length-1?scope.currentIndex++:scope.currentIndex=0;
+    };
+    
+    scope.prev=function(){
+      scope.currentIndex>0?scope.currentIndex--:scope.currentIndex=scope.images.length-1;
+    };
+    
+    scope.$watch('currentIndex',function(){
+      scope.images.forEach(function(image){
+        image.visible=false;
+      });
+      scope.images[scope.currentIndex].visible=true;
+    });
+    
+    /* Start: For Automatic slideshow*/
+    
+    var timer;
+    
+    var sliderFunc=function(){
+      timer=$timeout(function(){
+        scope.next();
+        timer=$timeout(sliderFunc,5000);
+      },5000);
+    };
+    
+    sliderFunc();
+    
+    scope.$on('$destroy',function(){
+      $timeout.cancel(timer);
+    });
+    
+    /* End : For Automatic slideshow*/
+    },
+    templateUrl: 'directives/detail/detailslider.html'
+  };
+}])
 .directive('youlike',[ function() {
   return {
     restrict: 'E',
@@ -60,12 +107,6 @@ angular.module('myApp', [ require('angular-touch'),require('angular-animate'),
   return {
     restrict: 'E',
     templateUrl:'/directives/detail/productinfo.html'
-  };
-}])
-.directive('detailslider',[ function() {
-  return {
-    restrict: 'E',
-    templateUrl:'/directives/detail/detailslider.html'
   };
 }])
 .directive('comment',[ function() {
