@@ -1262,8 +1262,8 @@ angular.module('myApp', [ require('angular-touch'),'ngAnimate',
     var sliderFunc=function(){
       timer=$timeout(function(){
         scope.next();
-        timer=$timeout(sliderFunc,5000);
-      },5000);
+        timer=$timeout(sliderFunc,3000);
+      },3000);
     };
     
     sliderFunc();

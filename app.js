@@ -92,11 +92,23 @@ var products = [{
        'http://xx-jia.com/images/productimage/1/640/1.jpg',
        'http://xx-jia.com/images/productimage/1/640/2.jpg',
        'http://xx-jia.com/images/productimage/1/640/3.jpg',
-       'http://xx-jia.com/images/productimage/1/640/4.jpg'
+       'http://xx-jia.com/images/productimage/1/640/4.jpg',
+        'http://xx-jia.com/images/productimage/1/640/5.jpg',
+       'http://xx-jia.com/images/productimage/1/640/6.jpg'
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
+},
+shortDes:'精选食材 工艺讲究  纯手工熬制 无防腐剂 无添加剂',
+detailDes:['食品是在拍下24小时内新鲜制作好发货（除了乌冬面，哈哈）',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系向向，我们会妥善处理；',
+'食品是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选当季最新鲜的，品质最高的，牛肉酱是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一包牛肉酱新鲜，纯正，天然，美味'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'阴凉干燥处：5天 冷藏：7天',
+eatmethod:'开袋即食',
+savemethod:'冷藏！！！',
+weight:'100g+'
  },{
     _id:2,
    name: '牛肉酱',
@@ -118,11 +130,22 @@ var products = [{
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
+},
+shortDes:'精选食材 小批量精制  纯手工熬制 无防腐剂 无添加剂',
+detailDes:['牛肉酱在拍下24小时内新鲜制作好发货',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系向向，我们会妥善处理',
+'牛肉酱是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选当季最新鲜的，品质最高的，每一款肉干儿都是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一瓶肉干儿新鲜，纯正，天然，美味'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'7天',
+eatmethod:'开瓶即食（可用来拌饭拌粉喔，很多菜也可以加它一起炒喔）',
+savemethod:'冷藏！！！',
+weight:'100g+'
+
  },
 {
     _id:3,
-   name: '鱿鱼',
+   name: '向向家麻辣鱿鱼干儿',
    price: 20,
     smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
     detailpictures:[
@@ -135,38 +158,59 @@ var products = [{
     'http://xx-jia.com/images/productimage/3/750/7.jpg'
     ],
      sliderpictures: [
-       'http://xx-jia.com/images/productimage/1/640/1.jpg',
-       'http://xx-jia.com/images/productimage/1/640/2.jpg',
-       'http://xx-jia.com/images/productimage/1/640/3.jpg',
-       'http://xx-jia.com/images/productimage/1/640/4.jpg'
+       'http://xx-jia.com/images/productimage/3/640/1.jpg',
+       'http://xx-jia.com/images/productimage/3/640/2.jpg',
+       'http://xx-jia.com/images/productimage/3/640/3.jpg',
+       'http://xx-jia.com/images/productimage/3/640/4.jpg'
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
+},
+shortDes:'精选食材  休闲零食 香辣口味 纯手工熬制 无防腐剂 无添加剂',
+detailDes:['鱿鱼干二在拍下24小时内新鲜制作好发货',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系向向，我们会妥善处理',
+'鱿鱼干儿是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选当季最新鲜的，品质最高的，每一款肉干儿都是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一瓶肉干儿新鲜，纯正，天然，美味'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'7天',
+eatmethod:'开袋即食（可作为馋嘴小零食，可用来拌饭拌粉，可作为招待客人的一道佳品，加热后口味更佳喔）',
+savemethod:'阴凉干燥处：10天 冷藏：15天',
+weight:'100g+'
  },
  {
     _id:4,
-   name: '牛肉干',
+   name: '向向家麻麻辣辣牛肉干儿',
    price: 20,
     smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
     detailpictures:[
-    'http://xx-jia.com/images/productimage/3/750/1.jpg',
-    'http://xx-jia.com/images/productimage/3/750/2.jpg',
-    'http://xx-jia.com/images/productimage/3/750/3.jpg',
-    'http://xx-jia.com/images/productimage/3/750/4.jpg',
-    'http://xx-jia.com/images/productimage/3/750/5.jpg',
-    'http://xx-jia.com/images/productimage/3/750/6.jpg',
-    'http://xx-jia.com/images/productimage/3/750/7.jpg'
+    'http://xx-jia.com/images/productimage/4/750/1.jpg',
+    'http://xx-jia.com/images/productimage/4/750/2.jpg',
+    'http://xx-jia.com/images/productimage/4/750/3.jpg',
+    'http://xx-jia.com/images/productimage/4/750/4.jpg',
+    'http://xx-jia.com/images/productimage/4/750/5.jpg',
+    'http://xx-jia.com/images/productimage/4/750/6.jpg',
+    'http://xx-jia.com/images/productimage/4/750/7.jpg'
     ],
      sliderpictures: [
-       'http://xx-jia.com/images/productimage/1/640/1.jpg',
-       'http://xx-jia.com/images/productimage/1/640/2.jpg',
-       'http://xx-jia.com/images/productimage/1/640/3.jpg',
-       'http://xx-jia.com/images/productimage/1/640/4.jpg'
+       'http://xx-jia.com/images/productimage/4/640/1.jpg',
+       'http://xx-jia.com/images/productimage/4/640/2.jpg',
+       'http://xx-jia.com/images/productimage/4/640/3.jpg',
+       'http://xx-jia.com/images/productimage/4/640/4.jpg'
      ],
 
     category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
-}
+},
+shortDes:'精选食材  休闲零食 香辣口味 纯手工熬制 无防腐剂 无添加剂',
+detailDes:['牛肉干儿在拍下24小时内新鲜制作好发货',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系客服，我们会妥善处理',
+'私房菜是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选当季最新鲜的，品质最高的，每一款肉干儿都是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一瓶肉干儿新鲜，纯正，天然，美味',
+'尽管选用新鲜成年黄牛肉，去腥还是不可忽视的，洗净修剪焯水后，经人工均匀切条切丁，这一过程是非常费时费工'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'7天',
+eatmethod:'开袋即食（可作为馋嘴小零食，可用来拌饭拌粉，可作为招待客人的一道佳品，加热后口味更佳喔）',
+savemethod:'阴凉干燥处：10天 冷藏：15天',
+weight:'100g+'
  }
 
  ];

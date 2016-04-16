@@ -9,6 +9,12 @@ var productSchema = {
   detailpictures: [{ type: String, match: /^http:\/\//i }],
   sliderpictures: [{ type: String, match: /^http:\/\//i }],
   shortDes:{ type: String},
+  detailDes: [{ type: String }],
+  flavor:{ type: String},
+  expirationDate:{ type: String},
+  eatmethod:{ type: String},
+  savemethod:{ type: String},
+  weight:{ type: String},
   price: {
    type: Number, 
    required: true 

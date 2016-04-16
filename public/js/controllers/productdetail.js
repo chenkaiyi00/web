@@ -26,6 +26,7 @@
                     $scope.value = {
                              quantity:1
                      };
+                     $scope.chinese =['壹','贰','叁','肆','伍'];
                      $scope.addQ = function(){
                        $scope.value.quantity++;
                      };
