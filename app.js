@@ -61,14 +61,7 @@ Product.remove({},function(error){
   if (error) {
      console.log(error);
   }
-User.remove({},function(error){
-  if (error) {
-      console.log(error);
-  }
-Order.remove({},function(error){
-  if (error) {
-      console.log(error);
-  }
+
         var categories = [
       { _id: '肉类' },
       { _id: '牛肉', parent: '肉类' }
@@ -76,7 +69,7 @@ Order.remove({},function(error){
 
 var products = [{
     _id:1,
-   name: '乌冬面',
+   name: '向向家牛肉酱乌冬面',
    price: 20,
     smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
     detailpictures:[
@@ -108,7 +101,10 @@ flavor:'微辣  中辣 超辣',
 expirationDate:'阴凉干燥处：5天 冷藏：7天',
 eatmethod:'开袋即食',
 savemethod:'冷藏！！！',
-weight:'100g+'
+weight:'100g+',
+secert:'选自多种天然香辛料按精确比例配制而成，无防腐剂，无添加剂，全靠天然香料提味',
+requirement:'有什么要求/（譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我们会耐心按照亲们的要求精心制作）
+已经到底啦'
  },{
     _id:2,
    name: '牛肉酱',
@@ -140,7 +136,10 @@ flavor:'微辣  中辣 超辣',
 expirationDate:'7天',
 eatmethod:'开瓶即食（可用来拌饭拌粉喔，很多菜也可以加它一起炒喔）',
 savemethod:'冷藏！！！',
-weight:'100g+'
+weight:'100g+',
+secert:'选自多种天然香辛料按精确比例配制而成，无防腐剂，无添加剂，全靠天然香料提味',
+requirement:'有什么要求/（譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我们会耐心按照亲们的要求精心制作）
+已经到底啦'
 
  },
 {
@@ -175,7 +174,10 @@ flavor:'微辣  中辣 超辣',
 expirationDate:'7天',
 eatmethod:'开袋即食（可作为馋嘴小零食，可用来拌饭拌粉，可作为招待客人的一道佳品，加热后口味更佳喔）',
 savemethod:'阴凉干燥处：10天 冷藏：15天',
-weight:'100g+'
+weight:'100g+',
+secret:'选自多种天然香辛料按精确比例配制而成，无防腐剂，无添加剂，全靠天然香料提味',
+requirement:'有什么要求/（譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我们会耐心按照亲们的要求精心制作）
+已经到底啦'
  },
  {
     _id:4,
@@ -210,7 +212,82 @@ flavor:'微辣  中辣 超辣',
 expirationDate:'7天',
 eatmethod:'开袋即食（可作为馋嘴小零食，可用来拌饭拌粉，可作为招待客人的一道佳品，加热后口味更佳喔）',
 savemethod:'阴凉干燥处：10天 冷藏：15天',
+weight:'100g+',
+secert:'选自多种天然香辛料按精确比例配制而成，无防腐剂，无添加剂，全靠天然香料提味',
+requirement:'有什么要求/（譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我们会耐心按照亲们的要求精心制作）
+已经到底啦'
+ },
+  {
+    _id:5,
+   name: '向向家麻麻辣辣腊肉干儿',
+   price: 20,
+    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/5/750/1.jpg',
+    'http://xx-jia.com/images/productimage/5/750/2.jpg',
+    'http://xx-jia.com/images/productimage/5/750/3.jpg',
+    'http://xx-jia.com/images/productimage/5/750/4.jpg',
+    'http://xx-jia.com/images/productimage/5/750/5.jpg',
+    'http://xx-jia.com/images/productimage/5/750/6.jpg',
+    'http://xx-jia.com/images/productimage/5/750/7.jpg',
+    'http://xx-jia.com/images/productimage/5/750/8.jpg',
+    'http://xx-jia.com/images/productimage/5/750/9.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/5/640/1.jpg',
+       'http://xx-jia.com/images/productimage/5/640/2.jpg',
+       'http://xx-jia.com/images/productimage/5/640/3.jpg',
+       'http://xx-jia.com/images/productimage/5/640/4.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+},
+shortDes:'精选食材  休闲零食 香辣口味 纯手工熬制 无防腐剂 无添加剂',
+detailDes:['腊肉干儿在拍下24小时内制作好发货',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系客服，我们会妥善处理',
+'食品是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选当季最新鲜的，品质最高的，每一款肉干儿都是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一瓶肉干儿新鲜，纯正，天然，美味',
+'湘西人家及湘西周边人家里每年都会做超多好吃的腊肉和腊肠，那是那一块地方的习俗，湘西腊肉的特点就是用橘树叶和橘皮当然还有干柴的烟熏制20天左右而成的，不是晒干的也不是乱七八糟的烟熏的，所以它有它独有的香味然后口感真的是极佳的'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'阴凉干燥处：10天 冷藏：15天',
+eatmethod:'开袋即食（可作为馋嘴小零食，可用来拌饭拌粉，可作为招待客人的一道佳品，加热后口味更佳喔）',
+savemethod:'冷藏',
 weight:'100g+'
+ },
+  {
+    _id:6,
+   name: '向向家牛轧糖',
+   price: 20,
+    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    detailpictures:[
+    'http://xx-jia.com/images/productimage/6/750/1.jpg',
+    'http://xx-jia.com/images/productimage/6/750/2.jpg',
+    'http://xx-jia.com/images/productimage/6/750/3.jpg',
+    'http://xx-jia.com/images/productimage/6/750/4.jpg',
+    'http://xx-jia.com/images/productimage/6/750/5.jpg',
+    'http://xx-jia.com/images/productimage/6/750/6.jpg'
+    ],
+     sliderpictures: [
+       'http://xx-jia.com/images/productimage/6/640/1.jpg',
+       'http://xx-jia.com/images/productimage/6/640/2.jpg',
+       'http://xx-jia.com/images/productimage/6/640/3.jpg',
+       'http://xx-jia.com/images/productimage/6/640/4.jpg'
+     ],
+
+    category: { _id: '牛肉', ancestors: ['牛肉', '肉类']  
+},
+shortDes:'精选食材  休闲零食 香辣口味 纯手工熬制 无防腐剂 无添加剂',
+detailDes:['牛轧糖在拍下24小时内制作好发货',
+'收到货后如果发现【错发，与食品不符】请拍照24小时内联系客服，我们会妥善处理',
+'食品是预定下单新鲜制作均无现货，保质期较短所以不接受7天无理由退换货',
+'所有的食材都是精挑细选最放心的，品质最高的，每一款牛轧糖都是我和家人用心纯手工熬制。我们用诚心良心竭力做精品美食，按订单需求小批量精制，保证每一块牛轧糖新鲜，纯正，天然，美味'],
+flavor:'微辣  中辣 超辣',
+expirationDate:'阴凉干燥处：10天 冷藏：15天',
+eatmethod:'开袋即食',
+savemethod:'冷藏',
+weight:'100g+',
+secert:'就是用心',
+requirement:'有什么要求/（譬如对什么坚果过敏的一定要提前说哦'
  }
 
  ];
@@ -224,14 +301,14 @@ Category.create(categories,function(err){
       res.json({products:products,
                 categories:categories}    
              );
-console.log('end here');
+
        });
       });
 });
-});
 
 
-      });
+
+
     });  
 });
 
