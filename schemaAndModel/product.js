@@ -15,7 +15,7 @@ var productSchema = {
   eatmethod:{ type: String},
   savemethod:{ type: String},
   weight:{ type: String},
-  secert:{ type: String},
+  mifang:{ type: String},
   requirement:{ type: String},
   price: {
    type: Number, 
