@@ -5,7 +5,8 @@ var productSchema = {
   _id: { type:Number},
   name: { type: String, required: true },
   // Pictures must start with "http://"
-  smallpic:{type: String, match: /^http:\/\//i },
+  smallpic130:{type: String, match: /^http:\/\//i },
+  smallpic210:{type: String, match: /^http:\/\//i },
   detailpictures: [{ type: String, match: /^http:\/\//i }],
   sliderpictures: [{ type: String, match: /^http:\/\//i }],
   shortDes:{ type: String},

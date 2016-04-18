@@ -8,7 +8,7 @@
 			<div class="product_item" ng-repeat="popular in populars">
 				<a href="/detail.html?p={{popular._id}}"target="_self" >
 					<div class="pic_box">
-				<img  src="img/麦提莎脆心朱古力.jpg"> <!-- 210px*210px-->
+				<img  ng-src="{{popular.smallpic210}}"> <!-- 210px*210px-->
 					</div>
 					<h3>{{popular.name}}</h3>				
 					<div class="price_box">

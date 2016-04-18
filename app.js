@@ -48,7 +48,6 @@ app.use('/category',require('./routes/category')(wagner));
 app.use('/product',require('./routes/product')(wagner));
 app.use('/order',require('./routes/order')(wagner));
 app.use('/user',require('./routes/users')(wagner));
-app.use('/admin',require('./routes/users')(wagner));
 ///////////////////////////////////////////////////////
 app.get('/setup',wagner.invoke(function(Product,Category,User,Order){
 return  function(req, res) {
@@ -71,7 +70,8 @@ var products = [{
     _id:1,
    name: '向向家牛肉酱乌冬面',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/1/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/1/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/1/750/1.jpg',
     'http://xx-jia.com/images/productimage/1/750/2.jpg',
@@ -108,7 +108,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:2,
    name: '向向家牛肉酱',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/2/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/2/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/2/750/1.jpg',
     'http://xx-jia.com/images/productimage/2/750/2.jpg',
@@ -144,7 +145,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:3,
    name: '向向家麻辣鱿鱼干儿',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/3/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/3/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/3/750/1.jpg',
     'http://xx-jia.com/images/productimage/3/750/2.jpg',
@@ -180,7 +182,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:4,
    name: '向向家麻麻辣辣牛肉干儿',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/4/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/4/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/4/750/1.jpg',
     'http://xx-jia.com/images/productimage/4/750/2.jpg',
@@ -217,7 +220,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:5,
    name: '向向家麻麻辣辣腊肉干儿',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/5/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/5/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/5/750/1.jpg',
     'http://xx-jia.com/images/productimage/5/750/2.jpg',
@@ -256,7 +260,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:6,
    name: '向向家牛轧糖',
    price: 20,
-    smallpic:'http://localhost:3000/img/东鸠桃烤杏仁焦糖粟米条.jpg',
+    smallpic130:'http://xx-jia.com/images/productimage/6/130.jpg',
+    smallpic210:'http://xx-jia.com/images/productimage/6/210.jpg',
     detailpictures:[
     'http://xx-jia.com/images/productimage/6/750/1.jpg',
     'http://xx-jia.com/images/productimage/6/750/2.jpg',
