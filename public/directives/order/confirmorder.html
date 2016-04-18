@@ -42,7 +42,7 @@
 <ul class="product_list open">
 <li ng-repeat='item in unsuborder.list'>
 <a class="product_wrapper" href = '/detail.html?p={{item.product._id}}' target='_self'>
-<img src="http://d9.yihaodianimg.com/N01/M06/EF/7E/CgQCr1J3DkaAHmEhAALp35CtbH832101_40x40.jpg" alt="{{item.product.name}}">
+<img ng-src="{{item.product.smallpic130}}" alt="{{item.product.name}}">
 <div class="info">
 <p class="content">{{item.product.name}}
 </p>

@@ -73,7 +73,7 @@ maxlength="40" ng-model="address.address">
 <ul class="product_list">
 <li>
 <a class="product_wrapper" href = '/detail.html?p={{item.product._id}}' target='_self'>
-<img src="http://d6.yihaodianimg.com/N05/M01/20/18/CgQI0lWd25aAV6i5AAQgyqPaIx457401_130x130.jpg" alt="{{item.product.name}}">
+<img ng-src="{{item.product.smallpic130}}" alt="{{item.product.name}}">
 <div class="info">
 <p class="content">{{item.product.name}}</p>
 </div>
