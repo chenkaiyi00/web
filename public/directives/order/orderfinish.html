@@ -9,7 +9,7 @@
 </p>
 <p class="mt5">商品数：{{order.list.length}}个</p>
 <p class="mt5">
-待支付金额：<span class="deepRed">¥{{order.total}}.<em>40</em></span>
+待支付金额：<span class="deepRed">¥{{order.total}}<em></em></span>
 </p>
 <i class="greyRightArrow"></i>
 </a>
@@ -33,7 +33,7 @@
 <br>
 <br>
 <div class="pages_nextprev" ng-if="order.status=='未支付'">
-<a id="h5OrderFinishGoPay" >
+<a id="h5OrderFinishGoPay"  href='http://xx-jia.com/pay.html?t={{order.total}}' target='_self'>
 <p class="floatListMore mt">立即支付</p>
 </a>
 </div>

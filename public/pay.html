@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head>
+<html ng-app="myApp">
+<head>
 <meta charset="UTF-8">
 <title>支付方式</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -104,12 +105,12 @@ href="javascript:history.go(-1);"></a>
 
 </div>
  
-<div class="confirm_box">
+<div class="confirm_box" ng-controller="PayController">
 <div class="total">合计：</div>
 <div class="price">
 <p>
 <small>￥</small>
-36.50
+{{total}}
 </p>
 </div>
 <button data-tpa="1101" class="confirm">立即支付</button>
@@ -126,5 +127,10 @@ href="javascript:history.go(-1);"></a>
 
 
 </div>
+     <script src="http://xx-jia.com/js/angular.min.js"></script>
+	 	   <script src="http://xx-jia.com/js/angular-animate.min.js"></script>  
+		       <script src="http://xx-jia.com/js/bin/index.js"></script>
+			      <script src="http://xx-jia.com/js/controllers/pay.js"></script>
+</body>
 
-</body></html>
+</html>
