@@ -1200,6 +1200,20 @@ angular.module('myApp', [ require('angular-touch'),'ngAnimate',
     $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 }])
+.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'http://www.xx-jia.com',
+    'http://xx-jia.com'
+  ]);
+
+  // The blacklist overrides the whitelist so the open redirect here is blocked.
+  $sceDelegateProvider.resourceUrlBlacklist([
+    'http://myapp.example.com/clickThru**'
+  ]);
+})
  .constant("baseURL","http://xx-jia.com/")
  .filter('comment', function() {
   return function(input, rate) {
