@@ -78,8 +78,7 @@ var products = [{
     'http://xx-jia.com/images/productimage/1/750/3.jpg',
     'http://xx-jia.com/images/productimage/1/750/4.jpg',
     'http://xx-jia.com/images/productimage/1/750/5.jpg',
-    'http://xx-jia.com/images/productimage/1/750/6.jpg',
-     'http://xx-jia.com/images/productimage/1/750/7.jpg'
+    'http://xx-jia.com/images/productimage/1/750/6.jpg'
     ],
      sliderpictures: [
        'http://xx-jia.com/images/productimage/1/640/1.jpg',
