@@ -23,6 +23,7 @@ controller('UserController', ['$scope','UserFactory','localStorageService',
                    .then(function(user){   
                                   
                       $scope.user = UserFactory.getUser();
+                      console.log('load user successfully');
                      $rootScope.$broadcast('UserController:getUserConfigSuccess');
                      $scope.$watch(function(){
                        return UserFactory.getUser();
