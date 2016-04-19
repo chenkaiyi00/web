@@ -1275,91 +1275,91 @@ angular.module('myApp', [ require('angular-touch'),'ngAnimate',
     /* End : For Automatic slideshow*/
     
     },
-  templateUrl:'directives/detail/detailslider.html'
+  templateUrl:'http://xx-jia.com/directives/detail/detailslider.html'
   }
 })
 .directive('youlike',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/index/youlike.html'
+    templateUrl:'http://xx-jia.com/directives/index/youlike.html'
   };
 }])
 .directive('productinfo',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'/directives/detail/productinfo.html'
+    templateUrl:'http://xx-jia.com/directives/detail/productinfo.html'
   };
 }])
 .directive('comment',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/detail/comment.html'
+    templateUrl:'http://xx-jia.com/directives/detail/comment.html'
   };
 }])
 .directive('cartyou',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/cart/cartyou.html'
+    templateUrl:'http://xx-jia.com/directives/cart/cartyou.html'
   };
 }])
 .directive('cartno',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/cart/cartno.html'
+    templateUrl:'http://xx-jia.com/directives/cart/cartno.html'
   };
 }])
 .directive('confirmorder',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/confirmorder.html'
+    templateUrl:'http://xx-jia.com/directives/order/confirmorder.html'
   };
 }])
 .directive('orderfinish',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/orderfinish.html'
+    templateUrl:'http://xx-jia.com/directives/order/orderfinish.html'
   };
 }])
 .directive('orderprolist',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/orderprolist.html'
+    templateUrl:'http://xx-jia.com/directives/order/orderprolist.html'
   };
 }])
 .directive('orderlist',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/orderlist.html'
+    templateUrl:'http://xx-jia.com/directives/order/orderlist.html'
   };
 }])
 .directive('orderdetail',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/orderdetail.html'
+    templateUrl:'http://xx-jia.com/directives/order/orderdetail.html'
   };
 }])
 .directive('ordernotlog',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/order/ordernotlog.html'
+    templateUrl:'http://xx-jia.com/directives/order/ordernotlog.html'
   };
 }])
 .directive('chooseaddr',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/addr/chooseaddr.html'
+    templateUrl:'http://xx-jia.com/directives/addr/chooseaddr.html'
   };
 }])
 .directive('usermenulist',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/user/menulist.html'
+    templateUrl:'http://xx-jia.com/directives/user/menulist.html'
   };
 }])
 .directive('addrmanage',[ function() {
   return {
     restrict: 'E',
-    templateUrl:'directives/user/addrmanage.html'
+    templateUrl:'http://xx-jia.com/directives/user/addrmanage.html'
   };
 }]);
 
