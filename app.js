@@ -70,6 +70,7 @@ var products = [{
     _id:1,
    name: '向向家牛肉酱乌冬面',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/1/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/1/210.jpg',
     detailpictures:[
@@ -107,6 +108,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:2,
    name: '向向家牛肉酱',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/2/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/2/210.jpg',
     detailpictures:[
@@ -144,6 +146,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:3,
    name: '向向家麻辣鱿鱼干儿',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/3/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/3/210.jpg',
     detailpictures:[
@@ -181,6 +184,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:4,
    name: '向向家麻麻辣辣牛肉干儿',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/4/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/4/210.jpg',
     detailpictures:[
@@ -219,6 +223,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:5,
    name: '向向家麻麻辣辣腊肉干儿',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/5/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/5/210.jpg',
     detailpictures:[
@@ -259,6 +264,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:6,
    name: '向向家牛轧糖',
    price: 20,
+   sales:10,
     smallpic130:'http://xx-jia.com/images/productimage/6/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/6/210.jpg',
     detailpictures:[

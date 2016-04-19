@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var productSchema = {
   _id: { type:Number},
   name: { type: String, required: true },
+  sales:{type:Number},
   // Pictures must start with "http://"
   smallpic130:{type: String, match: /^http:\/\//i },
   smallpic210:{type: String, match: /^http:\/\//i },

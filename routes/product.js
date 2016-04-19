@@ -45,6 +45,40 @@ module.exports = function(wagner) {
       });
     };
   }));
+  /*
+****************************************************************
+* add a sale quantity to a product                             *
+*                                                              *
+****************************************************************
+*/
+ api.post('/addsaleamount/:product_id',wagner.invoke(function(Product){
+        return function(req,res){
+          if (!req.body.quantity) {
+               return res.status(status.BAD_REQUEST).
+                     json({error:"Bad Request! No quantity!"});
+          }
+             Product.findOne({_id:parseInt(req.params.product_id)},
+                function(err,product) {
+                   if (err) {
+                    return res.status(status.INTERNAL_SERVER_ERROR).
+                     json({error:err +" when load product in addsaleamount!"});
+                   }else{
+                 
+                   product.sales+=parseInt(req.body.quantity);
+                      product.save(function(err){
+                       if (err) {
+                    return res.status(status.INTERNAL_SERVER_ERROR).
+                     json({error:err +" when save product in addsaleamount!"});
+                   }
+                    return res.status(status.OK).
+                     json({success:"successful added sales addsaleamount!"});
+                    });
+                  
+                   }
+
+             });      
+        };
+}));
 /*
 ****************************************************************
 * add a comment to a product                                   *

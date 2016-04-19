@@ -1,6 +1,7 @@
 angular.module('myApp')
  .controller('CartController', ['$scope','UserFactory','OrderFactory',
- '$window','baseURL',function($scope,UserFactory,OrderFactory,$window,baseURL){
+ '$window','baseURL','$http',function($scope,UserFactory,OrderFactory,
+  $window,baseURL,$http){
             
 
 
@@ -24,7 +25,7 @@ angular.module('myApp')
 
                       });
           });
-        $scope.$on('UserController:getUserConfigFail', function() {
+        $scope.$on('UserController:getUserConfigFail', function(){
         // calculation based on service value
            $scope.cart = UserFactory.getCart();
                     for (var i = 0; i <  $scope.cart.length; i++) {
@@ -121,7 +122,12 @@ angular.module('myApp')
                    $('#yhd_alert_tip_nopro').show();
                    return;
                }
-                 if (!UserFactory.loggedIn()) {
+                  //add sales for each product in cart
+                for (var i = 0; i < $scope.cart.length; i++) {
+                  $http.post(baseURL+'product/addsaleamount/'+$scope.cart[i].product._id,
+                    {quantity:$scope.cart[i].quantity});
+                  }
+                 if (!UserFactory.loggedIn()){
                
                   OrderFactory.startOrder()
                     .catch(function(err){
