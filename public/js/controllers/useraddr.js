@@ -18,8 +18,13 @@ controller('AddressuController', ['$scope','UserFactory',
                                $scope.user = newValue;
                                }
                       });
+           console.log($scope.user);
            $scope.provincelist = SharedDataFactory.getProvinceList();
            $scope.userAddresses =  $scope.user.profile.addresses;
+           console.log($scope.userAddresses);
+           if (($location.search().index)) {
+
+          
            if (parseInt($location.search().index)==-1) {
             $scope.address={};
                 $scope.address.address =null;
@@ -32,7 +37,7 @@ controller('AddressuController', ['$scope','UserFactory',
            $scope.address =   $scope.userAddresses[parseInt($location.search().index)];
                }
 
-     
+      }
           });
 
       $scope.$on('UserController:getUserConfigFail', function() {
