@@ -6,6 +6,7 @@
                   $scope.user = UserFactory.getUser();
                                       // init the product
                   $scope.cart = UserFactory.getCart();  
+
                    ProductDetailFactory.getbyid(parseInt($location.search().p,10),
                          function(err,product){
                                if (err) { 
