@@ -9,9 +9,9 @@ controller('AddressuController', ['$scope','UserFactory',
                     //get watch on user  
         $scope.$on('UserController:getUserConfigSuccess', function() { 
         // calculation based on service value
-  
+            
            $scope.user = UserFactory.getUser();
-
+          
            console.log($scope.user);
            $scope.provincelist = SharedDataFactory.getProvinceList();
            $scope.userAddresses =  $scope.user.profile.addresses;
