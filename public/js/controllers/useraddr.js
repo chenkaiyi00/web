@@ -7,6 +7,7 @@ controller('AddressuController', ['$scope','UserFactory',
          $scope.showAlert =false;
          $scope.index =0;
                     //get watch on user  
+                    console.log('listening');
         $scope.$on('UserController:getUserConfigSuccess', function() { 
         // calculation based on service value
             
