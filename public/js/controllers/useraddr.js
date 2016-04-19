@@ -11,13 +11,7 @@ controller('AddressuController', ['$scope','UserFactory',
         // calculation based on service value
   
            $scope.user = UserFactory.getUser();
-           $scope.$watch(function(){return UserFactory.getUser();},
-                      function(newValue,oldValue){
-                               if (newValue!==oldValue) {
-                               // console.log(newValue);
-                               $scope.user = newValue;
-                               }
-                      });
+
            console.log($scope.user);
            $scope.provincelist = SharedDataFactory.getProvinceList();
            $scope.userAddresses =  $scope.user.profile.addresses;
