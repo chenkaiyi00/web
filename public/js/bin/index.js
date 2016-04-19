@@ -1355,6 +1355,12 @@ angular.module('myApp', [ require('angular-touch'),'ngAnimate',
     restrict: 'E',
     templateUrl:'directives/user/menulist.html'
   };
+}])
+.directive('addrmanage',[ function() {
+  return {
+    restrict: 'E',
+    templateUrl:'directives/user/addrmanage.html'
+  };
 }]);
 
 },{"angular-local-storage":1,"angular-touch":4}]},{},[5]);

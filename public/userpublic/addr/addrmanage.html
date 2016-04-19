@@ -17,46 +17,9 @@
 </head>
 
 <body ng-controller="UserController">
-<div ng-controller="AddressuController">
-<div class="touchweb-com_header" id="globalHeader">
-<a id="topIconBack" class="left icon-back" href="http://xx-jia.com/user.html"
-target='_self'></a>
-<h1>地址管理</h1>
-<div class="rightBox">
-</div></div>
-<section class="main address_manage">
-<a  id="addAddress" class="greyBtn w48" ng-click='gotoEdit(-1)'>
-添加收货地址</a>
 
+<addrmanage></addrmanage>
 
-
-
-<article class="yrd_col clearfix" ng-repeat='add in userAddresses track by $index'>
-<p>{{add.recipient}}&&nbsp;&nbsp;{{add.selectedProvice}}&nbsp;&nbsp;{{add.selectedCity}}&nbsp;&nbsp;
-{{add.selectedArea}}&nbsp;&nbsp;
-{{add.address}}&nbsp;&nbsp;&nbsp;&nbsp;{{add.phone}}
-</p>
-<br>
-<a ng-click='gotoEdit($index)' class="edite_address" id="editeAddress">编辑</a>
-<a ng-click='delete($index)' class="del_address" >删除</a>
-</article>
-</section>
-
-<div ng-if='showAlert'>
-<div class="tipMask" style="display: block;"></div>
-
-<div class="alertTip">
-<div class="tip" id="canclOdr" style="display: block;">
-<div class="canclOdrIn clearfix">
-<p class="borderBotm" style="text-align:center">确定删除该收货地址？</p>
-<a id="delUrl" class="greyBtn greyShortBtn" ng-click='confirmDelete()'>确定</a>
-<a  class="tinyRedBtn yellowBtn" ng-click='cancel()'>取消</a>
-</div>
-</div>
-</div>
-</div>
-
-</div>
    <script src="http://xx-jia.com/js/jquery-1.11.0.min.js"></script>
     <script src="http://xx-jia.com/js/angular.min.js"></script>
 	<script src="http://xx-jia.com/js/angular-animate.min.js"></script>  
