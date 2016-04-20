@@ -58,7 +58,25 @@
 </div>
 </a>
 </li>
-
+<!-- 牛肉酱 -->
+<li ng-if='unsuborder.haspromote'>
+<a class="product_wrapper" href = '/detail.html?p=2' target='_self'>
+<img src="http://xx-jia.com/images/productimage/2/130.jpg" alt="向向家牛肉酱">
+<div class="info">
+<p class="content">向向家牛肉酱
+</p>
+<!--
+<div class="icons">
+<span class="icon_exchange_not icon-exchange_not" style="width: auto;font-size: 1rem;">不支持无理由退货</span>
+</div>
+-->
+</div>
+<div class="price">
+<span class="totol_price">￥5</span>
+<span class="count">X 1</span>
+</div>
+</a>
+</li>
 
 <!-- end product -->
 
@@ -109,7 +127,7 @@
 <!-- bottom box-->
 <div class="submit_box" >
 <div class="order_totol_cost">
-<span class="totol_cost">合计：<span class="cost"><span class="small">￥</span>{{total.toFixed(2)}}</span></span>
+<span class="totol_cost">合计：<span class="cost"><span class="small">￥</span>{{(unsuborder.total+unsuborder.shipping).toFixed(2)}}</span></span>
 </div>
 <a  ng-click='makeOrder()' class="submit">提交订单</a>
 </div>

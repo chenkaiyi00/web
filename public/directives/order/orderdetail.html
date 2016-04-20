@@ -29,7 +29,7 @@
 <td>包裹数</td>
 <td>
 1
-个<span class="attachment">（含{{order.list.length}}件商品）</span></td>
+个<span class="attachment">（含{{order.haspromote?order.list.length+1:order.list.length}}件商品）</span></td>
 </tr>
 <tr>
 <td>支付方式</td>
@@ -69,12 +69,15 @@
 </p>
 <a   class="items a_link" ng-click='gotoOrderproList()'>
 <ul>
-<li ng-repeat='item in order.list|limitTo:4'>
+<li ng-repeat='item in order.list|limitTo:3'>
 <img ng-src="{{item.product.smallpic130}}">
 </li>
-
+<!--牛肉酱  以后删改-->
+<li ng-if='order.haspromote'>
+<img src="http://xx-jia.com/images/productimage/2/130.jpg">
+</li>
 </ul>
-<span>共{{order.list.length}}件</span>
+<span>共{{order.haspromote?order.list.length+1:order.list.length}}件</span>
 </a>
 <p class="bottom ">
 <a>

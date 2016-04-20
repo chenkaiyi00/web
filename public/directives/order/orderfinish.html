@@ -7,7 +7,7 @@
 <p class="mt5">包裹数：1
 个
 </p>
-<p class="mt5">商品数：{{order.list.length}}个</p>
+<p class="mt5">商品数：{{order.haspromote?order.list.length+1:order.list.length}}个</p>
 <p class="mt5">
 待支付金额：<span class="deepRed">¥{{order.total+order.shipping}}<em></em></span>
 </p>
