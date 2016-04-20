@@ -16,6 +16,7 @@ var productSchema = {
   detailpictures: [{ type: String, match: /^http:\/\//i }],
   sliderpictures: [{ type: String, match: /^http:\/\//i }],
   //options part
+  priceoptions: [{ type: Number}],
   flavoroptions: [{ type: String}],
   selectedflavor:{ type: String},
   sizeoptions: [{ type: String}],

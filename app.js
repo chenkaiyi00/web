@@ -75,7 +75,7 @@ var products = [{
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
    sizeoptions:['100g'],
-   selectedsize:'10g',
+   selectedsize:'100g',
     smallpic130:'http://xx-jia.com/images/productimage/1/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/1/210.jpg',
     detailpictures:[
@@ -117,8 +117,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
-   sizeoptions:['10g','50g','100g'],
-   selectedsize:'10g',
+   sizeoptions:['100g'],
+   selectedsize:'100g',
     smallpic130:'http://xx-jia.com/images/productimage/2/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/2/210.jpg',
     detailpictures:[
@@ -161,7 +161,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
    sizeoptions:['10g/袋 10袋 ','50g/袋 2袋','100g/袋 1袋'],
-   selectedsize:'10g/袋',
+   selectedsize:'10g/袋 10袋',
     smallpic130:'http://xx-jia.com/images/productimage/3/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/3/210.jpg',
     detailpictures:[
@@ -204,7 +204,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
    sizeoptions:['10g/袋 10袋 ','50g/袋 2袋','100g/袋 1袋'],
-   selectedsize:'10g/袋',
+   selectedsize:'10g/袋 10袋',
     smallpic130:'http://xx-jia.com/images/productimage/4/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/4/210.jpg',
     detailpictures:[
@@ -248,7 +248,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
    sizeoptions:['10g/袋 10袋 ','50g/袋 2袋','100g/袋 1袋'],
-   selectedsize:'10g/袋',
+   selectedsize:'10g/袋 10袋',
     smallpic130:'http://xx-jia.com/images/productimage/5/130.jpg',
     smallpic210:'http://xx-jia.com/images/productimage/5/210.jpg',
     detailpictures:[
@@ -289,8 +289,9 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
     _id:6,
    name: '向向家牛轧糖',
    price: 17.8,
-    oldprice:18.8,
+   oldprice:18.8,
    sales:10,
+   priceoptions: [17.8,30.8,17.8,35.8],
    flavoroptions:['抹茶花生','抹茶核桃/杏仁','原味纯花生','核桃杏仁/花生'],
    selectedflavor:'抹茶花生',
    sizeoptions:['250g'],
