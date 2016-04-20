@@ -41,6 +41,7 @@
                       };
                       //isFlavorAt and isSizeAt
                       $scope.isFlavorAt = function(index){
+                        console.log($scope.product.selectedflavor==$scope.product.flavoroptions[index]);
                         return 
                           $scope.product.selectedflavor==$scope.product.flavoroptions[index];
                      };
