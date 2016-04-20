@@ -86,7 +86,8 @@ angular.module('myApp')
 
 
           $scope.getShipping = function(){
-              if ($scope.getTotal>=88) {
+              if ($scope.getTotal>88||$scope.getTotal==88) {
+                console.log('free shipping')
                  return 0;
               }else{
                 return 15;
