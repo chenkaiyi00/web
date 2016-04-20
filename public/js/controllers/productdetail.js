@@ -16,6 +16,7 @@
                              //get product, set to scope,
                              $scope.inCart = false;
                              $scope.product = product;
+                             console.log($scope.product);
 		                         $scope.sliderimgs = [];
                              product.sliderpictures.forEach(function(src){
                               $scope.sliderimgs.push({src:src,alt:product.name});
