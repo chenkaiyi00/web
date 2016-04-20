@@ -1,6 +1,6 @@
   angular.module('myApp')
      .controller('ProductDetailController', ['$scope','ProductDetailFactory'
-      ,'UserFactory','$location','$window'
+      ,'UserFactory','$location','$window',
          function($scope,ProductDetailFactory,UserFactory,
           $location,$window){
                   $scope.user = UserFactory.getUser();
