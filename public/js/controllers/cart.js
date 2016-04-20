@@ -32,7 +32,7 @@ angular.module('myApp')
                      $scope.cart[i].check=true;
                 }
                    console.log('not login, load cart successfully.');
-       console.log( $scope.cart);
+             
            $scope.$watch(function(){return UserFactory.getCart();},
                       function(newValue,oldValue){
                                if (newValue!==oldValue) {
@@ -52,10 +52,15 @@ angular.module('myApp')
 
 
            $scope.setPromote = function(){
-                         //add
+                         //add promoted product in a place and 
+                          // if needed add to total amount
                          
                           $scope.choosePro = true;
+
                       };
+           $scope.cancelPro = function() {
+                $scope.choosePro = false;
+           };           
           $scope.numOfcheck  = function(){ 
 
               var count= 0;
@@ -91,7 +96,10 @@ angular.module('myApp')
                                    $scope.cart[i].quantity;
                       }
                 }
-                  return temp;
+                if ( $scope.choosePro) {
+                    temp+=5;
+                }
+                  return Math.round( temp * 10) / 10;
                };
 
             $scope.deleteId;
