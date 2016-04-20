@@ -55,7 +55,8 @@
                         
                         $scope.flavorAt=index;
                         $scope.chosen=true;
-                        if ($scope.product.priceoptions) {
+                         console.log($scope.product.priceoptions)
+                        if (!(typeof($scope.product.priceoptions)==undefined)) {
                           console.log('change price')
                             $scope.product.price =$scope.product.priceoptions[index];
                             console.log($scope.product.price);
