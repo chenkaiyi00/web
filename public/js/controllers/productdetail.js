@@ -23,7 +23,7 @@
                              $scope.comments = $scope.product.comments;
                              $scope.isCollected =false;
                              $scope.tabAt = 1;
-                             $scope.flavarAt=0;
+                             $scope.flavorAt=0;
                              $scope.sizeAt=0;
                      });
                     $scope.value = {
@@ -44,7 +44,7 @@
                       $scope.isFlavorAt = function(index){
                     
                         return 
-                          $scope.flavarAt===index;
+                          $scope.flavorAt===index;
                      };
                        $scope.isSizeAt = function(index){
                         return 
@@ -52,7 +52,7 @@
                      };
                       $scope.setflavor = function(index){
                        $scope.product.selectedflavor=$scope.product.flavoroptions[index];
-                        $scope.flavarAt=index;
+                        $scope.flavorAt=index;
                      };
                       $scope.setsize = function(index){
                        $scope.product.selectedsize=$scope.product.sizeoptions[index];
