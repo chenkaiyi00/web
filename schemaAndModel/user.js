@@ -38,7 +38,7 @@ var userSchema = {
  		data: {
        oauth: { type: String },
  		   cart: [{
-     	   product: product:Product.productSchema,
+     	 product:Product.productSchema,
         quantity: {
            type: Number,
            min: 1
