@@ -56,7 +56,7 @@
                         $scope.flavorAt=index;
                         $scope.chosen=true;
 
-                        if ($scope.product.priceoptions.length==0) {
+                        if ($scope.product.priceoptions.length!==0) {
 
                             $scope.product.price =$scope.product.priceoptions[index];
 
