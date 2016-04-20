@@ -30,7 +30,7 @@
 </div>
 
 <div class="pd_product-price" id="current_price">
-
+<span class="pd_product-price-old">原价价:<del>￥{{product.oldprice}}</del></span>
 <span class="pd_product-price-yen">￥</span>
 <strong class="pd_product-price-num">{{product.price}}</strong>
 <span class="pd_product-price-decimal"></span>
@@ -38,26 +38,7 @@
 <span class="tips tips_save" id="comparePcPrice"style="display:none;">省0.9元</span>
 </div>
 
-<!--
-<div class="pd_product-medal-deals" >
-此商品支持商家会员优惠
-<a  class="pd_product-medal-deals-login" 
->登录查看</a>
-</div> 
-  
-<label class="pd_product-integral-buy" 
-id="point"  >
-<input type="checkbox" class="pd_product-integral-buy-check">
-<span class="pd_product-integral-buy-text">微辣</span>
 
-<input type="checkbox" class="pd_product-integral-buy-check">
-<span class="pd_product-integral-buy-text">中辣</span>
-
-<input type="checkbox" class="pd_product-integral-buy-check">
-<span class="pd_product-integral-buy-text">特辣</span>
-</label> 
-
--->
 
 
 <!--
@@ -69,8 +50,33 @@ id="point"  >
 <span class="icon_arrow icon-right_arrow"></span>
 </a>-->
 </div><!-- pd_box-border -->
-<!-- 促销-->
 
+<!-- 促销-->
+<div class="pd_promotions-wrap" id="detailPromotion">    
+     <div ng-class="{'item_show':showpromote}" class="item " >
+   		<div class="head_box" ng-click="setPromoteView()">
+            <span style="background-color: #ff7c3c;color: #fff;" class="status">促</span>
+            <span class="title">本商品单笔每买1件，加5元送原价 9.9 的牛肉酱一瓶</span>
+            <span class="arrow icon-right_arrow"></span>
+        </div>
+        <a class="item_box"  ng-click='addPromotePro()' >
+           <span style="border-color: #ff7c3c; color: #ff7c3c;" class="status">点我添加</span>
+            <span class="title">本商品单笔每买1件，加5元送原价 9.9 的牛肉酱一瓶</span>
+            	<div class="product_info" >
+                <img class="pic" alt="向向家牛肉酱" src="http://xx-jia.com/images/productimage/2/130.jpg">
+                    <div class="info">
+	                    <h3>向向家 牛肉酱 100g+/瓶 </h3>
+	                    <p>
+	                        <span class="price">￥<em>5</em></span>
+	                     		   价值：9.9元
+	                    </p>
+	                </div>
+            </div>
+            
+            <span class="arrow icon-right_arrow"></span>
+    	   </a>   
+     </div>
+</div>
 
 <!-- 系列属性-->
 <div class="pd_product-arguments show"  >

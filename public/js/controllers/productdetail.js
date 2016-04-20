@@ -30,7 +30,14 @@
                              quantity:1
                      };
                      $scope.chinese =['壹','贰','叁','肆','伍'];
-                      
+
+                      $scope.setPromoteView = function(){
+                        if ($scope.showpromote) {
+                            $scope.showpromote=false
+                        }else{
+                          $scope.showpromote = true;
+                        }
+                      };
                       $scope.setSelectorMode = function(){
                           $scope.selectorMode = true;
                       };
@@ -40,16 +47,7 @@
                       $scope.closeSelector = function(){
                          $scope.selectorMode = false;
                       };
-                      //isFlavorAt and isSizeAt
-                      $scope.isFlavorAt = function(index){
-                    
-                        return 
-                          $scope.flavorAt===index;
-                     };
-                       $scope.isSizeAt = function(index){
-                        return 
-                          $scope.sizeAt===index;
-                     };
+
                       $scope.setflavor = function(index){
                        $scope.product.selectedflavor=$scope.product.flavoroptions[index];
                         $scope.flavorAt=index;
