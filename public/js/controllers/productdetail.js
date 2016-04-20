@@ -55,11 +55,11 @@
                         
                         $scope.flavorAt=index;
                         $scope.chosen=true;
-                         console.log($scope.product.priceoptions)
-                        if (!(typeof($scope.product.priceoptions)==undefined)) {
-                          console.log('change price')
+
+                        if ($scope.product.priceoptions.length==0) {
+
                             $scope.product.price =$scope.product.priceoptions[index];
-                            console.log($scope.product.price);
+
                         }
                      };
                       $scope.setsize = function(index){
