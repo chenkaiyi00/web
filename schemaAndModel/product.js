@@ -5,6 +5,7 @@ var productSchema = {
   _id: { type:Number},
   name: { type: String, required: true },
   sales:{type:Number},
+  oldprice:{type: Number},
   price: {
    type: Number, 
    required: true 
