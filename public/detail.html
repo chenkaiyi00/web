@@ -156,9 +156,7 @@ ng-model='value.quantity' >
 </div>
 <ul class="pd_product-property-select">
 <!-- H5屏蔽分享套餐 -->
-<li  ng-repeat='flavor in flavoroptions track by $index'
-ng-class="{'pd_product-property-select-item_current': isFlavorAt($index)}"
-="pd_product-property-select-item item_single" ng-click='setflavor($index)'>
+<li  ng-repeat='flavor in flavoroptions track by $index'>
 {{flavor}}</li>
 
 </ul>
