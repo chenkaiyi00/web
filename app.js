@@ -69,8 +69,8 @@ Product.remove({},function(error){
 var products = [{
     _id:1,
    name: '向向家牛肉酱乌冬面',
-   price: 9.9,
-   oldprice:12.9,
+   price: 9.5,
+   oldprice:12.8,
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
@@ -112,8 +112,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
  },{
     _id:2,
    name: '向向家牛肉酱',
-   price: 9.9,
-    oldprice:12.9,
+   price: 9.5,
+    oldprice:12.8,
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
@@ -155,8 +155,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
 {
     _id:3,
    name: '向向家麻辣鱿鱼干儿',
-   price: 12.8,
-    oldprice:15.8,
+   price: 12.5,
+    oldprice:14.8,
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
@@ -198,7 +198,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
  {
     _id:4,
    name: '向向家麻麻辣辣牛肉干儿 100g',
-   price: 22.8,
+   price: 21.8,
     oldprice:25.8,
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
@@ -242,8 +242,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
   {
     _id:5,
    name: '向向家麻麻辣辣腊肉干儿',
-   price: 22.6,
-    oldprice:25.6,
+   price: 21.8,
+    oldprice:24.8,
    sales:10,
    flavoroptions:['微辣','中辣','超辣'],
    selectedflavor:'微辣',
@@ -288,8 +288,8 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
   {
     _id:6,
    name: '向向家牛轧糖',
-   price: 18.8,
-    oldprice:21.8,
+   price: 17.8,
+    oldprice:18.8,
    sales:10,
    flavoroptions:['抹茶花生','抹茶核桃/杏仁','原味纯花生','核桃杏仁/花生'],
    selectedflavor:'抹茶花生',

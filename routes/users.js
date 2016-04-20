@@ -31,7 +31,6 @@ module.exports = function(wagner) {
                 haspromote:req.body.unSubmittedOrder.haspromote,
                 status: 'starting'
             });
-            console.log(unsuborder);
             unsuborder.save(function(err) {
                 if (err) {
                     return res.status(status.INTERNAL_SERVER_ERROR).
@@ -202,21 +201,14 @@ module.exports = function(wagner) {
                         }
                         if (user) {
 
-                            user.populate({
-                                    path: 'data.cart.product',
-                                    model: 'Product'
-                                },
-                                function(err, result) {
-
-                                    if (err) {
-                                        console.log(err);
-                                    } else {
+                
+    
                                         //console.log(result.data.cart[0].product._id);
-                                        return res.json({
+                                  return res.json({
                                             user: user
                                         });
-                                    }
-                                });
+                                    
+                               
 
                         }else{
                     return res.status(status.UNAUTHORIZED).json({
@@ -273,22 +265,14 @@ module.exports = function(wagner) {
                             expiresIn: 14400
                         });
                     //populate cart
-                    user.populate({
-                            path: 'data.cart.product',
-                            model: 'Product'
-                        },
-                        function(err, result) {
-                            if (err) {
-                                console.log(err);
-                            } else {
+
                                 res.status(200);
                                 res.json({
                                     welcome: 'Good Job',
                                     user: user,
                                     token: token
                                 });
-                            }
-                        });
+              
 
                 } else {
                     // If user is not found
