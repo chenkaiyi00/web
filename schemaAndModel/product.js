@@ -5,11 +5,21 @@ var productSchema = {
   _id: { type:Number},
   name: { type: String, required: true },
   sales:{type:Number},
+  price: {
+   type: Number, 
+   required: true 
+  },
   // Pictures must start with "http://"
   smallpic130:{type: String, match: /^http:\/\//i },
   smallpic210:{type: String, match: /^http:\/\//i },
   detailpictures: [{ type: String, match: /^http:\/\//i }],
   sliderpictures: [{ type: String, match: /^http:\/\//i }],
+  //options part
+  flavoroptions: [{ type: String}],
+  selectedflavor:{ type: String},
+  sizeoptions: [{ type: String}],
+  selectedsize:{ type: String},
+  //des part
   shortDes:{ type: String},
   detailDes: [{ type: String }],
   flavor:{ type: String},
@@ -19,10 +29,7 @@ var productSchema = {
   weight:{ type: String},
   mifang:{ type: String},
   requirement:{ type: String},
-  price: {
-   type: Number, 
-   required: true 
-  },
+  //
   category: Category.categorySchema,
   comments: [{ 
             type:Schema.ObjectId ,

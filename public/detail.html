@@ -88,7 +88,7 @@ ng-model='value.quantity' >
 <span class="icon-ok"></span>商品已成功加入购物车</div>
 
 
-<!-- show -->
+<!--
 <div class="pd_product-property " id="sku_unit">
 
 <div class="pd_product-property-info">
@@ -104,7 +104,7 @@ ng-model='value.quantity' >
 </div>
 
 </div>
-<!-- 系列属性 -->
+
 <div class="property-wrapper" style="max-height: 379.014px;"><div class="pd_product-property-box" id="suit">
     <div class="pd_product-property-box-title">选套装：
         <span class="js_product-property-val">
@@ -126,6 +126,70 @@ ng-model='value.quantity' >
 <a href="javascript:;" class="property-close">
 <span class="icon-clear"></span>
 </a>
+</div>-->
+
+<!-- product selector-->
+<div ng-class="{'show': inSelector()}" class="pd_product-property" id="sku_unit">
+<div class="pd_product-property-info">
+<div class="pd_product-property-pic">
+<img ng-src="{{product.smallpic210}}" width="70" height="70" alt="product.name">
+</div>
+<div class="pd_product-property-title-wrap">
+<div class="pd_product-property-title">{{product.name}}</div>
+<div class="pd_product-property-price">
+<span class="price" id="pd_product-property-price-num">￥{{product.price}}</span>
+</div>
+
+<div class="pd_product-property-price" id="pd_product-property-integral-price" style="display: none;">
+
+</div>
+</div>
+</div>
+
+<!-- 系列属性 -->
+<div class="property-wrapper" style="max-height: 340.282px;">
+<div class="pd_product-property-box" id="attribute_0">
+<div class="pd_product-property-box-title">
+口味：
+<span class="js_product-property-val">
+{{product.selectedflavor}}</span>
+</div>
+<ul class="pd_product-property-select">
+<!-- H5屏蔽分享套餐 -->
+<li ng-class="{'pd_product-property-select-item_current': isFlavorAt($index)}"
+="pd_product-property-select-item item_single" ng-click='setflavor($index)'
+ng-repeat='flavor in flavoroptions track by $index'>
+{{flavor}}</li>
+
+</ul>
+</div>
+
+<div class="pd_product-property-box" id="attribute_1">
+<div class="pd_product-property-box-title">
+包装大小：
+<span class="js_product-property-val">
+{{product.selectedsize}}
+</span>
+</div>
+<ul class="pd_product-property-select">
+
+<li ng-class="{'pd_product-property-select-item_current': isSizeAt($index)}" 
+
+class="pd_product-property-select-item item_single" ng-click='setsize($index)'
+ng-repeat='size in sizeoptions track by $index'>
+{{size}}</li>
+
+</ul>
+</div>
+
+
+</div>
+<a  class="property-close" ng-click='closeSelector()'>
+
+<span class="icon-clear"></span>
+
+</a>
+
 </div>
 
 <div class="pd_product-property_mask"></div>
