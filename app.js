@@ -291,7 +291,7 @@ requirement:'譬如不喜欢吃蒜吃花椒请下单前与客服沟通好，我�
    price: 17.8,
    oldprice:18.8,
    sales:10,
-   priceoptions: [17.8,30.8,17.8,35.8],
+   priceoptions: [22.8,32.8,17.8,38.8],
    flavoroptions:['抹茶花生','抹茶核桃/杏仁','原味纯花生','核桃杏仁/花生'],
    selectedflavor:'抹茶花生',
    sizeoptions:['250g'],
