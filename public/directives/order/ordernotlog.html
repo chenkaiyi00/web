@@ -108,7 +108,7 @@ maxlength="40" ng-model="address.address">
 <div class="submit_box">
 <div class="order_totol_cost">
 <span class="totol_cost">商品价格合计：
-<span class="cost"><span class="small">￥</span>{{total}}</span>
+<span class="cost"><span class="small">￥</span>{{total.toFixed(2)}}</span>
 </span>
 </div>
 <a  ng-click='saveOrderInfo()' class="submit">保存信息</a>
