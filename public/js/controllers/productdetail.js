@@ -16,7 +16,6 @@
                              //get product, set to scope,
                              $scope.inCart = false;
                              $scope.product = product;
-                             console.log($scope.product);
 		                         $scope.sliderimgs = [];
                              product.sliderpictures.forEach(function(src){
                               $scope.sliderimgs.push({src:src,alt:product.name});
@@ -24,6 +23,8 @@
                              $scope.comments = $scope.product.comments;
                              $scope.isCollected =false;
                              $scope.tabAt = 1;
+                             $scope.flavarAt=0;
+                             $scope.sizeAt=0;
                      });
                     $scope.value = {
                              quantity:1
@@ -41,19 +42,21 @@
                       };
                       //isFlavorAt and isSizeAt
                       $scope.isFlavorAt = function(index){
-                        console.log($scope.product.selectedflavor==$scope.product.flavoroptions[index]);
+                    
                         return 
-                          $scope.product.selectedflavor==$scope.product.flavoroptions[index];
+                          $scope.flavarAt===index;
                      };
                        $scope.isSizeAt = function(index){
-                       return
-                        $scope.product.selectedsize==$scope.product.sizeoptions[index];
+                        return 
+                          $scope.sizeAt===index;
                      };
                       $scope.setflavor = function(index){
                        $scope.product.selectedflavor=$scope.product.flavoroptions[index];
+                        $scope.flavarAt=index;
                      };
                       $scope.setsize = function(index){
                        $scope.product.selectedsize=$scope.product.sizeoptions[index];
+                       $scope.sizeAt =index;
                      };
                      $scope.addQ = function(){
                        $scope.value.quantity++;
