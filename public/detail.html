@@ -173,7 +173,7 @@ class="pd_product-property-select-item item_single" ng-click='setflavor($index)'
 </div>
 <ul class="pd_product-property-select">
 
-<li ng-class="{'pd_product-property-select-item_current': isSizeAt($index)}" 
+<li 
 ng-class="{'pd_product-property-select-item_current': $index==sizeAt}"
 class="pd_product-property-select-item item_single" ng-click='setsize($index)'
 ng-repeat='size in product.sizeoptions track by $index'>

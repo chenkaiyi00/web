@@ -20,7 +20,7 @@ var productSchema = {
   selectedflavor:{ type: String},
   sizeoptions: [{ type: String}],
   selectedsize:{ type: String},
-  //des part
+  //descrition part
   shortDes:{ type: String},
   detailDes: [{ type: String }],
   flavor:{ type: String},
@@ -30,8 +30,17 @@ var productSchema = {
   weight:{ type: String},
   mifang:{ type: String},
   requirement:{ type: String},
-  //
   category: Category.categorySchema,
+    //promotion part
+    /*
+  promote:{
+  prolist:  [{
+   type:Number ,
+   ref:'Product'
+    }], // products promoted with the product
+    method: { type: String} //promote methed ex: fix price
+  }, 
+  */
   comments: [{ 
             type:Schema.ObjectId ,
             ref:'Comment'

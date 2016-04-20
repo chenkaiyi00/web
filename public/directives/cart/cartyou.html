@@ -182,12 +182,13 @@ z-index: 904;
 </div> 
 
 <div class="goods_box-tips">
-满199元包邮
+满88元包邮
 </div>
 
 
 
 <div class="goods_box-body" ng-repeat='item in cart track by $index'>
+
 <div class="product_list">
 <div class="product_list_wrap">
 
@@ -197,10 +198,10 @@ z-index: 904;
 <!-- content -->
 <div class="product_content">
 <div class="product_box">
-<div class="product_pic" ><a href = '/detail.html?p={{item.product._id}}' target='_self'>
+<div class="product_pic" ><a href = 'http://xx-jia.com/detail.html?p={{item.product._id}}' target='_self'>
 <img   ng-src="{{item.product.smallpic130}}"></a>
 </div>
-<a class="product_con" href = '/detail.html?p={{item.product._id}}' target='_self'>
+<a class="product_con" href = 'http://xx-jia.com/detail.html?p={{item.product._id}}' target='_self'>
 <span class="product_title"  >
 {{item.product.name}}</span>
 <p class="product_from">
@@ -232,6 +233,52 @@ z-index: 904;
 </div>
 </div>
 </div>
+
+<div class="activty_box" ng-if='($index==(cart.length-1))&&!choosePro'>
+<div class="mixed">
+<a class="list"  ng-click='setPromote()'>
+单品满1件送赠品
+<span >立即参与 <i class="icon-right_arrow"></i></span>
+</a>
+</div>
+</div>
+
+ <!-- end one product-->
+<div class="product_list" ng-if='($index==(cart.length-1))&&choosePro'>
+<div class="product_list_wrap">
+<div class="product_content">
+<div class="product_box">
+<div class="product_pic">
+<img  src="http://d10.yihaodianimg.com/N09/M03/82/A0/ChEi11ZxSCeAGokbAAQQcE1pbP415101_130x130.jpg">
+</div>
+<a class="product_con" href="javascript:void(0);">
+<span class="product_title"  >
+<i class="sale_tips mr5">赠品</i>
+向向家 牛肉酱 100g+/瓶</span>
+<p class="product_from">
+</p>
+<p class="cell_price">
+<span class="sale_price">
+¥5
+</span>
+</p>
+</a>
+<div class="product_option">
+<div class="tool_num">
+
+<div class="computing_num">
+<input type="number" min="1" pattern="[0-9]*" value="1" readonly="true">
+</div>
+</div>
+<i class="icon-rabish" ng-click='removeItemById(2)'></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end gift-->
+
+
 <!--
 <div class="activty_box">
 <div class="mixed">

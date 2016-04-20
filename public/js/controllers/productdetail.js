@@ -38,6 +38,10 @@
                           $scope.showpromote = true;
                         }
                       };
+                      $scope.setPromote = function(){
+                         //add
+                          $scope.choosePro = true;
+                      };
                       $scope.setSelectorMode = function(){
                           $scope.selectorMode = true;
                       };
