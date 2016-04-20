@@ -1,8 +1,8 @@
   angular.module('myApp')
      .controller('ProductDetailController', ['$scope','ProductDetailFactory'
-      ,'UserFactory','$location',
+      ,'UserFactory','$location','$window'
          function($scope,ProductDetailFactory,UserFactory,
-          $location){
+          $location,$window){
                   $scope.user = UserFactory.getUser();
                                       // init the product
                   $scope.cart = UserFactory.getCart();  
@@ -25,6 +25,7 @@
                              $scope.tabAt = 1;
                              $scope.flavorAt=0;
                              $scope.sizeAt=0;
+                             $scope.chosen=false;
                      });
                     $scope.value = {
                              quantity:1
@@ -52,10 +53,12 @@
                       $scope.setflavor = function(index){
                        $scope.product.selectedflavor=$scope.product.flavoroptions[index];
                         $scope.flavorAt=index;
+                        $scope.chosen=true;
                      };
                       $scope.setsize = function(index){
                        $scope.product.selectedsize=$scope.product.sizeoptions[index];
                        $scope.sizeAt =index;
+                       $scope.chosen=true;
                      };
                      $scope.addQ = function(){
                        $scope.value.quantity++;
@@ -80,6 +83,13 @@
                        }else{
                          $scope.showMenu = true;
                        }
+                     };
+                     $scope.gotoCart = function(){
+                        if (!($scope.chosen)) {
+                          $scope.setSelectorMode();
+                        }else{
+                            $window.location.href='http://xx-jia.com/cart.html'
+                        }
                      };
                      $scope.addToCart = function(quantity){
                         UserFactory.addItem($scope.product,quantity);
