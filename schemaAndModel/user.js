@@ -3,6 +3,7 @@ var crypto = require('crypto');
 var jwt = require('jsonwebtoken');
 var key =require('../config/index');
 var Order = require('./order');
+var Product = require('./product');
 var userSchema = {
  	profile:{
         username:{
