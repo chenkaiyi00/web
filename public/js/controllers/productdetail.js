@@ -92,10 +92,14 @@
                         }
                      };
                      $scope.addToCart = function(quantity){
+                      if (!($scope.chosen)) {
+                          $scope.setSelectorMode();
+                        }else{
                         UserFactory.addItem($scope.product,quantity);
                         $scope.inCart = true;
                       
                         $('#added').fadeIn(400).delay(1000).fadeOut(400); 
+                      }
                      }; 
 
                      $scope.collect = function(){
