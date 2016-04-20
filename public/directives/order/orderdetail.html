@@ -39,7 +39,8 @@
 </tr>
 <tr>
 <td>共需支付</td>
-<td class="amount"><span class="payment">¥{{order.total}}</span><span class="attachment">（含20元运费）</span></td>
+<td class="amount"><span class="payment">¥{{order.total+order.shipping}}</span>
+<span class="attachment">（含{{order.shipping}}元运费）</span></td>
 </tr>
 
 <tr ng-if="order.status=='未支付'">
@@ -95,7 +96,7 @@
 </li>
 <li>
 运费
-<span>+¥20</span>
+<span>+¥{{order.shipping}}</span>
 </li>
 <li>
 抵用券
@@ -111,7 +112,7 @@
 </li>
 <li>
 还需支付
-<span class="payment">¥{{order.total}}</span>
+<span class="payment">¥{{order.total+order.shipping}}</span>
 </li>
 </ul>
 </div>

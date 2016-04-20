@@ -49,6 +49,7 @@ angular.module('myApp')
               values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
             };
             $scope.showMenu = false;
+            $scope.choosePro=false;
             $scope.shippingrate;
        
            $scope.setPromote = function(){
@@ -140,7 +141,7 @@ angular.module('myApp')
                    return;
                }
                   //add sales for each product in cart
-                for (var i = 0; i < $scope.cart.length; i++) {
+                for (var i = 0; i < $scope.cart.length; i++){
                   $http.post(baseURL+'product/addsaleamount/'+$scope.cart[i].product._id,
                     {quantity:$scope.cart[i].quantity});
                   }
