@@ -3699,7 +3699,7 @@
                  var self=this;
                   this.unsuborder={}; 
                   //make an unsubmitted order
-                  this.startOrder = function(){
+                  this.startOrder = function(shipping,haspromote,total){
                     var date = moment().toObject();
                     var id = date.years+''+(parseInt(date.months)+1)+
                               date.date+date.hours+
@@ -3708,7 +3708,10 @@
                
                     var  unSubmittedOrder ={date:date,id:id,
                                            list:self.getProducts(),
-                                           total:self.getTotal()};
+                                           total:total,
+                                           shipping:shipping,
+                                           haspromote:haspromote
+                                       };
                         
                       console.log(unSubmittedOrder);
                     if (!UserFactory.loggedIn()) {
@@ -3775,11 +3778,11 @@
                        end unlog part
                  ************************************************/
                 this.getUnsuborder= function(id){
-      console.log('at getUnsuborder');
+
                     return  $http.get(baseURL+"user/getordernotlogin/"+id)
                            .then(function(response){
                            //get the product 
-        console.log(response.data);
+                     console.log(response.data);
                           return response.data;
                          });
                 };

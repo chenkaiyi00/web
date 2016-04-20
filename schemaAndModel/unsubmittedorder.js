@@ -6,6 +6,10 @@ var unsubmittedorderSchema = {
        type:String ,
        required:true 
     },
+  shipping:{ 
+       type:Number 
+    },
+  haspromote:Boolean,
   list:[{
     product:Product.productSchema,
     quantity: {

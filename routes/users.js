@@ -27,6 +27,8 @@ module.exports = function(wagner) {
                 list: req.body.unSubmittedOrder.list,
                 date: req.body.unSubmittedOrder.date,
                 total:parseFloat(req.body.unSubmittedOrder.total),
+                shipping:parseInt(req.body.unSubmittedOrder.shipping),
+                haspromote:req.body.unSubmittedOrder.haspromote,
                 status: 'starting'
             });
             unsuborder.save(function(err) {
@@ -133,6 +135,8 @@ module.exports = function(wagner) {
                   list: req.body.unsuborder.list,
                   address: req.body.unsuborder.address,
                   date: req.body.unsuborder.date,
+                  shipping:parseInt(req.body.unsuborder.shipping),
+                  haspromote:req.body.unsuborder.haspromote,
                   status:'未支付',
                   total:parseFloat(req.body.unsuborder.total)
                 });
@@ -580,6 +584,8 @@ module.exports = function(wagner) {
                   address: req.body.unsuborder.address,
                   date: req.body.unsuborder.date,
                   total:parseFloat(req.body.unsuborder.total),
+                  shipping:parseInt(req.body.unsuborder.shipping),
+                  haspromote:req.body.unsuborder.haspromote,
                   status:'未支付'
                 });
                 order.save(function(err) {
@@ -627,7 +633,7 @@ module.exports = function(wagner) {
                         json({
 							  success: true,
 							  order:order
-						});
+						   });
                        
                    });
                 }
@@ -655,6 +661,8 @@ module.exports = function(wagner) {
                 list: req.body.unSubmittedOrder.list,
                 date: req.body.unSubmittedOrder.date,
                 total: parseFloat(req.body.unSubmittedOrder.total),
+                shipping:parseInt(req.body.unSubmittedOrder.shipping),
+                haspromote:req.body.unSubmittedOrder.haspromote,
                 status: 'starting'
             });
             unsuborder.save(function(err) {

@@ -49,14 +49,12 @@ angular.module('myApp')
               values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
             };
             $scope.showMenu = false;
-
-
+            $scope.shippingrate;
+       
            $scope.setPromote = function(){
                          //add promoted product in a place and 
                           // if needed add to total amount
-                         
                           $scope.choosePro = true;
-
                       };
            $scope.cancelPro = function() {
                 $scope.choosePro = false;
@@ -86,7 +84,13 @@ angular.module('myApp')
            };
 
 
-
+          $scope.getShipping = function(){
+              if ($scope.getTotal>=88) {
+                 return 0;
+              }else{
+                return 15;
+              }
+          };
           $scope.getTotal = function(){
 
               var temp=0;
@@ -99,6 +103,7 @@ angular.module('myApp')
                 if ( $scope.choosePro) {
                     temp+=5;
                 }
+                  temp+= $scope.getShipping();
                   return Math.round( temp * 10) / 10;
                };
 
@@ -141,7 +146,8 @@ angular.module('myApp')
                   }
                  if (!UserFactory.loggedIn()){
                
-                  OrderFactory.startOrder()
+                  OrderFactory.startOrder($scope.getShipping(),$scope.choosePro,
+                    $scope.getTotal())
                     .catch(function(err){
 
                     }).then(function(data){
@@ -153,7 +159,8 @@ angular.module('myApp')
                     });
 
                  }else{
-                 OrderFactory.startOrder()
+                 OrderFactory.startOrder($scope.getShipping(),$scope.choosePro,
+                  $scope.getTotal())
                    .then(function(data){
                     
                       $scope.saveCart();

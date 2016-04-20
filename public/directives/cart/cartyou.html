@@ -156,29 +156,16 @@ z-index: 904;
 
 <a class="link" >向向家</a>
 </label>
-<div class="right">
+<div class="right" ng-if='getTotal()<88'>
 <span class="cart_info">
-<span class="double">
-运费
-<em class="price">
-¥20
-</em>
 </span>
-<br>
-<span>
-
-<span>
-
-</span>
-</span>
-</span>
-<!--
-<a href="/cart/noFee?merchantId=3" class="btn_all">
+<a href="/" class="btn_all">
 凑单
 <i class="icon-right_arrow">
 </i>
-</a> -->
+</a>
 </div>
+
 </div> 
 
 <div class="goods_box-tips">
@@ -237,7 +224,7 @@ z-index: 904;
 <div class="activty_box" ng-if='($index==(cart.length-1))&&!choosePro'>
 <div class="mixed">
 <a class="list"  ng-click='setPromote()'>
-单品满1件送赠品
+5元即购价值10元 向向家牛肉酱
 <span >立即参与 <i class="icon-right_arrow"></i></span>
 </a>
 </div>
@@ -253,7 +240,7 @@ z-index: 904;
 </div>
 <a class="product_con" href="javascript:void(0);">
 <span class="product_title"  >
-<i class="sale_tips mr5">赠品</i>
+<i class="sale_tips mr5">促</i>
 向向家 牛肉酱 100g+/瓶</span>
 <p class="product_from">
 </p>
@@ -279,16 +266,6 @@ z-index: 904;
 <!-- end gift-->
 
 
-<!--
-<div class="activty_box">
-<div class="mixed">
-<a class="list" data-tpa="GOTO_PROMOTION_DETAIL" href="http://m.yhd.com/mw/promotionprolist/1324656/1443826/1/1?promotiontitle=单品满1件送赠品">
-单品满1件送赠品
-<span onclick="javascript:window.event.stopPropagation;window.event.preventDefault();window.location='/cart/rdadyPromotion?promotionId=1324656&amp;levelId=1443826'">立即参与 <i class="icon-right_arrow"></i></span>
-</a>
-</div>
-</div>
--->
 </div>
 
 <!-- end product 1 -->
@@ -326,7 +303,7 @@ z-index: 904;
 </span>
 <span>
 <span class="price">
-¥ 20
+¥ {{getShipping()}}
 </span>
 <br>
 <em>
