@@ -51,7 +51,11 @@ angular.module('myApp')
             $scope.showMenu = false;
 
 
-      
+           $scope.setPromote = function(){
+                         //add
+                         
+                          $scope.choosePro = true;
+                      };
           $scope.numOfcheck  = function(){ 
 
               var count= 0;

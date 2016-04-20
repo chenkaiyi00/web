@@ -38,11 +38,7 @@
                           $scope.showpromote = true;
                         }
                       };
-                      $scope.setPromote = function(){
-                         //add
-                         console.log('in setPromote')
-                          $scope.choosePro = true;
-                      };
+
                       $scope.setSelectorMode = function(){
                           $scope.selectorMode = true;
                       };
