@@ -52,6 +52,7 @@
 
                       $scope.setflavor = function(index){
                        $scope.product.selectedflavor=$scope.product.flavoroptions[index];
+                        
                         $scope.flavorAt=index;
                         $scope.chosen=true;
                         if ($scope.product.priceoptions) {
