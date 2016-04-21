@@ -189,45 +189,14 @@ module.exports = function(wagner) {
                             message: 'You have not logged in.Please Login first.in validate'
                         });
                     }
-                    User.findOne({
-                        'profile.phone': decoded.phone
-                    }, function(err, user) {
-                        if (err) {
-                            console.log(err + '          ' + decoded.phone);
-                            return res.status(status.INTERNAL_SERVER_ERROR).
-                            json({
-                                error: err
-                            });
-                        }
-                        if (user) {
-
-                            user.populate(
-                                   'data.orderhistory').
-                                
-                               run( function(err, result) {
-
-                                    if (err) {
-                                        console.log(err);
-                                    } else {
-                                        //console.log(result.data.cart[0].product._id);
-                                        return res.json({
-                                            user: user
+                    User.findOne({'profile.phone': decoded.phone})
+                      .populate('data.orderhistory')
+                      .exec(function (err, User) {
+                            if (err) console.log(err);
+                    return res.json({
+                                    user: user
                                         });
-                                    }
-                                });
-                               
-
-                        }else{
-                    return res.status(status.UNAUTHORIZED).json({
-                            success: false,
-                            message: 'You have not logged in.Please register first.in validate'
-                        });
-                        }
-
-                    });
-
-
-                });
+                                              });
             } else {
                 // if there is no token
                 // return an error
