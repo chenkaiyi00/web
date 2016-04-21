@@ -201,11 +201,10 @@ module.exports = function(wagner) {
                         }
                         if (user) {
 
-                            user.populate({
-                                    path: 'data.orderhistory',
-                                    model: 'Order'
-                                },
-                                function(err, result) {
+                            user.populate(
+                                   'data.orderhistory').
+                                
+                               run( function(err, result) {
 
                                     if (err) {
                                         console.log(err);
@@ -387,6 +386,7 @@ module.exports = function(wagner) {
                 'profile.phone': phone
             }, function(err, user) {
                 if (err) {
+			console.log(err);
                     return res.status(status.INTERNAL_SERVER_ERROR).
                     json({
                         error: err
@@ -397,6 +397,7 @@ module.exports = function(wagner) {
                 //console.log(user.data.cart);
                 user.save(function(err) {
                     if (err) {
+			console.log(err);
                         return res.status(status.INTERNAL_SERVER_ERROR).json({
                             error: err
                         });
