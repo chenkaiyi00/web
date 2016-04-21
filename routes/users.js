@@ -201,13 +201,21 @@ module.exports = function(wagner) {
                         }
                         if (user) {
 
-                
-    
+                            user.populate({
+                                    path: 'data.orderhistory',
+                                    model: 'Order'
+                                },
+                                function(err, result) {
+
+                                    if (err) {
+                                        console.log(err);
+                                    } else {
                                         //console.log(result.data.cart[0].product._id);
-                                  return res.json({
+                                        return res.json({
                                             user: user
                                         });
-                                    
+                                    }
+                                });
                                
 
                         }else{

@@ -48,7 +48,10 @@ var userSchema = {
          type:Boolean
       }
     }],
-    orderhistory:[ Order]
+    orderhistory:[ { 
+            type:String ,
+            ref:'Order'
+                    }]
  	}
  };
 
