@@ -43,11 +43,6 @@
 <span class="attachment">（含{{order.shipping}}元运费）</span></td>
 </tr>
 
-<tr ng-if="order.status!='未支付'">
-<td>已支付</td>
-<td class="amount"><span class="payment">¥{{order.total+order.shipping}}</span>
-<span class="attachment">（含{{order.shipping}}元运费）</span></td>
-</tr>
 
 <tr ng-if="order.status=='未支付'">
 <td colspan="2">
@@ -119,8 +114,12 @@
 现金账户
 <span>-¥0</span>
 </li>
-<li>
+<li ng-if="order.status=='未支付'">
 还需支付
+<span class="payment">¥{{order.total+order.shipping}}</span>
+</li>
+<li ng-if="order.status!='未支付'">
+总计
 <span class="payment">¥{{order.total+order.shipping}}</span>
 </li>
 </ul>
