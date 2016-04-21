@@ -197,7 +197,9 @@ module.exports = function(wagner) {
                                     user: user
                                         });
                                               });
-            } else {
+                                 }); 
+              }
+            else {
                 // if there is no token
                 // return an error
                 return res.status(status.UNAUTHORIZED).send({
