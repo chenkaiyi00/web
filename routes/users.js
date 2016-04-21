@@ -191,7 +191,7 @@ module.exports = function(wagner) {
                     }
                     User.findOne({'profile.phone': decoded.phone})
                       .populate('data.orderhistory')
-                      .exec(function (err, User) {
+                      .exec(function (err, user) {
                             if (err) console.log(err);
                     return res.json({
                                     user: user
