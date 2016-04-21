@@ -14,7 +14,7 @@ var port2 = 27017;
 var username = "admin";
 var password = "admin";
 var replSetName = "mgset-1095113";
-var demoDb = "test";
+var demoDb = "web";
 
 
 var url = sprintf("mongodb://%s:%d,%s:%d/%s?replicaSet=%s", 
