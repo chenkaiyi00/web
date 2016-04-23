@@ -103,7 +103,7 @@ angular.module('myApp')
                       }
                 }
                 if ( $scope.choosePro) {
-                    temp+=5;
+                    temp+=8;
                 }
                  temp=parseFloat(Math.round(temp * 10) / 10).toFixed(2)
                   return temp;
